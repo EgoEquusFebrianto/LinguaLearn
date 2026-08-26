@@ -7,7 +7,9 @@ import (
 	"time"
 
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/config"
-	"github.com/EgoEquusFebrianto/LinguaLearn/internal/database"
+	"github.com/EgoEquusFebrianto/LinguaLearn/internal/database/mongodb"
+	"github.com/EgoEquusFebrianto/LinguaLearn/internal/database/mysql"
+	"github.com/EgoEquusFebrianto/LinguaLearn/internal/database/redis"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/helper"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/route"
 )
@@ -19,33 +21,44 @@ func Run() error {
 		return err
 	}
 
-	db, err := database.NewMySQL(&cfg.MySQL)
+	db, err := mysql.NewMySQL(&cfg.MySQL)
 	if err != nil {
 		return err
 	}
 	defer db.Close()
 
-	mongoClient, err := database.NewMongoDb(&cfg.MongoDb)
+	mongoClient, err := mongodb.NewMongoDb(&cfg.MongoDb)
 	if err != nil {
 		return err
 	}
-	ctx, cancel := context.WithTimeout(
-		context.Background(),
-		5 * time.Second,
-	) 
-	defer cancel()
-	mongoClient.Disconnect(ctx)
+	defer func() {
+		ctx, cancel := context.WithTimeout(
+			context.Background(),
+			5 * time.Second,
+		)
+		defer cancel()
 
-	redisClient, err := database.NewRedis(&cfg.Redis)
+		if err := mongoClient.Disconnect(ctx); err != nil {
+			log.Printf("failed to disconnect MongoDB: %v", err)
+		}
+	}()
+
+	redisClient, err := redis.NewRedis(&cfg.Redis)
 	if err != nil {
 		return err
 	}
 	defer redisClient.Close()
 
+	gormDB, err := mysql.NewGorm(db)
+	if err != nil {
+		return err
+	}
+
 	deps := &helper.Dependencies{
 		MySQL: db,
 		MongoDB: mongoClient,
 		Redis: redisClient,
+		GORM: gormDB,
 	}
 
 	router := route.NewRouter(deps)

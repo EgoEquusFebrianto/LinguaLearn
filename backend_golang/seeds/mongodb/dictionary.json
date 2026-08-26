@@ -1,0 +1,2546 @@
+[
+   {
+      "id": 1,
+      "word": "earner",
+      "translate": [
+         "pencari nafkah"
+      ],
+      "synonym": [
+         "breadwinner"
+      ],
+      "explanation": "example sentence:\nWe define an employee's total earnings to be their monthly  worked, and the\nmaximum total earnings to be the maximum total earnings for any employee \nin the Employee table.\nKami mendefinisikan total penghasilan seorang karyawan sebagai jumlah \nyang mereka peroleh setiap bulan, dan total penghasilan maksimum sebagai \ntotal penghasilan maksimum untuk setiap karyawan dalam tabel Karyawan.Kami mendefinisikan total pendapatan karyawan sebagai hasil kerja bulanan mereka, dan total pendapatan maksimum sebagai total pendapatan maksimum untuk setiap karyawan dalam tabel Karyawan.",
+      "type": "Noun"
+   },
+   {
+      "id": 2,
+      "word": "underneath",
+      "translate": [
+         "di bawah"
+      ],
+      "synonym": [
+         "below",
+         "beneath",
+         "under",
+         "within"
+      ],
+      "explanation": "",
+      "type": "Preposition"
+   },
+   {
+      "id": 3,
+      "word": "correspond",
+      "translate": [
+         "sesuai"
+      ],
+      "synonym": [
+         "suit",
+         "conform",
+         "accord"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 4,
+      "word": "precise form",
+      "translate": [
+         "bentuk yang tepat"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": ""
+   },
+   {
+      "id": 5,
+      "word": "discover",
+      "translate": [
+         "menemukan",
+         "mengetahui"
+      ],
+      "synonym": [
+         "come across",
+         "find",
+         "uncover",
+         "have"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 6,
+      "word": "relate",
+      "translate": [
+         "berhubungan"
+      ],
+      "synonym": [
+         "correspond",
+         "appertain",
+         "bear"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 7,
+      "word": "scope",
+      "translate": [
+         "ruang lingkup",
+         "cakupan"
+      ],
+      "synonym": [
+         "range",
+         "extent ",
+         "coverage",
+         "span",
+         "field",
+         "ambit"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 8,
+      "word": "represent",
+      "translate": [
+         "mewakili"
+      ],
+      "synonym": [
+         "reflect",
+         "depute"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 9,
+      "word": "show",
+      "translate": [
+         "menunjukkan"
+      ],
+      "synonym": [
+         "indicate",
+         "exhibit",
+         "denote",
+         "represent"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 10,
+      "word": "act",
+      "translate": [
+         "memainkan peran"
+      ],
+      "synonym": [
+         "represent"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 11,
+      "word": "requirement",
+      "translate": [
+         "persyaratan"
+      ],
+      "synonym": [
+         "need",
+         "necessity",
+         "obligation",
+         "condition",
+         "essential",
+         "specification"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 12,
+      "word": "broad",
+      "translate": [
+         "luas",
+         "lebar"
+      ],
+      "synonym": [
+         "comprehensive",
+         "spacious",
+         "vast",
+         "wide",
+         "extensive"
+      ],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 13,
+      "word": "large",
+      "translate": [
+         "besar"
+      ],
+      "synonym": [
+         "great",
+         "big",
+         "major",
+         "substantial",
+         "broad"
+      ],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 14,
+      "word": "initiative",
+      "translate": [
+         "inisiatif"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 15,
+      "word": "proposal",
+      "translate": [
+         "usul",
+         "usulan"
+      ],
+      "synonym": [
+         "suggestion",
+         "origin",
+         "motion",
+         "nature",
+         "offer"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 16,
+      "word": "propose",
+      "translate": [
+         "mengusulkan",
+         "mengajukan"
+      ],
+      "synonym": [
+         "suggest",
+         "argue",
+         "move",
+         "indicate",
+         "vote"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 17,
+      "word": "increase",
+      "translate": [
+         "meningkatkan"
+      ],
+      "synonym": [
+         "upgrade",
+         "intensify",
+         "escalate",
+         "jack up",
+         "work up"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 18,
+      "word": "appropriate",
+      "translate": [
+         "sesuai",
+         "tepat"
+      ],
+      "synonym": [
+         "suitable",
+         "corresponding",
+         "fit",
+         "convenient",
+         "consistent"
+      ],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 19,
+      "word": "approach",
+      "translate": [
+         "mendekati"
+      ],
+      "synonym": [
+         "nearcome",
+         "near",
+         "tocome",
+         "upget",
+         "gear",
+         "toverge"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 20,
+      "word": "approach",
+      "translate": [
+         "pendekatan"
+      ],
+      "synonym": [
+         "oncoming"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 21,
+      "word": "cutting edge",
+      "translate": [
+         "mutakhir",
+         "canggih"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adjective Phrase"
+   },
+   {
+      "id": 22,
+      "word": "suit",
+      "translate": [
+         "cocok"
+      ],
+      "synonym": [
+         "fit",
+         "fit in",
+         "match",
+         "agree"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 23,
+      "word": "suit",
+      "translate": [
+         "setelan"
+      ],
+      "synonym": [
+         "set",
+         "gob"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 24,
+      "word": "current",
+      "translate": [
+         "saat ini",
+         "sekarang"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 25,
+      "word": "current",
+      "translate": [
+         "arus"
+      ],
+      "synonym": [
+         "flow",
+         "stream",
+         "tides",
+         "influx",
+         "drift"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 26,
+      "word": "major",
+      "translate": [
+         "besar",
+         "utama"
+      ],
+      "synonym": [
+         "great",
+         "large",
+         "big",
+         "substantial",
+         "high"
+      ],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 27,
+      "word": "major",
+      "translate": [
+         "mata pelajaran pokok",
+         "mata kuliah pokok"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 28,
+      "word": "entrust",
+      "translate": [
+         "mempercayakan"
+      ],
+      "synonym": [
+         "intrust"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 29,
+      "word": "commend",
+      "translate": [
+         "memuji"
+      ],
+      "synonym": [
+         "praise",
+         "laud",
+         "extol",
+         "flatter"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 30,
+      "word": "condife",
+      "translate": [
+         "mengaku"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 31,
+      "word": "perform",
+      "translate": [
+         "melakukan"
+      ],
+      "synonym": [
+         "do",
+         "undertake",
+         "carry out"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 32,
+      "word": "run",
+      "translate": [
+         "berlari",
+         "berjalan",
+         "menjalankan",
+         "melarikan",
+         "mengoperasikan",
+         "mengelola",
+         "mengalir",
+         "mencalonkan diri"
+      ],
+      "synonym": [],
+      "explanation": "Explanation:\n1. Berlari:\nmean: To move swiftly on foot (Untuk bergerak cepat dengan berjalan kaki).\nexample:\nShe runs every morning to stay fit.\n(Dia berlari setiap pagi untuk tetap bugar.)\n\n2. Mengoperasikan atau Mengelola:\nmean: To operate or manage something (untuk mengoperasikan atau mengelola sesuatu).\nExample:\nHe runs a successful restaurant in the city.\n(Dia mengelola sebuah restoran yang sukses di kota.)\n\n3. Berjalan atau Berfungsi:\nmean: To function or operate (Untuk berfungsi atau beroperasi).\nexample:\nThe computer is running smoothly now.\n(Komputer berjalan dengan lancar sekarang.)\n\n4. Mengalir:\nmean: To flow, as in a liquid (Mengalir, seperti dalam cairan).\nexample:\nTears ran down her cheeks.\n(Air mata mengalir di pipinya.)\n\n5. mencalonkan diri:\nmean: To campaign for an office or position (Untuk berkampanye untuk suatu jabatan atau posisi).\nexample:\nHe decided to run for mayor.\n(Dia memutuskan untuk mencalonkan diri sebagai walikota.)\n\n6. Alur atau Aliran (Noun):\nmean: A continuous stretch or flow.\nexample:\nThe river's run was blocked by a dam.\n(Aliran sungai tersebut terhalang oleh bendungan.)",
+      "type": "Verb"
+   },
+   {
+      "id": 33,
+      "word": "deliver",
+      "translate": [
+         "mengantarkan"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 34,
+      "word": "accompany",
+      "translate": [
+         "menemani",
+         "mengantar"
+      ],
+      "synonym": [
+         "escort",
+         "attend",
+         "squire"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 35,
+      "word": "escort",
+      "translate": [
+         "pengawal",
+         "penjaga"
+      ],
+      "synonym": [
+         "bodyguard",
+         "guard",
+         "sentinel"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 36,
+      "word": "squire",
+      "translate": [
+         "mengantar",
+         "mengantarkan"
+      ],
+      "synonym": [
+         "deliver",
+         "usher",
+         "accompany",
+         "escort"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 37,
+      "word": "attend",
+      "translate": [
+         "menghadiri"
+      ],
+      "synonym": [
+         "present"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 38,
+      "word": "submit",
+      "translate": [
+         "mengirimkan",
+         "menyerahkan",
+         "mengajukan",
+         "patuh",
+         "tunduk"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 39,
+      "word": "lead",
+      "translate": [
+         "memimpin"
+      ],
+      "synonym": [
+         "guide",
+         "preside",
+         "conduct",
+         "run"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 40,
+      "word": "penetrate",
+      "translate": [
+         "menembus"
+      ],
+      "synonym": [
+         "pierce",
+         "permeate",
+         "cut through",
+         "go through",
+         "come through"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 41,
+      "word": "arrange",
+      "translate": [
+         "mengatur"
+      ],
+      "synonym": [
+         "set",
+         "organize",
+         "manage",
+         "regulate",
+         "adjust"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 42,
+      "word": "escape",
+      "translate": [
+         "melarikan diri"
+      ],
+      "synonym": [
+         "flee",
+         "run away",
+         "get away",
+         "run off",
+         "take off"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 43,
+      "word": "journey",
+      "translate": [
+         "perjalanan"
+      ],
+      "synonym": [
+         "travel",
+         "trip",
+         "traveling"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 44,
+      "word": "load",
+      "translate": [
+         "memuat",
+         "memuatkan"
+      ],
+      "synonym": [
+         "contain"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 45,
+      "word": "contain",
+      "translate": [
+         "berisi"
+      ],
+      "synonym": [
+         "include"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 46,
+      "word": "accommodate",
+      "translate": [
+         "menampung"
+      ],
+      "synonym": [
+         "contain",
+         "collect",
+         "resettle",
+         "relocate"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 47,
+      "word": "collect",
+      "translate": [
+         "mengumpulkan"
+      ],
+      "synonym": [
+         "gather",
+         "put together",
+         "garner",
+         "accumulate",
+         "raise"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 48,
+      "word": "relocate",
+      "translate": [
+         "pindah"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 49,
+      "word": "patch",
+      "translate": [
+         "tambalan",
+         "petakan",
+         "plester",
+         "pembaruan perangkat lunak"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 50,
+      "word": "patch",
+      "translate": [
+         "menambal",
+         "memperbaharui perangkat lunak"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 51,
+      "word": "evidence",
+      "translate": [
+         "bukti",
+         "keterangan"
+      ],
+      "synonym": [
+         "proof"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 52,
+      "word": "in addition",
+      "translate": [
+         "Selain itu"
+      ],
+      "synonym": [
+         "Additionally",
+         "Besides",
+         "Furthermore",
+         "Moreover"
+      ],
+      "explanation": "Explanation:\nJenis Kata: Adverb (kata keterangan)\nMakna: 'Furthermore' digunakan untuk menambahkan informasi atau argumen tambahan \nyang mendukung poin sebelumnya. Kata ini sering digunakan dalam tulisan formal untuk \nmenunjukkan bahwa ada informasi lebih lanjut yang relevan dengan topik yang sedang \ndibahas.\n\nCara Penggunaan:\n'Furthermore' biasanya diletakkan di awal kalimat atau klausa dan diikuti oleh koma untuk \nmemperkenalkan informasi tambahan.\n\nContoh Kalimat:\n'The project was completed ahead of schedule. Furthermore, the quality of the work exceeded expectations.'\n(Proyek selesai lebih cepat dari jadwal. Selain itu, kualitas pekerjaan melebihi harapan.)",
+      "type": "Prepositional Phrase"
+   },
+   {
+      "id": 53,
+      "word": "conduct",
+      "translate": [
+         "mengadakan"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 54,
+      "word": "establish",
+      "translate": [
+         "mendirikan",
+		 "membentuk",
+		 "membuat",
+		 "menegakkan",
+		 "menyusun"
+      ],
+      "synonym": [
+         "set up",
+         "build",
+         "found"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 55,
+      "word": "build",
+      "translate": [
+         "membangun"
+      ],
+      "synonym": [
+         "construct"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 56,
+      "word": "find",
+      "translate": [
+         "menemukan"
+      ],
+      "synonym": [
+         "come across",
+         "discover",
+         "uncover",
+         "locate"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 57,
+      "word": "recent",
+      "translate": [
+         "terkini",
+         "baru",
+         "belakangan ini"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 58,
+      "word": "through",
+      "translate": [
+         "melalui"
+      ],
+      "synonym": [
+         "via",
+         "thru",
+         "by means of",
+         "by way of"
+      ],
+      "explanation": "",
+      "type": "Preposition"
+   },
+   {
+      "id": 59,
+      "word": "throught",
+      "translate": [
+         "pemikiran",
+         "ide",
+         "opini"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 60,
+      "word": "throught",
+      "translate": [
+         "memikirkan"
+      ],
+      "synonym": [],
+      "explanation": "Explanation:\n'Throught' is the past tense (Verb 2) of 'think,'\nwhich means to think about something or to have an opinion.",
+      "type": "Verb"
+   },
+   {
+      "id": 61,
+      "word": "though",
+      "translate": [
+         "meskipun"
+      ],
+      "synonym": [
+         "although",
+         "even though",
+         "even if"
+      ],
+      "explanation": "Explanation:\n1. Though\nJenis Kata: Conjunction (kata sambung) dan Adverb (kata keterangan)\nMakna dan Penggunaan:\nSebagai Conjunction: Digunakan untuk menghubungkan dua ide yang berlawanan atau\ntidak sejalan, sering kali ditempatkan di tengah atau akhir kalimat.\n\nContoh Kalimat:\n'He is very intelligent, though he can be lazy at times.'\n(Dia sangat cerdas, meskipun kadang-kadang bisa malas.)\n\n'I didn't like the movie. It was interesting, though.'\n(Saya tidak suka filmnya. Tapi, film itu menarik.)\n\nSebagai Adverb: Biasanya diletakkan di akhir kalimat untuk memberikan penekanan yang lebih ringan.\n\nContoh Kalimat:\n'It was hard work; I enjoyed it, though.'\n(Itu pekerjaan yang sulit; namun, saya menikmatinya.)\n\n2. Although\nJenis Kata: Conjunction (kata sambung)\nMakna dan Penggunaan:\nSebagai Conjunction: Digunakan di awal kalimat atau klausa untuk menunjukkan kontras \nantara dua ide. Kata ini lebih formal dibandingkan 'though.'\n\nContoh Kalimat:\n'Although it was raining, we decided to go for a walk.'\n(Meskipun hujan, kami memutuskan untuk berjalan-jalan.)\n\n'She passed the exam, although she didn't study much.'\n(Dia lulus ujian, meskipun tidak belajar banyak.)\n\n3. Even Though\nJenis Kata: Conjunction (kata sambung)\nMakna dan Penggunaan:\nSebagai Conjunction: Memberikan penekanan lebih kuat daripada 'although' atau \n'though.' Digunakan untuk menunjukkan bahwa satu hal terjadi meskipun ada kondisi yang \nsangat bertentangan.\n\nContoh Kalimat:\n'Even though he was tired, he finished the marathon.'\n(Meskipun dia lelah, dia menyelesaikan maraton.)\n\n'She decided to go out even though it was late.'\n(Dia memutuskan untuk keluar meskipun sudah larut.)\n\n4. Even If\nJenis Kata: Conjunction (kata sambung)\nMakna dan Penggunaan:\nSebagai Conjunction: Digunakan untuk mengungkapkan situasi hipotetis atau \nkemungkinan, menandakan bahwa sesuatu akan terjadi atau akan tetap benar meskipun \ndengan kondisi tertentu.\n\nContoh Kalimat:\n'I will go to the party even if it rains.'\n(Saya akan pergi ke pesta meskipun hujan.)\n\n'Even if you apologize, she might not forgive you.'\n(Meskipun kamu minta maaf, dia mungkin tidak akan memaafkanmu.)\n\nRingkasan:\n'Though' bisa digunakan di tengah atau akhir kalimat untuk menunjukkan kontras.\n\n'Although' adalah kata sambung formal yang digunakan untuk menunjukkan kontras, sering di \nawal kalimat atau klausa.\n\n'Even though' memberikan penekanan lebih kuat daripada 'although' dan digunakan untuk \nmenunjukkan kontradiksi yang lebih tajam.\n\n'Even if' digunakan untuk menyatakan kondisi hipotetis atau kemungkinan, sering dalam \nkonteks jika-syarat.",
+      "type": "Conjunction"
+   },
+   {
+      "id": 62,
+      "word": "apply",
+      "translate": [
+         "menerapkan"
+      ],
+      "synonym": [
+         "adjust"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 63,
+      "word": "convince",
+      "translate": [
+         "meyakinkan",
+         "membujuk"
+      ],
+      "synonym": [
+         "reassure",
+         "persuade"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 64,
+      "word": "satisfy",
+      "translate": [
+         "memuaskan"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 65,
+      "word": "brief",
+      "translate": [
+         "singkat"
+      ],
+      "synonym": [
+         "shorter",
+         "curt",
+         "laconic"
+      ],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 66,
+      "word": "concise",
+      "translate": [
+         "ringkas"
+      ],
+      "synonym": [
+         "succinct"
+      ],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 67,
+      "word": "achievement",
+      "translate": [
+         "pencapaian"
+      ],
+      "synonym": [
+         "attainment",
+         "accession"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 68,
+      "word": "accomplishment",
+      "translate": [
+         "prestasi"
+      ],
+      "synonym": [
+         "feat",
+         "achievement"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 69,
+      "word": "performance",
+      "translate": [
+         "pertunjukkan"
+      ],
+      "synonym": [
+         "show",
+         "display",
+         "entertainment",
+         "exhibition"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 70,
+      "word": "display",
+      "translate": [
+         "menampilkan"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 71,
+      "word": "exhibition",
+      "translate": [
+         "pameran"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 72,
+      "word": "measure",
+      "translate": [
+         "ukuran"
+      ],
+      "synonym": [
+         "size",
+         "dimensions",
+         "gauge"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 73,
+      "word": "measure",
+      "translate": [
+         "mengukur"
+      ],
+      "synonym": [
+         "gauge",
+         "quantify",
+         "gage"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 74,
+      "word": "understand",
+      "translate": [
+         "memahami"
+      ],
+      "synonym": [
+         "fathom",
+         "comprehend",
+         "conceive"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 75,
+      "word": "appreciate",
+      "translate": [
+         "menghargai"
+      ],
+      "synonym": [
+         "respect",
+         "value",
+         "cherish"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 76,
+      "word": "interest",
+      "translate": [
+         "minat",
+         "suku bunga"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 77,
+      "word": "confuse",
+      "translate": [
+         "bingung"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 78,
+      "word": "therefore",
+      "translate": [
+         "karena itu",
+		 "oleh karena itu",
+		 "karenanya",
+		 "oleh sebab itu"
+      ],
+      "synonym": [
+         "Hence"
+      ],
+      "explanation": "\nJenis Kata: Adverb (kata keterangan)\nMakna: 'Therefore' digunakan untuk menunjukkan bahwa suatu kesimpulan atau akibat \ndiambil dari informasi atau argumen yang telah disampaikan sebelumnya. Kata ini berfungsi \nsebagai penghubung antara dua ide, di mana yang kedua adalah hasil atau konsekuensi dari \nyang pertama.\n\nCara Penggunaan:\nSebagai Adverb: 'Therefore' biasanya ditempatkan di awal atau tengah kalimat dan diikuti \noleh koma. Ini menunjukkan bahwa informasi yang datang setelahnya adalah hasil logis \ndari pernyataan sebelumnya.\n\nContoh Kalimat:\n'The project was not completed on time. Therefore, we need to extend the deadline.'\n(Proyek tidak selesai tepat waktu. Oleh karena itu, kita perlu memperpanjang tenggat waktu.)\n\n'He studied hard for the exam; therefore, he passed with excellent grades.'\n(Dia belajar keras untuk ujian; oleh karena itu, dia lulus dengan nilai yang sangat baik.)\n\nRingkasan:\n'Therefore' adalah kata keterangan yang digunakan untuk menyatakan hasil atau kesimpulan \ndari sesuatu yang telah disebutkan sebelumnya. Kata ini menghubungkan dua ide dengan \nmenunjukkan bahwa ide kedua adalah konsekuensi logis dari ide pertama.\nSinonim: Thus, Hence, Consequently, As a result.",
+      "type": "Adverb"
+   },
+   {
+      "id": 79,
+      "word": "especially",
+      "translate": [
+         "khususnya"
+      ],
+      "synonym": [
+         "particularly",
+         "specifically",
+         "in particular"
+      ],
+      "explanation": "",
+      "type": "Adverb"
+   },
+   {
+      "id": 80,
+      "word": "branch",
+      "translate": [
+         "cabang",
+         "ranting"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 81,
+      "word": "show",
+      "translate": [
+         "menunjukkan"
+      ],
+      "synonym": [
+         "indicate",
+         "denote"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 82,
+      "word": "rapid",
+      "translate": [
+         "cepat",
+         "pesat",
+         "laju",
+         "curam"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 83,
+      "word": "various",
+      "translate": [
+         "bermacam macam"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 84,
+      "word": "field",
+      "translate": [
+         "bidang"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 85,
+      "word": "throughout",
+      "translate": [
+         "selama"
+      ],
+      "synonym": [
+         "during"
+      ],
+      "explanation": "",
+      "type": "Preposition"
+   },
+   {
+      "id": 86,
+      "word": "yet",
+      "translate": [
+         "masih"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adverb"
+   },
+   {
+      "id": 87,
+      "word": "yell",
+      "translate": [
+         "berteriak",
+         "meninggikan suara"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 88,
+      "word": "yell",
+      "translate": [
+         "teriak",
+         "teriakan"
+      ],
+      "synonym": [
+         "scream",
+         "screaming",
+         "whoop"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 89,
+      "word": "yarn",
+      "translate": [
+         "benang"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 90,
+      "word": "write the ticket",
+      "translate": [
+         "menulis denda"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": ""
+   },
+   {
+      "id": 91,
+      "word": "wreck",
+      "translate": [
+         "merusak"
+      ],
+      "synonym": [
+         "ruin",
+         "harm",
+         "undermine",
+         "impair"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 92,
+      "word": "accident",
+      "translate": [
+         "kecelakaan"
+      ],
+      "synonym": [
+         "wreck",
+         "mishap"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 93,
+      "word": "wrap",
+      "translate": [
+         "membungkus"
+      ],
+      "synonym": [
+         "incase",
+         "encase",
+         "envelop"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 94,
+      "word": "well",
+      "translate": [
+         "baik"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 95,
+      "word": "incredible",
+      "translate": [
+         "menakjubkan",
+         "sulit dipercaya",
+         "luar biasa"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 96,
+      "word": "wonderful",
+      "translate": [
+         "indah",
+         "luar biasa",
+         "elok"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 97,
+      "word": "awesome",
+      "translate": [
+         "luar biasa",
+         "mengagumkan"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 98,
+      "word": "thin",
+      "translate": [
+         "tipis"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 99,
+      "word": "thick",
+      "translate": [
+         "tebal"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 100,
+      "word": "ridiculous",
+      "translate": [
+         "bodoh"
+      ],
+      "synonym": [
+         "foolish",
+         "fool",
+         "dumb"
+      ],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 101,
+      "word": "realize",
+      "translate": [
+         "menyadari"
+      ],
+      "synonym": [
+         "be aware",
+         "appreciate",
+         "wise up"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 102,
+      "word": "offer",
+      "translate": [
+         "menawarkan"
+      ],
+      "synonym": [
+         "propose",
+         "bid",
+         "proffer",
+         "tender",
+         "extend"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 103,
+      "word": "soft",
+      "translate": [
+         "lembut",
+         "empuk",
+         "lunak"
+      ],
+      "synonym": [
+         "tender",
+         "delicate"
+      ],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 104,
+      "word": "smooth",
+      "translate": [
+         "halus"
+      ],
+      "synonym": [
+         "delicate"
+      ],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 105,
+      "word": "across",
+      "translate": [
+         "melintasi"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 106,
+      "word": "interplanetary",
+      "translate": [
+         "antar planet"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 107,
+      "word": "crush",
+      "translate": [
+         "menghancurkan"
+      ],
+      "synonym": [
+         "destroy",
+         "smash",
+         "ruin",
+         "demolish",
+         "shatter"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 108,
+      "word": "opportunity",
+      "translate": [
+         "peluang",
+         "kesempatan"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 109,
+      "word": "depressing",
+      "translate": [
+         "gloomy",
+         "somber",
+         "muram"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 110,
+      "word": "witness",
+      "translate": [
+         "saksi"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 111,
+      "word": "wince",
+      "translate": [
+         "memasamkan wajah"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 112,
+      "word": "weather forecast",
+      "translate": [
+         "prakiraan cuaca"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 113,
+      "word": "weather",
+      "translate": [
+         "cuaca"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 114,
+      "word": "wave one's hand",
+      "translate": [
+         "melambaikan tangan"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": ""
+   },
+   {
+      "id": 115,
+      "word": "venture",
+      "translate": [
+         "upaya yang berbahaya"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 116,
+      "word": "venture",
+      "translate": [
+         "mengambil risiko"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 117,
+      "word": "verse",
+      "translate": [
+         "kuplet",
+         "syair"
+      ],
+      "synonym": [],
+      "explanation": "kuplet merupakan satuan syair yang terdiri dari 2 baris.\n",
+      "type": "Noun"
+   },
+   {
+      "id": 118,
+      "word": "vault",
+      "translate": [
+         "lemari penyimpanan"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 119,
+      "word": "uptown",
+      "translate": [
+         "pinggiran kota",
+         "daerah permukiman"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 120,
+      "word": "turnstile",
+      "translate": [
+         "pintu putar"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 121,
+      "word": "baggage",
+      "translate": [
+         "bagasi",
+         "bagasi mobil"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 122,
+      "word": "trousers",
+      "translate": [
+         "celana panjang"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 123,
+      "word": "treat",
+      "translate": [
+         "merawat",
+         "menyuguhi"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 124,
+      "word": "travel",
+      "translate": [
+         "bepergian"
+      ],
+      "synonym": [
+         "trace",
+         "track"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 125,
+      "word": "track",
+      "translate": [
+         "melacak"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 126,
+      "word": "trail",
+      "translate": [
+         "jejak"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 127,
+      "word": "drag",
+      "translate": [
+         "menyeret"
+      ],
+      "synonym": [
+         "haul",
+         "lug",
+         "tow"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 128,
+      "word": "attract",
+      "translate": [
+         "menarik"
+      ],
+      "synonym": [
+         "appeal",
+         "tow",
+         "pull"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 129,
+      "word": "tough",
+      "translate": [
+         "tanggung",
+         "keras"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 130,
+      "word": "threaten",
+      "translate": [
+         "mengancam"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 131,
+      "word": "conclude",
+      "translate": [
+         "menyimpulkan"
+      ],
+      "synonym": [
+         "deduce",
+         "sum up",
+         "stuck up"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 132,
+      "word": "evergreen",
+      "translate": [
+         "selalu hijau"
+      ],
+      "synonym": [],
+      "explanation": "\nDalam konteks kalimat 'Data processing is an evergreen field for software engineers',\nkata 'evergreen' memiliki makna selalu relevan, tidak pernah ketinggalan zaman, atau\nterus-menerus bermanfaat dalam jangka waktu panjang.\n\nSecara umum, istilah 'evergreen' digunakan untuk menggambarkan sesuatu yang selalu hijau\n(seperti pohon yang daunnya tidak gugur), dan secara figuratif mengacu pada hal-hal yang\nselalu relevan, berguna, atau diminati, tanpa peduli dengan perubahan waktu atau tren.\n\nJadi, dalam kalimat tersebut, 'evergreen field' berarti bahwa pemrosesan data adalah\nbidang yang akan selalu dibutuhkan dan relevan bagi para insinyur perangkat lunak,\nterlepas dari perubahan teknologi atau tren industri. Bidang ini dianggap tidak pernah\nusang dan terus memiliki nilai penting.\n",
+      "type": ""
+   },
+   {
+      "id": 133,
+      "word": "evolve",
+      "translate": [
+         "berkembang"
+      ],
+      "synonym": [
+         "thrive",
+         "flourish",
+         "unfold"
+      ],
+      "explanation": "'thrive' digunakan untuk menunjukkan suatu yang berkembang dengan pesat",
+      "type": "Verb"
+   },
+   {
+      "id": 134,
+      "word": "scale",
+      "translate": [
+         "skala"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 135,
+      "word": "however",
+      "translate": [
+         "namun"
+      ],
+      "synonym": [
+         "yet",
+         "nevertheles",
+         "still"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 136,
+      "word": "thus",
+      "translate": [
+         "dengan demikian",
+         "oleh karena itu",
+         "dengan cara ini"
+      ],
+      "synonym": [],
+      "explanation": "berfungsi untuk menjelaskan bagaimana atau mengapa sesuatu terjadi berdasarkan konteks sebelumnya.\n\nContoh kalimat:\n\n1. Explanation of a result (menjelaskan hasil):\n\nThe company did not have enough funds, thus, they had to close several branches.\n(Perusahaan tidak memiliki cukup dana, dengan demikian, mereka harus menutup beberapa cabang.)\n\n2. Explaining a method (menjelaskan metode",
+      "type": "Adverb"
+   },
+   {
+      "id": 137,
+      "word": "hence",
+      "translate": [
+         "karena itu",
+         "karenanya",
+         "oleh karena itu"
+      ],
+      "synonym": [
+         "therefore",
+         "consequently",
+         "accordingly",
+         "in consequence",
+         "thereupon"
+      ],
+      "explanation": "Contoh Kalimat:\n\nSide by side, we also saw an evolution of the internet,and hence engineers started working on Web sites and mobile applications.\n\n(Berdampingan, kita juga menyaksikan evolusi internet, dan karenanya para insinyur mulai mengerjakan situs web dan aplikasi seluler.)",
+      "type": "Adverb"
+   },
+   {
+      "id": 138,
+      "word": "consequently",
+      "translate": ["akibatnya"],
+      "synonym": [
+         "therefore",
+         "hence",
+         "in consequence",
+         "thereupon"
+      ],
+      "explanation": "fungsinya hampir sama dengan 'thus', tetapi lebih menekankan pada akibat atau hasil yang muncul dari suatu kejadian.\n\nContoh kalimat:\n\n1. Explanation of a result (menjelaskan akibat):\n\nHe didn't submit his project on time, consequently, he failed the course.\n(Dia tidak menyerahkan proyeknya tepat waktu, akibatnya, dia gagal dalam mata kuliah tersebut.)\n\n2. Cause and effect (sebab dan akibat):\n\nThe factory faced a major power outage, and consequently, production was delayed for several hours.\n(Pabrik mengalami pemadaman listrik besar, dan akibatnya, produksi tertunda selama beberapa jam.)\n\nJadi, 'consequently' digunakan untuk menekankan hubungan sebab-akibat dalam suatu pernyataan.",
+      "type": "Adverb"
+   },
+   {
+      "id": 139,
+      "word": "as a result",
+      "translate": [
+         "sebagai akibat",
+         "sebagai hasil"
+      ],
+      "synonym": [
+         "consequently",
+         "therefore",
+         "thus"
+      ],
+      "explanation": "Ini digunakan untuk menunjukkan hasil atau konsekuensi dari suatu tindakan atau peristiwa yang telah dijelaskan sebelumnya.\n\nContoh kalimat:\n\n1. Explanation of a consequence (menjelaskan akibat):\n\nThe team didn't prepare well for the presentation, and as a result, they lost the project bid.\n(Tim tidak mempersiapkan presentasi dengan baik, dan sebagai akibatnya, mereka kalah dalam penawaran proyek.)\n\n2. Cause and effect (sebab dan akibat):\n\nIt rained heavily last night. As a result, the streets were flooded this morning.\n(Hujan deras turun semalam. Sebagai akibatnya, jalanan banjir pagi ini.)",
+      "type": "Adjective Phrase"
+   },
+   {
+      "id": 140,
+      "word": "least",
+      "translate": ["paling tidak"],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adverb"
+   },
+   {
+      "id": 141,
+      "word": "least",
+      "translate": [
+         "paling sedikit",
+         "paling kecil",
+         "paling rendah"
+      ],
+      "synonym": [
+         "fewest",
+         "smallest",
+         "minimal"
+      ],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 142,
+      "word": "At the very least",
+      "translate": ["setidaknya"],
+      "synonym": ["at least"],
+      "explanation": "1. At least\nFrasa ini digunakan untuk menyatakan batas minimum atau jumlah minimum dari sesuatu. Itu menunjukkan\nbahwa hal yang disebutkan adalah batas terendah atau paling sedikit yang diharapkan atau diperlukan.\n\nContoh\nYou should at least finish your homework before going out.\n(Setidaknya kamu harus menyelesaikan pekerjaan rumah sebelum keluar.)\n\nI need at least $100 to cover my expenses.\n(Saya membutuhkan setidaknya $100 untuk menutupi pengeluaran saya.)\n\nDalam kalimat ini, 'at least' menunjukkan sesuatu yang dianggap cukup atau minimal untuk situasi tertentu.\n\n2. At the very least\nFrasa ini memberikan penekanan lebih kuat pada batas minimum, sering kali menunjukkan bahwa situasi\nini adalah yang paling kecil atau paling rendah yang bisa diterima atau diharapkan. Ini menekankan\nbahwa meskipun tidak ideal, hal ini adalah standar minimal yang mutlak diperlukan.\n\nContoh:\nYou should at the very least apologize for your mistake.\n(Kamu paling tidak harus meminta maaf atas kesalahanmu.)\n\nAt the very least, we should have a backup plan in case things go wrong.\n(Paling tidak, kita harus memiliki rencana cadangan jika sesuatu berjalan tidak sesuai rencana.)\n\nDalam kalimat ini, 'at the very least' menekankan bahwa tidak ada pilihan lain yang lebih rendah atau lebih\nsedikit dari itu yang bisa diterima.\n\nPerbedaan Intinya:\n\nAt least, menyatakan batas minimum secara umum.\nAt the very least, menambahkan penekanan lebih kuat, menyiratkan bahwa ini adalah batas minimum yang\nbenar-benar diperlukan, dan apa pun di bawah itu tidak dapat diterima.",
+      "type": "Adjective Phrase"
+   },
+   {
+      "id": 143,
+      "word": "variety",
+      "translate": ["variasi"],
+      "synonym": [
+         "variation",
+         "variant"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 144,
+      "word": "things",
+      "translate": [
+         "hal-hal",
+         "suatu"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 145,
+      "word": "categorize",
+      "translate": ["mengkategorikan"],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 146,
+      "word": "crafting",
+      "translate": ["membuat"],
+      "synonym": [],
+      "explanation": "Kata 'crafting' adalah bentuk gerund atau kata kerja berakhiran -ing dari kata dasar 'craft'.\nIni berarti proses membuat, membentuk, atau menciptakan sesuatu dengan keterampilan dan ketelitian,\nsering kali dengan tangan.\n\nJenis kata:\nCrafting adalahgerund (kata kerja yang berfungsi sebagai kata benda) atau bentuk present participle\ndari kata kerja 'craft'.\n\nSebagai kata benda, itu merujuk pada aktivitas atau proses menciptakan sesuatu.\nSebagai kata kerja, itu menunjukkan tindakan sedang berlangsung.\n\nContoh kalimat:\n\n1. Sebagai gerund (kata benda):\nShe enjoys crafting handmade jewelry.\n(Dia suka membuat perhiasan buatan tangan.)\n\n2. Sebagai present participle (kata kerja dalam bentuk berlanjut):\nThey are crafting a new strategy for the business.\n(Mereka sedang merancang strategi baru untuk bisnis.)",
+      "type": "Verb"
+   },
+   {
+      "id": 147,
+      "word": "almost",
+      "translate": ["hampir"],
+      "synonym": [
+         "nearly",
+         "close",
+         "nigh",
+         "practically"
+      ],
+      "explanation": "",
+      "type": "Adverb"
+   },
+   {
+      "id": 148,
+      "word": "emerge",
+      "translate": [
+         "muncul",
+         "tampil",
+         "tampak",
+         "timbul"
+      ],
+      "synonym": [
+         "appear",
+         "arise",
+         "show",
+         "come up"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 149,
+      "word": "capture",
+      "translate": ["menangkap"],
+      "synonym": [
+         "catch",
+         "arrest",
+         "seize",
+         "pick up",
+         "catch on"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 150,
+      "word": "capture",
+      "translate": [
+         "penangkapan",
+         "tangkap"
+      ],
+      "synonym": [
+         "interception",
+         "apprehension",
+         "catching",
+         "arrest"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 151,
+      "word": "straightforward",
+      "translate": [
+         "mudah",
+         "terus terang",
+         "polos"
+      ],
+      "synonym": [
+         "easy",
+         "convenient",
+         "simple",
+         "prone",
+         "handy"
+      ],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 152,
+      "word": "prone",
+      "translate": ["rentan"],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 153,
+      "word": "handy",
+      "translate": ["berguna"],
+      "synonym": [
+         "useful",
+         "helpful"
+      ],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 154,
+      "word": "demand",
+      "translate": ["tuntutan"],
+      "synonym": [
+         "claim",
+         "charge",
+         "indictment",
+         "assertion",
+         "requirement"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 155,
+      "word": "indictment",
+      "translate": [
+         "dakwaan",
+         "tuduhan",
+         "tuntutan"
+      ],
+      "synonym": [
+         "arraignment",
+         "charge",
+         "accusation",
+         "inculpation",
+         "crimination"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 156,
+      "word": "charge",
+      "translate": ["mengenakan biaya"],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 157,
+      "word": "assume",
+      "translate": ["menganggap"],
+      "synonym": [
+         "think",
+         "regard",
+         "presume",
+         "believe",
+         "take"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 158,
+      "word": "concurrent",
+      "translate": ["bersamaan"],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 159,
+      "word": "plain",
+      "translate": [
+         "polos",
+         "biasa",
+         "sederhana"
+      ],
+      "synonym": [
+         "smooth",
+         "sience",
+         "straightforward"
+      ],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 160,
+      "word": "in contrast",
+      "translate": ["sebalinya"],
+      "synonym": [],
+      "explanation": "Frasa 'in contrast' digunakan untuk menunjukkan perbedaan atau perbandingan antara dua hal, ide, atau \nsituasi yang berbeda. Frasa ini membantu menekankan bagaimana satu hal berbeda dari yang lain. yang \nmana dalam arti lain, untuk menunjukkan perbandingan atau perbedaan. \n\nContoh kalimat: \n1. Menunjukkan perbedaan: \nIn contrast to her brother, she is very outgoing. \n(Berbeda dengan saudaranya, dia sangat terbuka.) \n\n2. Menggambarkan dua situasi yang berbeda: \nThe climate in the north is cold; in contrast, the south enjoys a warm climate. \n(Iklim di utara dingin; sebaliknya, selatan menikmati iklim hangat.) \n\n3. Menekankan perbandingan: \nIn contrast to last year's results, this year's performance has improved significantly. \n(Berbeda dengan hasil tahun lalu, kinerja tahun ini telah meningkat secara signifikan.)",
+      "type": "Adjective Phrase"
+   },
+   {
+      "id": 161,
+      "word": "overcome",
+      "translate": ["mengatasi"],
+      "synonym": [
+         "surmount",
+         "get over",
+         "outgrow"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 162,
+      "word": "prefer",
+      "translate": [
+         "lebih menyukai",
+         "lebih suka",
+         "memilih"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 163,
+      "word": "simultaneous",
+      "translate": [
+         "serentak",
+         "serempak",
+         "bersama"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 164,
+      "word": "expertise",
+      "translate": ["keahlian"],
+      "synonym": [
+         "craftsmanship",
+         "proficiency"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 165,
+      "word": "proficiency",
+      "translate": ["kecakapan"],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 166,
+      "word": "experience",
+      "translate": ["pengalaman"],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 167,
+      "word": "mastery",
+      "translate": ["penguasaan"],
+      "synonym": [
+         "mastership",
+         "control"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 168,
+      "word": "wary",
+      "translate": ["waspada"],
+      "synonym": [
+         "vigilant",
+         "watchful",
+         "cautious",
+         "alert"
+      ],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 169,
+      "word": "wide-awake",
+      "translate": ["terjaga sepenuhnya","mata terbuka lebar"],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 170,
+      "word": "generate",
+      "translate": ["menghasilkan"],
+      "synonym": [
+         "produce",
+         "result",
+         "yield",
+         "bear"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 171,
+      "word": "particular",
+      "translate": [
+         "tertentu",
+         "khusus",
+         "terutama",
+         "istimewa"
+      ],
+      "synonym": [
+         "certain",
+         "specific",
+         "special",
+         "definite",
+         "fixed"
+      ],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 172,
+      "word": "definite",
+      "translate": [
+         "pasti",
+         "jelas"
+      ],
+      "synonym": [
+         "sure",
+         "certain"
+      ],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 173,
+      "word": "due to the",
+      "translate": ["karena"],
+      "synonym": [],
+      "explanation": "Frasa 'due to the' digunakan untuk menunjukkan penyebab atau alasan suatu keadaan, peristiwa, \natau situasi. Ini mengindikasikan bahwa sesuatu terjadi sebagai hasil dari sesuatu yang lain. \n\nContoh kalimat: \n\n1.Menggambarkan penyebab: \nThe event was canceled due to the bad weather. \n(Acara dibatalkan karena cuaca buruk.) \n\n2.Menjelaskan alasan: \nThe flight was delayed due to the technical issues. \n(Penerbangan tertunda karena masalah teknis.) \n\n3. Dalam konteks formal: \nThe project was postponed due to the lack of funding. \n(Proyek ditunda karena kurangnya dana.)",
+      "type": "Adjective Phrase"
+   },
+   {
+      "id": 174,
+      "word": "expansion",
+      "translate": [
+         "ekspansi",
+         "perluasan",
+         "perkembangan"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 175,
+      "word": "achieve",
+      "translate": [
+         "meraih",
+         "mencapai",
+         "memperoleh"
+      ],
+      "synonym": [
+         "reach",
+         "attain",
+         "obtain",
+         "acquire",
+         "gain"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 176,
+      "word": "retrieve",
+      "translate": [
+         "mengambil",
+         "mendapatkan"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 177,
+      "word": "initiate",
+      "translate": [
+         "memulai",
+         "menginisiasikan"
+      ],
+      "synonym": [
+         "start",
+         "begin",
+         "embark",
+         "commence"
+      ],
+      "explanation": "Sinonim kata 'initiate', berlaku untuk arti memulai",
+      "type": "Verb"
+   },
+   {
+      "id": 178,
+      "word": "redirection",
+      "translate": ["pengalihan"],
+      "synonym": ["diversion"],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 179,
+      "word": "facilitate",
+      "translate": [
+         "memudahkan",
+         "membantu"
+      ],
+      "synonym": [
+         "ease",
+         "simplify"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 180,
+      "word": "spare",
+      "translate": ["meluangkan"],
+      "synonym": [
+         "vacate",
+         "make time for",
+         "make room for"
+      ],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 181,
+      "word": "spare",
+      "translate": [
+         "meyisihkan",
+         "menyelamatkan"
+      ],
+      "synonym": ["Allocate"],
+      "explanation": "spare juga berarti menyediakan sesuatu yang berlebih, atau juga berarti \nmenyelamatkan atau menghindarkan seseorang dari sesuatu. \n\ncontoh: \ncan you spare a few minutes to talk?\n(Bisakah kamu menyisihkan beberapa menit untuk berbicara?) \n\nShe spared him from futher embarrassment.\n(Dia menyelamatkannya dari rasa malu yang lebih besar.)",
+      "type": "Verb"
+   },
+   {
+      "id": 182,
+      "word": "spare",
+      "translate": [
+         "barang cadangan",
+         "sisa"
+      ],
+      "synonym": ["backup"],
+      "explanation": "Contoh kalimat: \n\nHe has a spare in case the original breaks.\n(Dia punya cadangan jika yang asli rusak.)",
+      "type": "Noun"
+   },
+   {
+      "id": 183,
+      "word": "reassemble",
+      "translate": [
+         "mengumpulkan kembali",
+         "menyusun kembali"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 184,
+      "word": "receive",
+      "translate": ["menerima"],
+      "synonym": [
+         "accept",
+         "admit"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 185,
+      "word": "consider",
+      "translate": ["mempertimbangkan"],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 186,
+      "word": "approximate",
+      "translate": [
+         "perkiraan",
+         "kurang lebih",
+         "kira-kira"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 187,
+      "word": "figure",
+      "translate": ["angka"],
+      "synonym": [
+         "number",
+         "rate",
+         "digit"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 188,
+      "word": "overwhelming",
+      "translate": [
+         "sangat banyak",
+         "berlimpah-limpah",
+         "begitu banyak"
+      ],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 189,
+      "word": "comprehend",
+      "translate": [
+         "memahami",
+         "mengerti"
+      ],
+      "synonym": [
+         "understand",
+         "grasp",
+         "perceive",
+         "fathom"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 190,
+      "word": "enormous",
+      "translate": ["sangat besar"],
+      "synonym": ["huge"],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 191,
+      "word": "annually",
+      "translate": ["setiap tahun"],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adverb"
+   },
+   {
+      "id": 192,
+      "word": "refer",
+      "translate": ["merujuk"],
+      "synonym": [],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 193,
+      "word": "trustworthiness",
+      "translate": [
+         "dapat dipercaya",
+         "keandalan"
+      ],
+      "synonym": [
+         "reliability",
+         "dependability",
+         "honesty",
+         "integrity"
+      ],
+      "explanation": "Trustworthiness adalah kata benda (noun) yang menggambarkan sifat atau kualitas.",
+      "type": "Noun"
+   },
+   {
+      "id": 194,
+      "word": "significant",
+      "translate": ["penting"],
+      "synonym": [
+         "important",
+         "necessary",
+         "notable",
+         "prominent"
+      ],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 195,
+      "word": "derived",
+      "translate": ["berasal dari"],
+      "synonym": [],
+      "explanation": "\nKata 'derived' adalah bentuk past tense dan past participle dari kata kerja 'derive',\nyang berarti berasal dari atau diperoleh dari sesuatu. Ini digunakan untuk menunjukkan\nbahwa sesuatu diperoleh atau diambil dari sumber lain.",
+      "type": "Verb"
+   },
+   {
+      "id": 196,
+      "word": "derived",
+      "translate": ["yang berasal"],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 197,
+      "word": "available",
+      "translate": ["tersedia"],
+      "synonym": [],
+      "explanation": "",
+      "type": "Adjective"
+   },
+   {
+      "id": 198,
+      "word": "chunk",
+      "translate": ["potongan-potongan"],
+      "synonym": [
+         "piece",
+         "segment"
+      ],
+      "explanation": "",
+      "type": "Noun"
+   },
+   {
+      "id": 199,
+      "word": "employ",
+      "translate": ["mempekerjakan"],
+      "synonym": ["engage"],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 200,
+      "word": "divide",
+      "translate": ["membagi"],
+      "synonym": [
+         "split",
+         "share",
+         "distribute",
+         "cut",
+         "partition"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 201,
+      "word": "instead",
+      "translate": ["alih-alih"],
+      "synonym": [],
+      "explanation": "Contoh kalimat:\n\n1. Mengganti pilihan:\n\nI didn't go to the party; I stayed home instead.\n(Saya tidak pergi ke pesta; saya tinggal di rumah sebagai gantinya.)\n\n2. Mengambil tindakan lain:\n\nInstead of driving, she took the bus to work.\n(Alih-alih mengemudi, dia naik bus ke tempat kerja.)\n\n3. Memberikan saran alternatif:\n\nYou should call instead of sending an email.\n(Kamu sebaiknya menelepon daripada mengirim email.)",
+      "type": "Adverb"
+   },
+   {
+      "id": 202,
+      "word": "divert",
+      "translate": ["mengalihkan"],
+      "synonym": [
+         "switch",
+         "shift",
+         "turn",
+         "distract"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 203,
+      "word": "deflect",
+      "translate": [
+         "membelokkan",
+         "mengelak"
+      ],
+      "synonym": [
+         "divert",
+         "turn",
+         "swerve"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   },
+   {
+      "id": 204,
+      "word": "distort",
+      "translate": ["memutarbalikkan"],
+      "synonym": [
+         "contort",
+         "garble"
+      ],
+      "explanation": "",
+      "type": "Verb"
+   }
+]

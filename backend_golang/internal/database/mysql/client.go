@@ -1,8 +1,7 @@
-package database
+package mysql
 
 import (
 	"database/sql"
-	"fmt"
 	"time"
 
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/config"
@@ -10,16 +9,7 @@ import (
 )
 
 func NewMySQL(cfg *config.MySQLConfig) (*sql.DB, error) {
-	dsn := fmt.Sprintf(
-		"%s:%s@tcp(%s:%s)/%s?parseTime=true",
-		cfg.DBUser,
-		cfg.DBPassword,
-		cfg.DBHost,
-		cfg.DBPort,
-		cfg.DBName,
-	)
-
-	db, err := sql.Open("mysql", dsn)
+	db, err := sql.Open("mysql", cfg.DSN())
 
 	db.SetMaxOpenConns(25)
 	db.SetMaxIdleConns(10)

@@ -1,6 +1,7 @@
 package config
 
 import (
+	"fmt"
 	"os"
 	"strconv"
 
@@ -37,6 +38,17 @@ type Config struct {
 	MongoDb MongoConfig
 	Redis 	RedisConfig
 	Server	ServerConfig
+}
+
+func (cfg *MySQLConfig) DSN() string {
+	return fmt.Sprintf(
+		"%s:%s@tcp(%s:%s)/%s?parseTime=true",
+		cfg.DBUser,
+		cfg.DBPassword,
+		cfg.DBHost,
+		cfg.DBPort,
+		cfg.DBName,
+	)
 }
 
 func Load() (*Config, error) {
