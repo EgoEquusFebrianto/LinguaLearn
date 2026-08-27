@@ -7,6 +7,7 @@ import (
 
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/config"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/database/mongodb"
+	"github.com/EgoEquusFebrianto/LinguaLearn/internal/database/mysql"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/migration/mongodb"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/seed"
 )
@@ -16,6 +17,18 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to load config: %v", err)
 	}
+
+	//MySQL
+	db, err := mysql.NewMySQL(&cfg.MySQL)
+	if err != nil {
+		log.Fatal("Failed to connect to MySQL: ", err)
+	}
+	defer db.Close()
+
+	if err := seed.SeedMySQL(db); err != nil {
+		log.Fatal("Failed to seed MySQL: ", err)
+	}
+	log.Println("MySQL seed completed successfully.")
 
 	// MongoDB
 	client, err := mongodb.NewMongoDb(&cfg.MongoDb)

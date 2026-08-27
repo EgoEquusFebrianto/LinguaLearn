@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/config"
-	_ "github.com/go-sql-driver/mysql"
+	// _ "github.com/go-sql-driver/mysql"
 )
 
 func NewMySQL(cfg *config.MySQLConfig) (*sql.DB, error) {

@@ -11,7 +11,7 @@ import (
 	"golang.org/x/crypto/argon2"
 )
 
-type PassowrdHasher struct {
+type PasswordHasher struct {
 	memory      uint32
 	iterations  uint32
 	parallelism uint8
@@ -19,8 +19,8 @@ type PassowrdHasher struct {
 	saltLength  uint32
 }
 
-func NewPasswordHasher() *PassowrdHasher {
-	return &PassowrdHasher{
+func NewPasswordHasher() *PasswordHasher {
+	return &PasswordHasher{
 		memory:      64 * 1024,
 		iterations:  3,
 		parallelism: 2,
@@ -29,7 +29,7 @@ func NewPasswordHasher() *PassowrdHasher {
 	}
 }
 
-func (p *PassowrdHasher) Hash(password string) (string, error) {
+func (p *PasswordHasher) Hash(password string) (string, error) {
 	if password == "" {
 		return "", errors.New("Password cannot be empty.")
 	}
@@ -62,7 +62,7 @@ func (p *PassowrdHasher) Hash(password string) (string, error) {
 	), nil
 }
 
-func (p *PassowrdHasher) Verify(
+func (p *PasswordHasher) Verify(
 	passowrd string,
 	encodedHash string,
 ) error {

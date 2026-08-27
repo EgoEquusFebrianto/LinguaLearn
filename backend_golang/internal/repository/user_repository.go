@@ -9,17 +9,34 @@ import (
 	"gorm.io/gorm"
 )
 
-type UserRepository struct {
+type UserRepository interface {
+	FindByEmail(
+		ctx context.Context,
+		email string,
+	) (*models.User, error)
+
+	FindByID (
+		ctx context.Context,
+		id uint64,
+	) (*models.User, error)
+
+	Create(
+		ctx context.Context,
+		user *models.User,
+	) error
+}
+
+type userRepository struct {
 	db *gorm.DB
 }
 
-func NewUserRepository(db *gorm.DB) *UserRepository {
-	return &UserRepository {
+func NewUserRepository(db *gorm.DB) UserRepository {
+	return &userRepository{
 		db: db,
 	}
 }
 
-func (r *UserRepository) FindByEmail (
+func (r *userRepository) FindByEmail (
 	ctx context.Context,
 	email string,
 ) (*models.User, error) {
@@ -42,7 +59,7 @@ func (r *UserRepository) FindByEmail (
 	return &user, nil
 }
 
-func (r *UserRepository) FindByID(
+func (r *userRepository) FindByID(
 	ctx context.Context,
 	id uint64,
 ) (*models.User, error) {
@@ -64,7 +81,7 @@ func (r *UserRepository) FindByID(
 	return &user, nil
 }
 
-func (r *UserRepository) Create(
+func (r *userRepository) Create(
 	ctx context.Context,
 	user *models.User,
 ) error {

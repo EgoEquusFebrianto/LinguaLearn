@@ -10,8 +10,12 @@ import (
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/database/mongodb"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/database/mysql"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/database/redis"
-	"github.com/EgoEquusFebrianto/LinguaLearn/internal/helper"
+	"github.com/EgoEquusFebrianto/LinguaLearn/internal/deps"
+	"github.com/EgoEquusFebrianto/LinguaLearn/internal/handler"
+	"github.com/EgoEquusFebrianto/LinguaLearn/internal/repository"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/route"
+	"github.com/EgoEquusFebrianto/LinguaLearn/internal/security"
+	"github.com/EgoEquusFebrianto/LinguaLearn/internal/service"
 )
 
 func Run() error {
@@ -54,11 +58,32 @@ func Run() error {
 		return err
 	}
 
-	deps := &helper.Dependencies{
+	userRepository := repository.NewUserRepository(gormDB)
+
+	jwtService := security.NewJWTService(
+		cfg.JWT.AccessSecret,
+		time.Duration(cfg.JWT.AccessExpiresMinute) * time.Minute,
+	)
+
+	passwordHasher := security.NewPasswordHasher()
+	authService := service.NewauthService(
+		userRepository,
+		passwordHasher,
+		jwtService,
+		redisClient,
+	)
+
+	authHandler := handler.NewAuthHandler(authService)
+
+	deps := &deps.Dependencies{
 		MySQL: db,
 		MongoDB: mongoClient,
 		Redis: redisClient,
 		GORM: gormDB,
+		UserRepository: userRepository,
+		AuthService: authService,
+		AuthHandler: authHandler,
+		JwtService: jwtService,
 	}
 
 	router := route.NewRouter(deps)

@@ -33,11 +33,18 @@ type ServerConfig struct {
 	Address		string
 }
 
+type JwtConfig struct {
+	AccessSecret 		string
+	AccessExpiresMinute int
+	RefreshExpiresdays 	int
+}
+
 type Config struct {
 	MySQL 	MySQLConfig
 	MongoDb MongoConfig
 	Redis 	RedisConfig
 	Server	ServerConfig
+	JWT		JwtConfig
 }
 
 func (cfg *MySQLConfig) DSN() string {
@@ -59,6 +66,8 @@ func Load() (*Config, error) {
 	}
 
 	redisDb, _ := strconv.Atoi(os.Getenv("REDIS_DB"))
+	minute, _ := strconv.Atoi(os.Getenv("JWT_ACCESS_EXPIRES_MINUTES"))
+	expiration, _ := strconv.Atoi(os.Getenv("JWT_REFRESH_EXPIRES_DAYS"))
 
 	return &Config{
 		MySQL: MySQLConfig{
@@ -81,6 +90,11 @@ func Load() (*Config, error) {
 		},
 		Server: ServerConfig{
 			Address: os.Getenv("SERVER_ADDRESS"),
+		},
+		JWT: JwtConfig{
+			AccessSecret: os.Getenv("JWT_ACCESS_SECRET"),
+			AccessExpiresMinute: minute,
+			RefreshExpiresdays: expiration,
 		},
 	}, nil
 }
