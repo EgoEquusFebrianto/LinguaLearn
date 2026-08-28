@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"net/http"
+	"time"
 
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/helper"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/service"
@@ -29,6 +30,11 @@ type registerRequest struct {
 type loginRequest struct {
 	Email    string `json:"email"`
 	Password string `json:"password"`
+}
+
+type loginResponse struct {
+    AccessToken string      `json:"access_token"`
+    User        interface{} `json:"user"`
 }
 
 type userResponse struct {
@@ -102,7 +108,7 @@ func (h *AuthHandler) Login(
 		return
 	}
 
-	result, err := h.authService.Login(
+	response, err := h.authService.Login(
 		r.Context(),
 		service.LoginRequest{
 			Email: req.Email,
@@ -119,9 +125,108 @@ func (h *AuthHandler) Login(
 		return
 	}
 
+	http.SetCookie(
+		w,
+		&http.Cookie{
+			Name: "refresh_token",
+			Value: response.RefreshToken,
+			Path: "/api/v1/auth",
+			HttpOnly: true,
+			Secure: false,
+			SameSite: http.SameSiteLaxMode,
+			MaxAge: int((7 * 24 * time.Hour).Seconds()),
+		},
+	)
+
 	helper.JSON(
 		w,
 		http.StatusOK,
-		result,
+		loginResponse{
+			AccessToken: response.AccessToken,
+			User: response.User,
+		},
+	)
+}
+
+func (h *AuthHandler) Refresh (
+	w http.ResponseWriter,
+	r *http.Request,
+) {
+	cookie, err := r.Cookie("refresh_token")
+	if err != nil {
+		helper.Error(
+			w,
+			http.StatusUnauthorized,
+			"Refresh token required.",
+		)
+		return
+	}
+
+	response, err := h.authService.Refresh(
+		r.Context(),
+		cookie.Value,
+	)
+	if err != nil {
+		helper.Error(
+			w,
+			http.StatusUnauthorized,
+			"Invalid or Expired refresh token.",
+		)
+	}
+
+	http.SetCookie(
+		w,
+		&http.Cookie{
+			Name: "refresh_token",
+			Value: response.RefreshToken,
+			Path: "/api/v1/auth",
+			HttpOnly: true,
+			Secure: false,
+			SameSite: http.SameSiteLaxMode,
+			MaxAge: int((7 * 24 * time.Hour).Seconds()),
+		},
+	)
+
+	helper.JSON(
+		w,
+		http.StatusOK,
+		loginResponse{
+			AccessToken: response.AccessToken,
+			User: response.User,
+		},
+	)
+}
+
+func (h *AuthHandler) Logout(
+	w http.ResponseWriter,
+	r *http.Request,
+) {
+	cookie, err := r.Cookie("refresh_token")
+	if err == nil {
+		_ = h.authService.Logout(
+			r.Context(),
+			cookie.Value,
+		)
+	}
+
+	http.SetCookie(
+		w,
+		&http.Cookie{
+			Name: "refresh_token",
+			Value: "",
+			Path: "/api/v1/auth",
+			HttpOnly: true,
+			Secure: false,
+			SameSite: http.SameSiteLaxMode,
+			MaxAge: -1,
+		},
+	)
+
+	helper.JSON(
+		w,
+		http.StatusOK,
+		map[string]string{
+			"message": "Logged out successfully.",
+		},
 	)
 }

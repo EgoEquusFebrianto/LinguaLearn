@@ -4,19 +4,24 @@ import (
 	"context"
 	"errors"
 	"strings"
-	"time"
 
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/models"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/repository"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/security"
-	"github.com/redis/go-redis/v9"
 	"gorm.io/gorm"
 )
 
 type RegisterRequest struct {
-	FullName string
-	Email    string
-	Password string
+	FullName string `json:"full_name"`
+	Email    string `json:"email"`
+	Password string `json:"password"`
+}
+
+type UserProfile struct {
+    ID       uint64 `json:"id"`
+    FullName string `json:"full_name"`
+    Email    string `json:"email"`
+    Role     string `json:"role"`
 }
 
 type LoginRequest struct {
@@ -25,28 +30,29 @@ type LoginRequest struct {
 }
 
 type LoginResponse struct {
-	AccessToken  string
-	RefreshToken string
+	AccessToken  	string
+	RefreshToken  	string
+	User 			UserProfile
 }
 
 type AuthService struct {
-	userRepository 	repository.UserRepository
-	passwordHasher 	*security.PasswordHasher
-	jwtService 		*security.JWTService
-	redis			*redis.Client
+	userRepository 		repository.UserRepository
+	passwordHasher 		*security.PasswordHasher
+	jwtService 			*security.JWTService
+	refreshTokenService	*RefreshTokenService
 }
 
 func NewauthService(
 	userRepository repository.UserRepository,
 	passwordHasher *security.PasswordHasher,
 	jwtService *security.JWTService,
-	redis *redis.Client,
+	refreshTokenService *RefreshTokenService,
 ) *AuthService {
 	return &AuthService{
 		userRepository: userRepository,
 		passwordHasher: passwordHasher,
 		jwtService: jwtService,
-		redis: redis,
+		refreshTokenService: refreshTokenService,
 	}
 }
 
@@ -135,20 +141,10 @@ func (s *AuthService) Login(
 		return nil, err
 	}
 
-	refreshToken, refreshTokenHash, err := security.GenerateRefreshToken()
-	if err != nil {
-		return nil, err
-	}
-
-	key := "refresh:" + refreshTokenHash
-
-	err = s.redis.Set(
+	refreshToken, err := s.refreshTokenService.Create(
 		ctx,
-		key,
 		user.ID,
-		7 * 24 * time.Hour,
-	).Err()
-
+	)
 	if err != nil {
 		return nil, err
 	}
@@ -156,5 +152,72 @@ func (s *AuthService) Login(
 	return &LoginResponse{
 		AccessToken: accessToken,
 		RefreshToken: refreshToken,
+        User: UserProfile{
+            ID:       user.ID,
+            FullName: user.FullName,
+            Email:    user.Email,
+            Role:     user.Role.Name,
+        },
 	}, nil
+}
+
+func (s *AuthService) Refresh(
+	ctx context.Context,
+	refreshToken string,
+) (*LoginResponse, error) {
+	userID, err := s.refreshTokenService.GetUserID(
+		ctx,
+		refreshToken,
+	)
+	if err != nil {
+		return nil, err
+	}
+
+	user, err := s.userRepository.FindByID(ctx, userID)
+	if err != nil {
+		return nil, err
+	}
+
+	accessToken, err := s.jwtService.GenerateAccessToken(
+		user.ID,
+		user.Role.Name,
+	)
+	if err != nil {
+		return nil, err
+	}
+
+	// Refresh Token Rotation
+	err = s.refreshTokenService.Delete(
+		ctx,
+		refreshToken,
+	)
+	if err != nil {
+		return nil, err
+	}
+
+	newRefreshToken, err := s.refreshTokenService.Create(
+		ctx,
+		user.ID,
+	)
+
+	return &LoginResponse{
+		AccessToken: accessToken,
+		RefreshToken: newRefreshToken,
+		User: UserProfile{
+			ID: userID,
+			FullName: user.FullName,
+			Email: user.Email,
+			Role: user.Role.Name,
+		},
+	}, nil
+}
+
+func (s *AuthService) Logout(
+	ctx context.Context,
+	refreshToken string,
+) error {
+	return s.refreshTokenService.Delete(
+		ctx,
+		refreshToken,
+	)
 }

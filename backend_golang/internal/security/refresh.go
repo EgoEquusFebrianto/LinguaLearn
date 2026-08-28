@@ -20,3 +20,9 @@ func GenerateRefreshToken() (string, string, error) {
 
 	return token, tokenHash, nil
 }
+
+func HashRefreshToken(token string) string {
+	hash := sha256.Sum256([]byte(token))
+
+	return base64.RawURLEncoding.EncodeToString(hash[:])
+}

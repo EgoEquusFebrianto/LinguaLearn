@@ -18,6 +18,8 @@ func NewRouter(deps *deps.Dependencies) *chi.Mux {
 	r.Route("/api/v1/auth", func(r chi.Router) {
 		r.Post("/register", authHandler.Register)
 		r.Post("/login", authHandler.Login)
+		r.Post("/logout", authHandler.Logout)
+		r.Post("/refresh", authHandler.Refresh)
 	})
 
 	r.Route("/api/v1", func(r chi.Router) {
