@@ -1,27 +1,35 @@
 import React from 'react'
-import { FaLock, FaUser } from 'react-icons/fa'
-import './login-page.css'
+import { FaLock, FaHome } from 'react-icons/fa'
+import { IoIosMail } from "react-icons/io";
+import './page-layout.css'
+import { Link } from 'react-router-dom';
 
 export const LoginPage = () => {
   return (
     <div className='container'>
         <form>
+            <Link to="/" className="home-button">
+                <FaHome />
+            </Link>
             <h1>Login</h1>
             <div className='input-box'>
                 <input 
-                    type='text' 
-                    placeholder='Username'
+                    type='email'
+                    autoComplete="off"
+                    placeholder=""
                     required
                 />
-                <FaUser className='icon'/>
+                <label>Email</label>
+                <IoIosMail size={20} className='icon'/>
             </div>
 
             <div className='input-box'>
                 <input 
-                    type='password' 
-                    placeholder='Password'
+                    type='password'
+                    placeholder=""
                     required
                 />
+                <label>Password</label>
                 <FaLock className='icon'/>
             </div>
 
@@ -37,7 +45,7 @@ export const LoginPage = () => {
 
             <div className='register-link'>
                 <p>
-                    Don't have an account? <a href='#'>Register</a>
+                    Don't have an account? <Link to='/register'>Register</Link>
                 </p>
             </div>
         </form>

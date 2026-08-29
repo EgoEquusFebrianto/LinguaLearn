@@ -1,11 +1,11 @@
 import React from 'react'
 import "./authentication.css"
-import { LoginPage } from './login/login-page'
+import { Outlet } from 'react-router-dom'
 
 export const AuthenticationPage = () => {
   return (
     <div className='wrapper'>
-        <LoginPage />
+        <Outlet />
     </div>
   )
 }
