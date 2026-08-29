@@ -6,6 +6,8 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/EgoEquusFebrianto/LinguaLearn/internal/data/request"
+	"github.com/EgoEquusFebrianto/LinguaLearn/internal/data/response"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/helper"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/service"
 	"gorm.io/gorm"
@@ -21,30 +23,8 @@ func NewAuthHandler(authService *service.AuthService) *AuthHandler {
 	}
 }
 
-type registerRequest struct {
-	FullName string	`json:"full_name"`
-	Email    string	`json:"email"`
-	Password string	`json:"password"`
-}
-
-type loginRequest struct {
-	Email    string `json:"email"`
-	Password string `json:"password"`
-}
-
-type loginResponse struct {
-    AccessToken string      `json:"access_token"`
-    User        interface{} `json:"user"`
-}
-
-type userResponse struct {
-	ID       uint64 `json:"id"`
-	FullName string `json:"full_name"`
-	Email    string `json:"email"`
-}
-
 func (h *AuthHandler) Register(w http.ResponseWriter, r *http.Request) {
-	var req registerRequest
+	var req request.RegisterRequest
 
 	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
 		helper.Error(
@@ -56,7 +36,7 @@ func (h *AuthHandler) Register(w http.ResponseWriter, r *http.Request) {
 
 	user, err := h.authService.Register(
 		r.Context(),
-		service.RegisterRequest{
+		request.RegisterRequest{
 			FullName: req.FullName,
 			Email: req.Email,
 			Password: req.Password,
@@ -84,7 +64,7 @@ func (h *AuthHandler) Register(w http.ResponseWriter, r *http.Request) {
 	helper.JSON(
 		w,
 		http.StatusCreated,
-		userResponse{
+		response.UserResponse{
 			ID:       user.ID,
 			FullName: user.FullName,
 			Email:    user.Email,
@@ -96,7 +76,7 @@ func (h *AuthHandler) Login(
 	w http.ResponseWriter,
 	r *http.Request,
 ) {
-	var req loginRequest
+	var req request.LoginRequest
 
 	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
 		helper.Error(
@@ -108,11 +88,12 @@ func (h *AuthHandler) Login(
 		return
 	}
 
-	response, err := h.authService.Login(
+	responseService, err := h.authService.Login(
 		r.Context(),
-		service.LoginRequest{
+		request.LoginRequest{
 			Email: req.Email,
 			Password: req.Password,
+			RememberMe: req.RememberMe,
 		},
 	)
 	if err != nil {
@@ -125,25 +106,27 @@ func (h *AuthHandler) Login(
 		return
 	}
 
-	http.SetCookie(
-		w,
-		&http.Cookie{
-			Name: "refresh_token",
-			Value: response.RefreshToken,
-			Path: "/api/v1/auth",
-			HttpOnly: true,
-			Secure: false,
-			SameSite: http.SameSiteLaxMode,
-			MaxAge: int((7 * 24 * time.Hour).Seconds()),
-		},
-	)
+	cookie := &http.Cookie{
+		Name: "refresh_token",
+		Value: responseService.RefreshToken,
+		Path: "/api/v1/auth",
+		HttpOnly: true,
+		Secure: false,
+		SameSite: http.SameSiteLaxMode,	
+	}
+
+	if req.RememberMe {
+		cookie.MaxAge = int((7 * 24 * time.Hour).Seconds())
+	}
+
+	http.SetCookie(w, cookie)
 
 	helper.JSON(
 		w,
 		http.StatusOK,
-		loginResponse{
-			AccessToken: response.AccessToken,
-			User: response.User,
+		response.LoginResponse{
+			AccessToken: responseService.AccessToken,
+			User: responseService.User,
 		},
 	)
 }
@@ -162,7 +145,7 @@ func (h *AuthHandler) Refresh (
 		return
 	}
 
-	response, err := h.authService.Refresh(
+	responseService, err := h.authService.Refresh(
 		r.Context(),
 		cookie.Value,
 	)
@@ -174,25 +157,27 @@ func (h *AuthHandler) Refresh (
 		)
 	}
 
-	http.SetCookie(
-		w,
-		&http.Cookie{
-			Name: "refresh_token",
-			Value: response.RefreshToken,
-			Path: "/api/v1/auth",
-			HttpOnly: true,
-			Secure: false,
-			SameSite: http.SameSiteLaxMode,
-			MaxAge: int((7 * 24 * time.Hour).Seconds()),
-		},
-	)
+	cookieRef := &http.Cookie{
+		Name: "refresh_token",
+		Value: responseService.RefreshToken,
+		Path: "/api/v1/auth",
+		HttpOnly: true,
+		Secure: false,
+		SameSite: http.SameSiteLaxMode,
+	}
+
+	if responseService.RememberMe {
+		cookieRef.MaxAge = int((7 * 24 * time.Hour).Seconds())
+	}
+	
+	http.SetCookie(w, cookieRef)
 
 	helper.JSON(
 		w,
 		http.StatusOK,
-		loginResponse{
-			AccessToken: response.AccessToken,
-			User: response.User,
+		response.LoginResponse{
+			AccessToken: responseService.AccessToken,
+			User: responseService.User,
 		},
 	)
 }

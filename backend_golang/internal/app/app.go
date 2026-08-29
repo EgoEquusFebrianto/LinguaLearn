@@ -65,14 +65,14 @@ func Run() error {
 		time.Duration(cfg.JWT.AccessExpiresMinute) * time.Minute,
 	)
 
-	refreshToeknService := service.NewRefreshTokenService(redisClient)
+	refreshTokenService  := service.NewRefreshTokenService(redisClient)
 
 	passwordHasher := security.NewPasswordHasher()
-	authService := service.NewauthService(
+	authService := service.NewAuthService(
 		userRepository,
 		passwordHasher,
 		jwtService,
-		refreshToeknService,
+		refreshTokenService,
 	)
 
 	authHandler := handler.NewAuthHandler(authService)

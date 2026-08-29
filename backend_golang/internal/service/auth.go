@@ -5,35 +5,13 @@ import (
 	"errors"
 	"strings"
 
+	"github.com/EgoEquusFebrianto/LinguaLearn/internal/data/request"
+	"github.com/EgoEquusFebrianto/LinguaLearn/internal/data/response"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/models"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/repository"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/security"
 	"gorm.io/gorm"
 )
-
-type RegisterRequest struct {
-	FullName string `json:"full_name"`
-	Email    string `json:"email"`
-	Password string `json:"password"`
-}
-
-type UserProfile struct {
-    ID       uint64 `json:"id"`
-    FullName string `json:"full_name"`
-    Email    string `json:"email"`
-    Role     string `json:"role"`
-}
-
-type LoginRequest struct {
-	Email    string
-	Password string
-}
-
-type LoginResponse struct {
-	AccessToken  	string
-	RefreshToken  	string
-	User 			UserProfile
-}
 
 type AuthService struct {
 	userRepository 		repository.UserRepository
@@ -42,7 +20,7 @@ type AuthService struct {
 	refreshTokenService	*RefreshTokenService
 }
 
-func NewauthService(
+func NewAuthService(
 	userRepository repository.UserRepository,
 	passwordHasher *security.PasswordHasher,
 	jwtService *security.JWTService,
@@ -58,7 +36,7 @@ func NewauthService(
 
 func (s *AuthService) Register(
 	ctx context.Context,
-	req RegisterRequest,
+	req request.RegisterRequest,
 ) (*models.User, error) {
 	fullName := strings.TrimSpace((req.FullName))
 	email := strings.ToLower(strings.TrimSpace(req.Email))
@@ -104,8 +82,8 @@ func (s *AuthService) Register(
 
 func (s *AuthService) Login(
 	ctx context.Context,
-	req LoginRequest,
-) (*LoginResponse, error ) {
+	req request.LoginRequest,
+) (*response.LoginServiceResponse, error ) {
 	email := strings.ToLower(strings.TrimSpace(req.Email))
 
 	if email == "" {
@@ -144,15 +122,16 @@ func (s *AuthService) Login(
 	refreshToken, err := s.refreshTokenService.Create(
 		ctx,
 		user.ID,
+		req.RememberMe,
 	)
 	if err != nil {
 		return nil, err
 	}
 
-	return &LoginResponse{
+	return &response.LoginServiceResponse{
 		AccessToken: accessToken,
 		RefreshToken: refreshToken,
-        User: UserProfile{
+        User: response.UserProfile{
             ID:       user.ID,
             FullName: user.FullName,
             Email:    user.Email,
@@ -164,8 +143,8 @@ func (s *AuthService) Login(
 func (s *AuthService) Refresh(
 	ctx context.Context,
 	refreshToken string,
-) (*LoginResponse, error) {
-	userID, err := s.refreshTokenService.GetUserID(
+) (*response.RefreshServiceResponse, error) {
+	userID, remember_me, err := s.refreshTokenService.GetUserData(
 		ctx,
 		refreshToken,
 	)
@@ -198,17 +177,19 @@ func (s *AuthService) Refresh(
 	newRefreshToken, err := s.refreshTokenService.Create(
 		ctx,
 		user.ID,
+		remember_me,
 	)
 
-	return &LoginResponse{
+	return &response.RefreshServiceResponse{
 		AccessToken: accessToken,
 		RefreshToken: newRefreshToken,
-		User: UserProfile{
+		User: response.UserProfile{
 			ID: userID,
 			FullName: user.FullName,
 			Email: user.Email,
 			Role: user.Role.Name,
 		},
+		RememberMe: remember_me,
 	}, nil
 }
 

@@ -1,17 +1,16 @@
-import React from 'react'
-import { AuthenticationPage } from './component/authentication/authentication'
 import "./App.css"
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
-import { LoginPage } from './component/authentication/pages/login-page'
-import { RegisterPage } from './component/authentication/pages/register-page'
-import { Home } from './page/home'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { AuthenticationPage } from "./page/authentication/authentication"
+import { LoginPage } from './component/authentication/login-page' 
+import { RegisterPage } from './component/authentication/register-page' 
+import { HomePublic } from "./page/home-public/home-public"
 
-function AppContent() {
+function AppContent() {  
   return(
     <div className='app'>
       <div className='page-context'>
         <Routes>
-          <Route index element={<Home />}/>
+          <Route index element={<HomePublic />}/>
 
           <Route element={<AuthenticationPage />}>
             <Route path='login' element={<LoginPage />} />

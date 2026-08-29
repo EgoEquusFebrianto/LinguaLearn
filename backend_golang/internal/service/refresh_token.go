@@ -27,6 +27,7 @@ func NewRefreshTokenService(
 func (s *RefreshTokenService) Create(
 	ctx context.Context,
 	UserID uint64,
+	RememberMe bool,
 ) (string, error) {
 	token, tokenHash, err := security.GenerateRefreshToken()
 	if err != nil {
@@ -35,12 +36,29 @@ func (s *RefreshTokenService) Create(
 
 	key := "refresh:" + tokenHash
 	
-	err = s.redis.Set(
-		ctx,
-		key,
-		strconv.FormatUint(UserID, 10),
-		refreshTokenTTL,
-	).Err()
+	_, err = s.redis.TxPipelined(ctx, func(pipe redis.Pipeliner) error {
+		pipe.HSet(
+			ctx,
+			key,
+			"user_id", UserID,
+			"remember_me", RememberMe,
+		)
+
+		pipe.Expire(
+			ctx,
+			key,
+			refreshTokenTTL,
+		)
+
+		return nil
+	})
+	
+	// err = s.redis.Set(
+	// 	ctx,
+	// 	key,
+	// 	strconv.FormatUint(UserID, 10),
+	// 	refreshTokenTTL,
+	// ).Err()
 
 	if err != nil {
 		return "", err
@@ -49,32 +67,43 @@ func (s *RefreshTokenService) Create(
 	return token, nil
 }
 
-func (s *RefreshTokenService) GetUserID(
+func (s *RefreshTokenService) GetUserData(
 	ctx context.Context,
 	token string,
-) (uint64, error) {
+) (uint64, bool, error) {
 	if token == "" {
-		return 0, errors.New("Refresh token is required.")
+		return 0, false, errors.New("Refresh token is required.")
 	}
 
 	tokenHash := security.HashRefreshToken(token)
 	key := "refresh:" + tokenHash
 
-	value, err := s.redis.Get(ctx, key).Result()
-	if err != nil {
-		if errors.Is(err, redis.Nil) {
-			return 0, errors.New("Invalid or Expired Refresh Token.")
-		}
+	// value, err := s.redis.Get(ctx, key).Result()
+	// if err != nil {
+	// 	if errors.Is(err, redis.Nil) {
+	// 		return 0, false, errors.New("Invalid or Expired Refresh Token.")
+	// 	}
 
-		return 0, err
+	// 	return 0, false, err
+	// }
+
+	value, err := s.redis.HGetAll(ctx, key).Result()
+	if err != nil {
+		return 0, false, err
+	}
+	
+	if len(value) == 0 {
+		return 0, false, errors.New("Invalid or Expired Refresh Token.")
 	}
 
-	userId, err := strconv.ParseUint(value, 10, 64)
+	userId, err := strconv.ParseUint(value["user_id"], 10, 64)
 	if err != nil {
-		return 0, errors.New("Invalid refresh token data.")
+		return 0, false, errors.New("Invalid refresh token data.")
 	}
 
-	return userId, nil
+	rememberMe := value["remember_me"] == "1"
+
+	return userId, rememberMe, nil
 }
 
 func (s *RefreshTokenService) Delete(
