@@ -30,7 +30,9 @@ export const AuthContextProvider = ({children}) => {
         };
 
         } catch (error) {
-            console.error("Login Failed: ", error);
+            console.log("Failed Login: ", error)
+
+            throw error;
         }
     };
 
@@ -59,6 +61,17 @@ export const AuthContextProvider = ({children}) => {
         }, []
     );
 
+    const register = async (formData) => {
+        try {
+            await API.post("/auth/register", formData);
+
+        } catch (error) {
+            console.error("Failed Register", error)
+
+            throw error;
+        }
+    };
+
     const logout = async () => {
         try {
             await API.post("/auth/logout");
@@ -86,6 +99,7 @@ export const AuthContextProvider = ({children}) => {
         loading,
         login,
         refresh,
+        register,
         logout,
         isAuthenticated: !!user,
     };

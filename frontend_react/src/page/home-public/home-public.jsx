@@ -1,4 +1,3 @@
-import "./home-public.css";
 import { FaBook, FaPuzzlePiece, FaSortAlphaDown, FaKeyboard } from 'react-icons/fa';
 import { NavbarPublic } from "../../component/public/navbar-public";
 import { FeatureCardPublic } from "../../component/public/feature-card-public";

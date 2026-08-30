@@ -10,6 +10,7 @@ import (
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/data/response"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/helper"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/service"
+	"github.com/EgoEquusFebrianto/LinguaLearn/internal/validation"
 	"gorm.io/gorm"
 )
 
@@ -32,15 +33,22 @@ func (h *AuthHandler) Register(w http.ResponseWriter, r *http.Request) {
 			http.StatusBadRequest,
 			"Invalid request body.",
 		)
+
+		return
 	}
 
-	user, err := h.authService.Register(
+	if err := validation.ValidateRegisterRequest(&req); err != nil {
+		helper.Error(
+			w,
+			http.StatusBadRequest,
+			err.Error(),
+		)
+		return
+	}
+
+	err := h.authService.Register(
 		r.Context(),
-		request.RegisterRequest{
-			FullName: req.FullName,
-			Email: req.Email,
-			Password: req.Password,
-		},
+		req,
 	)
 	if err != nil {
 		switch {
@@ -64,10 +72,8 @@ func (h *AuthHandler) Register(w http.ResponseWriter, r *http.Request) {
 	helper.JSON(
 		w,
 		http.StatusCreated,
-		response.UserResponse{
-			ID:       user.ID,
-			FullName: user.FullName,
-			Email:    user.Email,
+		map[string]string{
+			"message": "Register Successful, Please Login...",
 		},
 	)
 }
@@ -88,13 +94,18 @@ func (h *AuthHandler) Login(
 		return
 	}
 
+	if err := validation.ValidateLoginRequest(&req); err != nil {
+		helper.Error(
+			w,
+			http.StatusBadRequest,
+			err.Error(),
+		)
+		return
+	}
+
 	responseService, err := h.authService.Login(
 		r.Context(),
-		request.LoginRequest{
-			Email: req.Email,
-			Password: req.Password,
-			RememberMe: req.RememberMe,
-		},
+		req,
 	)
 	if err != nil {
 		helper.Error(
@@ -155,6 +166,7 @@ func (h *AuthHandler) Refresh (
 			http.StatusUnauthorized,
 			"Invalid or Expired refresh token.",
 		)
+		return
 	}
 
 	cookieRef := &http.Cookie{

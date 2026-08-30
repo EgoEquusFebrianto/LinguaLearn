@@ -6,8 +6,13 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* background: #0a0e1a; */
+  overflow-x: hidden;
+}
+
 .app {
-  background: lightblue;
   width: 100%;
   min-height: 100vh;
   display: flex;

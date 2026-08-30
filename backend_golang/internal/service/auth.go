@@ -3,7 +3,6 @@ package service
 import (
 	"context"
 	"errors"
-	"strings"
 
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/data/request"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/data/response"
@@ -37,64 +36,39 @@ func NewAuthService(
 func (s *AuthService) Register(
 	ctx context.Context,
 	req request.RegisterRequest,
-) (*models.User, error) {
-	fullName := strings.TrimSpace((req.FullName))
-	email := strings.ToLower(strings.TrimSpace(req.Email))
-
-	if fullName == "" {
-		return nil, errors.New("Fullname is required.")
-	}
-
-	if email == "" {
-		return nil, errors.New("Email is required.")
-	}
-
-	if req.Password == "" {
-		return nil, errors.New("Password is required.")
-	}
-
-	_, err := s.userRepository.FindByEmail(ctx, email)
+) error {
+	_, err := s.userRepository.FindByEmail(ctx, req.Email)
 	if err == nil {
-		return nil, errors.New("Email already registered.")
+		return errors.New("Email already registered.")
 	}
 
 	if !errors.Is(err, gorm.ErrRecordNotFound) {
-		return nil, err
+		return err
 	}
 
 	passwordHash, err := s.passwordHasher.Hash(req.Password)
 	if err != nil {
-		return nil, err
+		return err
 	}
 
 	user := &models.User{
 		RoleId: 1,
-		FullName: fullName,
-		Email: email,
+		FullName: req.FullName,
+		Email: req.Email,
 		PasswordHash: passwordHash,
 	}
 	if err := s.userRepository.Create(ctx, user); err != nil {
-		return nil, err
+		return err
 	}
 
-	return user, nil
+	return nil
 }
 
 func (s *AuthService) Login(
 	ctx context.Context,
 	req request.LoginRequest,
 ) (*response.LoginServiceResponse, error ) {
-	email := strings.ToLower(strings.TrimSpace(req.Email))
-
-	if email == "" {
-		return nil, errors.New("Email is required.")
-	}
-
-	if req.Password == "" {
-		return nil, errors.New("Passowrd is required.")
-	}
-
-	user, err := s.userRepository.FindByEmail(ctx, email)
+	user, err := s.userRepository.FindByEmail(ctx, req.Email)
 	if err != nil {
 		if errors.Is(err, gorm.ErrRecordNotFound) {
 			return nil, errors.New("Invalid email or password.")
@@ -144,7 +118,7 @@ func (s *AuthService) Refresh(
 	ctx context.Context,
 	refreshToken string,
 ) (*response.RefreshServiceResponse, error) {
-	userID, remember_me, err := s.refreshTokenService.GetUserData(
+	userID, rememberMe, err := s.refreshTokenService.GetUserData(
 		ctx,
 		refreshToken,
 	)
@@ -177,8 +151,12 @@ func (s *AuthService) Refresh(
 	newRefreshToken, err := s.refreshTokenService.Create(
 		ctx,
 		user.ID,
-		remember_me,
+		rememberMe,
 	)
+
+	if err!= nil {
+		return nil, err
+	}
 
 	return &response.RefreshServiceResponse{
 		AccessToken: accessToken,
@@ -189,7 +167,7 @@ func (s *AuthService) Refresh(
 			Email: user.Email,
 			Role: user.Role.Name,
 		},
-		RememberMe: remember_me,
+		RememberMe: rememberMe,
 	}, nil
 }
 

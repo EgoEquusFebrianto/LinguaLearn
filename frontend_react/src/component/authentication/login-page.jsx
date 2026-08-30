@@ -2,21 +2,19 @@ import { FaLock, FaHome } from 'react-icons/fa'
 import { IoIosMail } from "react-icons/io";
 import './page-layout.css'
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../../context/authentication/hook/auth-hook'
 import { useState } from 'react';
+import { showErrorToast, showInfoToast } from '../../utils/toast-utils';
 
-export const LoginPage = () => {
-    const { login } = useAuth();
+export const LoginPage = ({login}) => {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false)
-
-    const [formData, setFormData] = useState({
+    const defaultForm = {
         email: '',
         password: '',
         remember_me: false,
-    });
+    }
 
-    console.log(formData)
+    const [formData, setFormData] = useState(defaultForm);
 
     const handleChange = (event) => {
         const { name, value, type, checked } = event.target;
@@ -34,11 +32,17 @@ export const LoginPage = () => {
         setLoading(true);
 
         try {
-            await login(formData);
+            const response = await login(formData);
 
+            showInfoToast(response.message);
+            setFormData(defaultForm);
             navigate("/");
         } catch (error) {
-            console.error("Login Failed: ", error);
+            console.error("Failed Login", error)
+            const errorMessage = error.response?.data?.error || 
+                                error.response?.data?.message ||
+                                'Login failed. Please try again.';
+            showErrorToast(errorMessage);
         } finally {
             setLoading(false);
         }

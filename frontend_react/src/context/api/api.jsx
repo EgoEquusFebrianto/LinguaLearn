@@ -63,10 +63,16 @@ API.interceptors.response.use(
     async (error) => {
         const originalRequest = error.config;
 
+        const publicEndpoints = ['/auth/login', '/auth/register'];
+        const isPublicEndpoint = publicEndpoints.some(url => 
+            originalRequest.url?.includes(url)
+        );
+
         if (
             error.response?.status === 401 &&
             !originalRequest._retry &&
-            !originalRequest.url.includes("/auth/refresh")
+            !originalRequest.url.includes("/auth/refresh") &&
+            !isPublicEndpoint
         ) {
             originalRequest._retry = true;
 

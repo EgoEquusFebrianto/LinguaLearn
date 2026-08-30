@@ -1,8 +1,11 @@
-// src/components/Navbar.jsx
-import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 export const NavbarPublic = () => {
-  const [isHovered, setIsHovered] = useState(false);
+  const navigate = useNavigate();
+
+  const onHandleClick = (value) => {
+    navigate(`/${value}`)
+  };
 
   return (
     <nav className="navbar">
@@ -15,15 +18,13 @@ export const NavbarPublic = () => {
         <div className="navbar-actions">
           <button 
             className="btn-login"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onClick={() => onHandleClick("login")}
           >
             Log In
           </button>
           <button 
             className="btn-register"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+              onClick={() => onHandleClick("register")}
           >
             Register
           </button>
