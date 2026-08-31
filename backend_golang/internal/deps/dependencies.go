@@ -21,4 +21,7 @@ type Dependencies struct {
 	AuthService    	*service.AuthService
 	AuthHandler    	*handler.AuthHandler
 	JwtService		*security.JWTService
+	DictionaryRepository repository.BankWordRepository
+	DictionaryService    *service.DictionaryService
+	DictionaryHandler    *handler.DictionaryHandler
 }

@@ -7,91 +7,38 @@ import (
 	"time"
 
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/config"
-	"github.com/EgoEquusFebrianto/LinguaLearn/internal/database/mongodb"
-	"github.com/EgoEquusFebrianto/LinguaLearn/internal/database/mysql"
-	"github.com/EgoEquusFebrianto/LinguaLearn/internal/database/redis"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/deps"
-	"github.com/EgoEquusFebrianto/LinguaLearn/internal/handler"
-	"github.com/EgoEquusFebrianto/LinguaLearn/internal/repository"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/route"
-	"github.com/EgoEquusFebrianto/LinguaLearn/internal/security"
-	"github.com/EgoEquusFebrianto/LinguaLearn/internal/service"
+
 )
 
-func Run() error {
+type App struct {
+	Config 	*config.Config
+	Deps 	*deps.Dependencies
+}
+
+func New() (*App, error) {
 	cfg, err := config.Load()
-
 	if err != nil {
-		return err
+		return nil, err
 	}
 
-	db, err := mysql.NewMySQL(&cfg.MySQL)
+	dependencies, err := SetupDependencies(cfg)
 	if err != nil {
-		return err
-	}
-	defer db.Close()
-
-	mongoClient, err := mongodb.NewMongoDb(&cfg.MongoDb)
-	if err != nil {
-		return err
-	}
-	defer func() {
-		ctx, cancel := context.WithTimeout(
-			context.Background(),
-			5 * time.Second,
-		)
-		defer cancel()
-
-		if err := mongoClient.Disconnect(ctx); err != nil {
-			log.Printf("failed to disconnect MongoDB: %v", err)
-		}
-	}()
-
-	redisClient, err := redis.NewRedis(&cfg.Redis)
-	if err != nil {
-		return err
-	}
-	defer redisClient.Close()
-
-	gormDB, err := mysql.NewGorm(db)
-	if err != nil {
-		return err
+		return nil, err
 	}
 
-	userRepository := repository.NewUserRepository(gormDB)
+	return &App{
+		Config: cfg,
+		Deps: dependencies,
+	}, nil
+}
 
-	jwtService := security.NewJWTService(
-		cfg.JWT.AccessSecret,
-		time.Duration(cfg.JWT.AccessExpiresMinute) * time.Minute,
-	)
-
-	refreshTokenService  := service.NewRefreshTokenService(redisClient)
-
-	passwordHasher := security.NewPasswordHasher()
-	authService := service.NewAuthService(
-		userRepository,
-		passwordHasher,
-		jwtService,
-		refreshTokenService,
-	)
-
-	authHandler := handler.NewAuthHandler(authService)
-
-	deps := &deps.Dependencies{
-		MySQL: db,
-		MongoDB: mongoClient,
-		Redis: redisClient,
-		GORM: gormDB,
-		UserRepository: userRepository,
-		AuthService: authService,
-		AuthHandler: authHandler,
-		JwtService: jwtService,
-	}
-
-	router := route.NewRouter(deps)
+func (a *App) Run() error {
+	router := route.NewRouter(a.Deps)
 
 	server := &http.Server{
-		Addr: cfg.Server.Address,
+		Addr: a.Config.Server.Address,
 		Handler: router,
 		ReadTimeout: 5 * time.Second,
 		WriteTimeout: 10 * time.Second,
@@ -99,9 +46,45 @@ func Run() error {
 	}
 
 	log.Printf(
-		"LinguaLearn API running on %s",
-		cfg.Server.Address,
+		"LinguaLearn API Running on %s",
+		a.Config.Server.Address, 
 	)
 
 	return server.ListenAndServe()
+}
+
+func (a *App) Close() {
+	if a.Deps.MySQL != nil {
+		a.Deps.MySQL.Close()
+	}
+
+	if a.Deps.Redis != nil {
+		a.Deps.Redis.Close()
+	}
+
+	if a.Deps.MongoDB != nil {
+		ctx, cancel := context.WithTimeout(
+			context.Background(),
+			5 * time.Second,
+		)
+		defer cancel()
+
+		if err := a.Deps.MongoDB.Disconnect(ctx); err != nil {
+			log.Printf(
+				"Failed to disconnect MongoDB: %v",
+				err,
+			)
+		}
+	}
+}
+
+func Run() error {
+	app, err := New()
+	if err != nil {
+		return err
+	}
+
+	defer app.Close()
+
+	return app.Run()
 }

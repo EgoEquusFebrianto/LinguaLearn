@@ -9,6 +9,7 @@ import (
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/data/request"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/data/response"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/helper"
+	"github.com/EgoEquusFebrianto/LinguaLearn/internal/middleware"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/service"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/validation"
 	"gorm.io/gorm"
@@ -192,6 +193,34 @@ func (h *AuthHandler) Refresh (
 			User: responseService.User,
 		},
 	)
+}
+
+func (h *AuthHandler) GetMe(
+	w http.ResponseWriter, 
+	r *http.Request,
+) {
+	userID, ok := middleware.GetUserID(r.Context())
+	if !ok {
+		helper.Error(
+			w,
+			http.StatusUnauthorized,
+			"User not found in context",
+		)
+		return
+	}
+
+	// role, _ := middleware.GetRole(r.Context())
+
+	user, err := h.authService.GetMe(r.Context(), userID)
+	if err != nil {
+		helper.Error(
+			w,
+			http.StatusUnauthorized,
+			"User not found.",
+		)
+	}
+
+	helper.JSON(w, http.StatusOK, user)
 }
 
 func (h *AuthHandler) Logout(

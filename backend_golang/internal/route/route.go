@@ -23,18 +23,20 @@ func NewRouter(deps *deps.Dependencies) *chi.Mux {
 	r.Get("/api/v1/health", handler.HealthHandler)
 	r.Get("/api/v1/health/database", handler.DatabaseHealthHandler(deps.MySQL))
 
-	authHandler := handler.NewAuthHandler(deps.AuthService)
 
 	r.Route("/api/v1/auth", func(r chi.Router) {
-		r.Post("/register", authHandler.Register)
-		r.Post("/login", authHandler.Login)
-		r.Post("/logout", authHandler.Logout)
-		r.Post("/refresh", authHandler.Refresh)
+		r.Post("/register", deps.AuthHandler.Register)
+		r.Post("/login", deps.AuthHandler.Login)
+		r.Post("/logout", deps.AuthHandler.Logout)
+		r.Post("/refresh", deps.AuthHandler.Refresh)
 	})
 
 	r.Route("/api/v1", func(r chi.Router) {
 		r.Use(middleware.Auth(deps.JwtService))
-		r.Get("/users/me", handler.GetMe)
+		r.Get("/users/me", deps.AuthHandler.GetMe)
+
+		r.Get("/dictionary", deps.DictionaryHandler.Search)
+		r.Get("/dictionary/word", deps.DictionaryHandler.FindByWord)
 	})
 
 	return r

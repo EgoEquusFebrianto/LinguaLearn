@@ -171,6 +171,25 @@ func (s *AuthService) Refresh(
 	}, nil
 }
 
+func (s *AuthService) GetMe(
+	ctx context.Context,
+	userID uint64,
+) (*response.UserProfile, error) {
+	user, err := s.userRepository.FindByID(ctx, userID)
+	if err != nil {
+		return nil, err
+	}
+
+	userProfile := &response.UserProfile{
+		ID: user.ID,
+		FullName: user.FullName,
+		Email: user.Email,
+		Role: user.Role.Name,
+	}
+
+	return userProfile, nil
+}
+
 func (s *AuthService) Logout(
 	ctx context.Context,
 	refreshToken string,
