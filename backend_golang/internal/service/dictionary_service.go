@@ -4,8 +4,8 @@ import (
 	"context"
 	"strings"
 
-	"github.com/EgoEquusFebrianto/LinguaLearn/internal/data/response"
-	"github.com/EgoEquusFebrianto/LinguaLearn/internal/models"
+	"github.com/EgoEquusFebrianto/LinguaLearn/internal/delivery/http/response"
+	"github.com/EgoEquusFebrianto/LinguaLearn/internal/domain"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/repository"
 )
 
@@ -65,7 +65,7 @@ func (s *DictionaryService) Search(
 func (s *DictionaryService) FindByWord(
 	ctx context.Context,
 	word string,
-) (*models.BankWord, error) {
+) (*domain.BankWord, error) {
 	word = strings.ToLower(strings.TrimSpace(word))
 
 	return s.repository.FindByWord(

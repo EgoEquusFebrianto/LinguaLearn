@@ -7,9 +7,8 @@ import (
 	"time"
 
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/config"
-	"github.com/EgoEquusFebrianto/LinguaLearn/internal/deps"
-	"github.com/EgoEquusFebrianto/LinguaLearn/internal/route"
-
+	"github.com/EgoEquusFebrianto/LinguaLearn/internal/delivery/http/router"
+	"github.com/EgoEquusFebrianto/LinguaLearn/internal/utils/deps"
 )
 
 type App struct {
@@ -23,7 +22,7 @@ func New() (*App, error) {
 		return nil, err
 	}
 
-	dependencies, err := SetupDependencies(cfg)
+	dependencies, err := deps.SetupDependencies(cfg)
 	if err != nil {
 		return nil, err
 	}
@@ -35,7 +34,7 @@ func New() (*App, error) {
 }
 
 func (a *App) Run() error {
-	router := route.NewRouter(a.Deps)
+	router := router.NewRouter(a.Deps)
 
 	server := &http.Server{
 		Addr: a.Config.Server.Address,
