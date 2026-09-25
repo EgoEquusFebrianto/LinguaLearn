@@ -12,29 +12,6 @@ import (
 
 var ErrBankWordNotFound = errors.New("Bank word not found.")
 
-type BankWordRepository interface {
-	FindByWord(
-		ctx context.Context,
-		word string,
-	) (*domain.BankWord, error)
-
-	FindByUUID(
-		ctx context.Context,
-		wordUUID string,
-	) (*domain.BankWord, error)
-
-	Search(
-		ctx context.Context,
-		query string,
-		limit int,
-		offset int,
-	) ([]domain.BankWord, error)
-
-	Count(
-		ctx context.Context,
-		query string,
-	) (int64, error)
-}
 
 type bankWordRepository struct {
 	collection *mongo.Collection
@@ -43,7 +20,7 @@ type bankWordRepository struct {
 func NewBankWordRepository(
 	client *mongo.Client,
 	databaseName string,
-) BankWordRepository {
+) domain.BankWordRepository {
 	return &bankWordRepository{
 		collection: client.
 			Database(databaseName).

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { Feature } from '../public.page.types';
+import type { Feature } from '../home.public.types';
 
 type FeatureCardPublicProps  = {
   feature: Feature;

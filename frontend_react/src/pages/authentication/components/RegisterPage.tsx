@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { FaLock, FaUser, FaHome } from 'react-icons/fa'
 import { IoIosMail } from "react-icons/io";
-import "./page-layout.css"
 import { Link, useNavigate } from 'react-router-dom';
 import { showErrorToast, showSuccessToast } from '../../../utils/toastHelper';
+import "./PageLayout.css"
 
 export const RegisterPage = ({register}) => {
     const navigate = useNavigate();

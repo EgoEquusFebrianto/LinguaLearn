@@ -1,6 +1,6 @@
-import { AuthContextProvider } from "./context/authentication/auth-context"
+import { AuthContextProvider } from "./features/authentication/context/AuthContext"
 
-export const RootProvider = ({ children }) => {
+export const RootProvider = ({ children }: {children: React.ReactNode}) => {
   return (
     <AuthContextProvider>
         {children}

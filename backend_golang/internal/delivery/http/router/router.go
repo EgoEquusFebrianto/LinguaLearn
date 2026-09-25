@@ -20,9 +20,10 @@ func NewRouter(deps *deps.Dependencies) *chi.Mux {
 		MaxAge: 300,
 	}))
 
-	r.Get("/api/v1/health", handler.HealthHandler)
-	r.Get("/api/v1/health/database", handler.DatabaseHealthHandler(deps.MySQL))
-
+	r.Route("/api/v1/health", func(r chi.Router) {
+		r.Get("/", handler.HealthHandler)
+		r.Get("/database", handler.DatabaseHealthHandler(deps.MySQL))
+	})
 
 	r.Route("/api/v1/auth", func(r chi.Router) {
 		r.Post("/register", deps.AuthHandler.Register)
@@ -35,8 +36,8 @@ func NewRouter(deps *deps.Dependencies) *chi.Mux {
 		r.Use(middleware.Auth(deps.JwtService))
 		r.Get("/users/me", deps.AuthHandler.GetMe)
 
-		r.Get("/dictionary", deps.DictionaryHandler.Search)
-		r.Get("/dictionary/word", deps.DictionaryHandler.FindByWord)
+		r.Get("/dictionary", deps.BankWordHandler.Search)
+		r.Get("/dictionary/word", deps.BankWordHandler.FindByWord)
 	})
 
 	return r

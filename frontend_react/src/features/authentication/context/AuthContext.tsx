@@ -11,7 +11,11 @@ import { AuthService } from '../services/AuthService';
 
 export const AuthContext = createContext<AuthContextValue | null>(null);
 
-export const AuthContextProvider = ({children}) => {
+type AuthContextProviderProps = {
+  children: React.ReactNode;
+};
+
+export const AuthContextProvider = ({children}: AuthContextProviderProps ) => {
     const [user, setUser] = useState<User | null>(null);
     const [loading, setLoading] = useState(false);
 

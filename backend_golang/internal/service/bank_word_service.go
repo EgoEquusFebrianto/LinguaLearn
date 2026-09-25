@@ -6,27 +6,26 @@ import (
 
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/delivery/http/response"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/domain"
-	"github.com/EgoEquusFebrianto/LinguaLearn/internal/repository"
 )
 
-type DictionaryService struct {
-	repository repository.BankWordRepository
+type BankWordService struct {
+	repository domain.BankWordRepository
 }
 
-func NewDictionaryService(
-	repository repository.BankWordRepository,
-) *DictionaryService {
-	return &DictionaryService{
+func NewBankWordServiceService(
+	repository domain.BankWordRepository,
+) *BankWordService {
+	return &BankWordService{
 		repository: repository,
 	}
 }
 
-func (s *DictionaryService) Search(
+func (s *BankWordService) Search(
 	ctx context.Context,
 	query string,
 	page int,
 	limit int,
-) (*response.DictionarySearchResponse, error) {
+) (*response.BankWordSearchResponse, error) {
 	if page < 1 {
 		page = 1
 	}
@@ -53,16 +52,16 @@ func (s *DictionaryService) Search(
 
 	TotalPages := (int(total) + limit - 1) / limit
 
-	return &response.DictionarySearchResponse{
-		Data: data,
-		Page: int(page),
-		Limit: int(limit),
-		Total: total,
+	return &response.BankWordSearchResponse{
+		Data:       data,
+		Page:       int(page),
+		Limit:      int(limit),
+		Total:      total,
 		TotalPages: TotalPages,
 	}, nil
 }
 
-func (s *DictionaryService) FindByWord(
+func (s *BankWordService) FindByWord(
 	ctx context.Context,
 	word string,
 ) (*domain.BankWord, error) {

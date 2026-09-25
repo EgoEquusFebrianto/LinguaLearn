@@ -3,7 +3,7 @@ import { NavbarPublic } from "./components/NavbarPublic";
 import { FeatureCardPublic } from "./components/FeatureCardPublic";
 import { HeroSectionPublic } from "./components/HeroSectionPublic";
 import './HomePublic.css';
-import type { Feature } from './public.page.types';
+import type { Feature } from './home.public.types';
 
 export const HomePublic = () => {
   const features: Feature[] = [

@@ -1,8 +1,6 @@
 package response
 
-import (
-	"github.com/EgoEquusFebrianto/LinguaLearn/internal/domain"
-)
+import "github.com/EgoEquusFebrianto/LinguaLearn/internal/domain"
 
 type LoginServiceResponse struct {
 	AccessToken  string
@@ -35,7 +33,7 @@ type UserResponse struct {
 	Email    string `json:"email"`
 }
 
-type DictionarySearchResponse struct {
+type BankWordSearchResponse struct {
 	Data       []domain.BankWord `json:"data"`
 	Page       int               `json:"page"`
 	Limit      int               `json:"limit"`

@@ -1,9 +1,9 @@
 import { FaLock, FaHome } from 'react-icons/fa'
 import { IoIosMail } from "react-icons/io";
-import './page-layout.css'
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { showErrorToast, showInfoToast } from '../../../utils/toastHelper';
+import './PageLayout.css'
 
 export const LoginPage = ({login}) => {
     const navigate = useNavigate();

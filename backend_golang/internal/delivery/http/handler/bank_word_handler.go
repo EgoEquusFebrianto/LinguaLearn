@@ -9,19 +9,19 @@ import (
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/utils"
 )
 
-type DictionaryHandler struct {
-	service *service.DictionaryService
+type BankWordHandler struct {
+	service *service.BankWordService
 }
 
-func NewDictionaryHandler(
-	service *service.DictionaryService,
-) *DictionaryHandler {
-	return &DictionaryHandler{
+func NewBankWordHandler(
+	service *service.BankWordService,
+) *BankWordHandler {
+	return &BankWordHandler{
 		service: service,
 	}
 }
 
-func (h *DictionaryHandler) Search(
+func (h *BankWordHandler) Search(
 	w http.ResponseWriter,
 	r *http.Request,
 ) {
@@ -58,7 +58,7 @@ func (h *DictionaryHandler) Search(
 	)
 }
 
-func (h *DictionaryHandler) FindByWord(
+func (h *BankWordHandler) FindByWord(
 	w http.ResponseWriter,
 	r *http.Request,
 ) {

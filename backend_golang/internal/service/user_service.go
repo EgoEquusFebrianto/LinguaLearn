@@ -7,20 +7,19 @@ import (
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/delivery/http/request"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/delivery/http/response"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/domain"
-	"github.com/EgoEquusFebrianto/LinguaLearn/internal/repository"
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/security"
 	"gorm.io/gorm"
 )
 
 type AuthService struct {
-	userRepository 		repository.UserRepository
+	userRepository 		domain.UserRepository
 	passwordHasher 		*security.PasswordHasher
 	jwtService 			*security.JWTService
 	refreshTokenService	*RefreshTokenService
 }
 
 func NewAuthService(
-	userRepository repository.UserRepository,
+	userRepository domain.UserRepository,
 	passwordHasher *security.PasswordHasher,
 	jwtService *security.JWTService,
 	refreshTokenService *RefreshTokenService,

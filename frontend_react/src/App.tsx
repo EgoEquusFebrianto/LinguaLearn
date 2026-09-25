@@ -1,15 +1,26 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { AuthenticationPage } from "./page/authentication/AuthenticationOutlet";
-import { LoginPage } from './page/authentication/components/LoginPage';
-import { RegisterPage } from './page/authentication/components/RegisterPage';
-import { HomePublic } from "./page/home_public/HomePublic";
-import { HomeUser } from "./page/home_authorized_user/HomeUser";
+import { AuthenticationPage } from "./pages/authentication/AuthenticationOutlet";
+import { LoginPage } from './pages/authentication/components/LoginPage';
+import { RegisterPage } from './pages/authentication/components/RegisterPage';
+import { HomePublic } from "./pages/home_public/HomePublic";
+import { HomeUser } from "./pages/home_authorized_user/HomeUser";
 import { useAuth } from "./features/authentication/hooks/useAuth";
 import { Toaster } from "react-hot-toast";
+import { UserLayout } from './layouts/user/UserLayout';
 import "./App.css";
 
-const ProtectedRoute = ({isAuthenticated}) => {
-  if (isAuthenticated) return <HomeUser />;
+type ProtectedRouteProps = {
+  isAuthenticated: boolean;
+};
+
+const ProtectedRoute = ({isAuthenticated}: ProtectedRouteProps) => {
+  if (isAuthenticated) {
+    return (
+      <UserLayout>
+        <HomeUser />
+      </UserLayout>
+    )
+  };
 
   return <HomePublic />
 };
@@ -23,7 +34,8 @@ function AppContent() {
         <Routes>
           <Route 
             index 
-            element={<ProtectedRoute isAuthenticated={isAuthenticated}/>}
+            // element={<ProtectedRoute isAuthenticated={isAuthenticated}/>}
+            element={<ProtectedRoute isAuthenticated={true}/>}
           />
 
           <Route element={<AuthenticationPage />}>

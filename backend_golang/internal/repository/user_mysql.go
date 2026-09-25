@@ -9,28 +9,11 @@ import (
 	"gorm.io/gorm"
 )
 
-type UserRepository interface {
-	FindByEmail(
-		ctx context.Context,
-		email string,
-	) (*domain.User, error)
-
-	FindByID (
-		ctx context.Context,
-		id uint64,
-	) (*domain.User, error)
-
-	Create(
-		ctx context.Context,
-		user *domain.User,
-	) error
-}
-
 type userRepository struct {
 	db *gorm.DB
 }
 
-func NewUserRepository(db *gorm.DB) UserRepository {
+func NewUserRepository(db *gorm.DB) domain.UserRepository {
 	return &userRepository{
 		db: db,
 	}
