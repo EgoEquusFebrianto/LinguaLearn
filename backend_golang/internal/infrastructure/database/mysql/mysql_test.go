@@ -5,11 +5,11 @@ import (
 	"testing"
 
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/config"
-	"github.com/joho/godotenv"
+	"github.com/EgoEquusFebrianto/LinguaLearn/internal/utils"
 )
 
 func TestNewSQL(t *testing.T) {
-	godotenv.Load("../../.env");
+	utils.LoadEnv(t)
 
 	cfg := &config.MySQLConfig{
 		DBHost: os.Getenv("DB_HOST"),

@@ -6,13 +6,11 @@ import (
 	"testing"
 
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/config"
-	"github.com/joho/godotenv"
+	"github.com/EgoEquusFebrianto/LinguaLearn/internal/utils"
 )
 
 func TestNewMongoDB(t *testing.T) {
-	if err := godotenv.Load("../../.env"); err != nil {
-		t.Fatalf("Failed to load .env: %v", err)
-	}
+	utils.LoadEnv(t)
 
 	cfg := &config.MongoConfig{
 		MongoUrl: os.Getenv("MONGO_URL"),
