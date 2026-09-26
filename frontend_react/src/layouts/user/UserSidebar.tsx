@@ -15,13 +15,15 @@ type UserSidebarProps = {
     isCollapsed: boolean;
     onClose: () => void;
     onCollapse: () => void;
+    onLogout: () => void;
 }
 
 export const UserSidebar = ({
     isOpen, 
     isCollapsed, 
     onClose, 
-    onCollapse
+    onCollapse,
+    onLogout
 }: UserSidebarProps
 ) => {
     return (
@@ -115,6 +117,7 @@ export const UserSidebar = ({
                     <button
                         type='button'
                         className='logout-button'
+                        onClick={onLogout}
                     >
                         <FaSignOutAlt />
                         {!isCollapsed && (<span>Logout</span>)}
