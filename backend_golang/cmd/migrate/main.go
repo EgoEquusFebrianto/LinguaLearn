@@ -47,7 +47,7 @@ func main() {
 	if err := seed.RunDictionaryseed(
 		client,
 		cfg.MongoDb.MongoDb,
-		"seeds/mongodb/dictionary.json",
+		"database/seeds/mongodb/dictionary.json",
 	); err != nil {
 		log.Fatal("Dictionary seed failed: ", err)
 	}

@@ -7,7 +7,7 @@ import (
 )
 
 func SeedMySQL(db *sql.DB) error {
-	data, err := os.ReadFile("seeds/mysql/roles.sql")
+	data, err := os.ReadFile("database/seeds/mysql/roles.sql")
 	if err != nil {
 		return fmt.Errorf("Read roles seed failed: %w", err)
 	}
