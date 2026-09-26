@@ -1,0 +1,9 @@
+.wrapper {
+    background: url('/src/assets/auth_background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

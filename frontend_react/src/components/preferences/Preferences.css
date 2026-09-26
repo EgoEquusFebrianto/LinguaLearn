@@ -1,0 +1,69 @@
+/* THEME TOGGLE */
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.theme-toggle-label {
+    font-size: 14px;
+    color: #555;
+}
+
+.theme-toggle input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.theme-toggle-slider {
+    width: 42px;
+    height: 24px;
+    background: #cbd5e1;
+    border-radius: 999px;
+    position: relative;
+    transition: background .2s ease;
+}
+
+.theme-toggle-slider::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: transform .2s ease;
+}
+
+.theme-toggle input:checked + .theme-toggle-slider {
+    background: #2563eb;
+}
+
+.theme-toggle input:checked + .theme-toggle-slider::after {
+    transform: translateX(18px);
+}
+
+
+/* LANGUAGE SELECTOR */
+.language-selector {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.language-selector-label {
+    font-size: 14px;
+    color: #555;
+}
+
+.language-selector select {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 7px 10px;
+    background: white;
+    cursor: pointer;
+}
