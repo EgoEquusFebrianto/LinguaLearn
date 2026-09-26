@@ -15,7 +15,7 @@ export const FeatureCardPublic = ({feature}: FeatureCardPublicProps) => {
       onMouseLeave={() => setIsHovered(false)}
       style={{
         '--card-gradient': feature.gradient,
-      }}
+      } as React.CSSProperties}
     >
       <div className="feature-card-glow" style={{ background: feature.gradient }}></div>
       

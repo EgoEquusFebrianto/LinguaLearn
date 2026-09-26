@@ -4,8 +4,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { showErrorToast, showInfoToast } from '../../../utils/toastHelper';
 import './PageLayout.css'
+import type { LoginPageProps } from '../auth.page.types';
+import axios from 'axios';
 
-export const LoginPage = ({login}) => {
+export const LoginPage = ({login}: LoginPageProps) => {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false)
     const defaultForm = {
@@ -16,7 +18,7 @@ export const LoginPage = ({login}) => {
 
     const [formData, setFormData] = useState(defaultForm);
 
-    const handleChange = (event) => {
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value, type, checked } = event.target;
 
         setFormData((previous) => ({
@@ -27,7 +29,7 @@ export const LoginPage = ({login}) => {
         }));
     };
 
-    const handleSubmit = async(event) => {
+    const handleSubmit = async(event: React.SubmitEvent<HTMLFormElement>) => {
         event.preventDefault();
         setLoading(true);
 
@@ -38,10 +40,14 @@ export const LoginPage = ({login}) => {
             setFormData(defaultForm);
             navigate("/");
         } catch (error) {
+            let errorMessage = 'Login failed. Please try again.'; 
+            
+            if (axios.isAxiosError(error)) {
+                errorMessage = error.response?.data?.error || 
+                error.response?.data?.message;
+            }
+            
             console.error("Failed Login", error)
-            const errorMessage = error.response?.data?.error || 
-                                error.response?.data?.message ||
-                                'Login failed. Please try again.';
             showErrorToast(errorMessage);
         } finally {
             setLoading(false);

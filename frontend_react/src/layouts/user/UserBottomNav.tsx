@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaGamepad, FaHome, FaUser } from 'react-icons/fa'
 import { NavLink } from 'react-router-dom'
 

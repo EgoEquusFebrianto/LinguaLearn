@@ -37,13 +37,13 @@ export const BankWordContextProvider = ({children}: FunctionProps) => {
         }), [bankWords, loading]
     );
 
-    // useEffect(() => {
-    //     const callFetchBankWord = async () => {
-    //         await fetchBankWordList();
-    //     }
+    useEffect(() => {
+        const callFetchBankWord = async () => {
+            await fetchBankWordList();
+        }
 
-    //     callFetchBankWord()
-    // }, [fetchBankWordList]);
+        callFetchBankWord()
+    }, [fetchBankWordList]);
     
     return (
         <BankWordContext.Provider value={value}>

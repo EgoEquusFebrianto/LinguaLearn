@@ -1,9 +1,14 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.js'
 import { RootProvider } from './RootProvider.js'
+import App from './App.js'
 
-createRoot(document.getElementById('root')).render(
+const rootElement = document.getElementById('root')
+if (!rootElement) {
+  throw new Error("Root element #root not found")
+}
+
+createRoot(rootElement).render(
   <StrictMode>
     <RootProvider>
       <App />
