@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaBars } from 'react-icons/fa';
+import { Preferences } from '../../components/preferences/Preferences';
 
 type UserNavbarProps = {
     onMenuClick: () => void;
@@ -34,7 +35,7 @@ export const UserNavbar = ({onMenuClick}: UserNavbarProps) => {
             {/* Navbar Desktop User */}
             <div className='desktop-navbar'>
                 <div/>
-                <div className='navbar-user-actions'>
+                {/* <div className='navbar-user-actions'>
                     <button type='button'>
                         C
                     </button>
@@ -42,8 +43,12 @@ export const UserNavbar = ({onMenuClick}: UserNavbarProps) => {
                     <button type='button'>
                         🇮🇩 Indonesia
                     </button>
+                </div> */}
 
-                </div>
+                <Preferences 
+                    showThemeLabel={false}
+                    showLanguageLabel={false}
+                />
             </div>
             
         </header>

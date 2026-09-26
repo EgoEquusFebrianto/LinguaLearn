@@ -1,4 +1,3 @@
-import React from 'react'
 import { 
     FaBook, 
     FaGamepad, 
@@ -9,6 +8,7 @@ import {
     FaUserEdit 
 } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
+import { Preferences } from '../../components/preferences/Preferences';
 
 type UserSidebarProps = {
     isOpen: boolean;
@@ -69,7 +69,7 @@ export const UserSidebar = ({
                         </NavLink>
                     </div>
 
-                    <div className='sidebar-section'>
+                    <div className='sidebar-section sidebar-account'>
                         {!isCollapsed && (
                             <span className='sidebar-section-title'>
                                 ACCOUNT
@@ -91,6 +91,18 @@ export const UserSidebar = ({
                         </NavLink>
                     </div>
 
+                    <div className="sidebar-section sidebar-preferences">
+                        {!isCollapsed && (
+                            <span className="sidebar-section-title">
+                                PREFERENCES
+                            </span>
+                        )}
+
+                        <Preferences
+                            showThemeLabel={!isCollapsed}
+                            showLanguageLabel={!isCollapsed}
+                        />
+                    </div>
                     <NavLink
                         to={"/about"}
                     >
@@ -99,7 +111,7 @@ export const UserSidebar = ({
                     </NavLink>
                 </nav>
 
-                <div className='sidebar-bottom'>
+                <div className='sidebar-bottom'>                    
                     <button
                         type='button'
                         className='logout-button'
