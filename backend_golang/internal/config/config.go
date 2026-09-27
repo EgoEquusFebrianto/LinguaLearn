@@ -20,7 +20,7 @@ type MongoConfig struct {
 	MongoUrl	string
 	MongoUser	string
 	MongoPwd	string
-	MongoName	string
+	MongoDb		string
 }
 
 type RedisConfig struct {
@@ -81,7 +81,7 @@ func Load() (*Config, error) {
 			MongoUrl: os.Getenv("MONGO_URL"),
 			MongoUser: os.Getenv("MONGO_USER"),
 			MongoPwd: os.Getenv("MONGO_PASSWORD"),
-			MongoName: os.Getenv("MONGO_NAME"),
+			MongoDb: os.Getenv("MONGO_NAME"),
 		},
 		Redis: RedisConfig{
 			RedisADDR: os.Getenv("REDIS_ADDR"),
