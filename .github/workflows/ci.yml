@@ -119,20 +119,16 @@ jobs:
       - name: Initialize MongoDB test user
         working-directory: backend_golang
         run: |
-          mongosh \
-            --host 127.0.0.1 \
-            -u root \
-            -p root \
+          docker exec ${{ job.services.mongo.id }} mongosh \
+            --username root \
+            --password root \
             --authenticationDatabase admin \
             --eval '
-              db = db.getSiblingDB('lingualearn');
+              db = db.getSiblingDB("lingualearn");
               db.createUser({
                 user: "lingualearn",
                 pwd: "lingualearn",
-                roles: [{
-                  role: "readWrite",
-                  db: "lingualearn"  
-                }]
+                roles: [{ role: "readWrite", db: "lingualearn" }]
               });
             '
       - name: Run Go tests
