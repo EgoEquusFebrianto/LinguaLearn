@@ -1,58 +1,60 @@
 name: CD
 
 on:
-    push: 
-        branches: 
-            - main
-    
+  push:
+    branches:
+      - main
+
 jobs:
-    deploy:
-        name: Deploy to VPS
-        runs-on: ubuntu-latest
+  deploy:
+    name: Deploy to VPS
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Deploy via SSH
-              uses: appleboy/ssh-action@v1.2.2
-              with:
-                  host: ${{ secrets.VPS_HOST }}
-                  username: ${{ secrets.VPS_USER }}
-                  key: ${{ secrets.VPS_SSH_KEY }}
-                  script: |
-                    set -e
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            set -e
 
-                    export PATH="/usr/local/go/bin:$PATH"
+            export PATH="/usr/local/go/bin:$PATH"
 
-                    echo "==> Environment"
-                    whoami
-                    go version
-                    node --version
-                    npm --version
-                    make --version
+            echo "==> Environment"
+            whoami
+            go version
+            node --version
+            npm --version
+            make --version
 
-                    cd /var/www/lingualearn
+            cd /var/www/lingualearn
 
-                    echo "==> Updating source.."
-                    git fetch origin main
-                    git reset --hard origin/main
+            echo "==> Updating source.."
+            git fetch origin main
+            git reset --hard origin/main
 
-                    echo "==> Building backend.."
-                    cd /var/www/lingualearn/backend_golang
+            echo "==> Building backend.."
+            cd /var/www/lingualearn/backend_golang
 
-                    make test
-                    make build
+            make test
+            make build
 
-                    echo "==> Building frontend.."
-                    cd /var/www/lingualearn/frontnend_react
-                    npm ci
-                    npm run build
+            echo "==> Building frontend.."
+            cd /var/www/lingualearn/frontend_react
 
-                    echo "==> Restarting backend.."
-                    sudo systemctl restart lingualearn
+            npm ci
+            npm run build
 
-                    echo "==> Checking backend service.."
-                    sudo systemctl is-activate --quite lingualearn
+            echo "==> Restarting backend.."
+            sudo systemctl restart lingualearn
 
-                    echo "==> Running health check"
-                    curl --fail --silent --show-error http://127.0.0.1/api/v1/health
+            echo "==> Checking backend service.."
+            sudo systemctl is-active --quiet lingualearn
 
-                    echo "==> Deployment successfull.."
+            echo "==> Running health check.."
+            curl --fail --silent --show-error \
+              http://127.0.0.1:8080/api/v1/health
+
+            echo "==> Deployment successful.."
