@@ -37,7 +37,7 @@ func main() {
 	}
 
 	// MongoDB Migration
-	if err := migration.MigrateMongoDB(client, cfg.MongoDb.MongoDb); err != nil {
+	if err := migration.MigrateMongoDB(client, cfg.MongoDb.MongoName); err != nil {
 		log.Fatal("MongoDB migration failed: ", err)
 	}
 
@@ -46,7 +46,7 @@ func main() {
 	// Dictionary Seed
 	if err := seed.RunDictionaryseed(
 		client,
-		cfg.MongoDb.MongoDb,
+		cfg.MongoDb.MongoName,
 		"database/seeds/mongodb/dictionary.json",
 	); err != nil {
 		log.Fatal("Dictionary seed failed: ", err)

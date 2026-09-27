@@ -18,7 +18,7 @@ func NewMongoDb(cfg *config.MongoConfig) (*mongo.Client, error) {
 		SetAuth(options.Credential{
 			Username: cfg.MongoUser,
 			Password: cfg.MongoPwd,
-			AuthSource: cfg.MongoDb,
+			AuthSource: cfg.MongoName,
 		})
 	
 	client, err := mongo.Connect(clientOptions)
