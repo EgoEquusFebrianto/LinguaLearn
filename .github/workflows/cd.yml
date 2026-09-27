@@ -1,0 +1,49 @@
+name: CD
+
+on:
+    push: 
+        branches: 
+            - main
+    
+jobs:
+    deploy:
+        name: Deplot to VPS
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Deploy via SSH
+              uses: appleboy/ssh-action@v1.2.2
+              with:
+                  host: ${{ secrets.VPS_HOST }}
+                  username: ${{ secrets.VPS_USER }}
+                  key: ${{ secrets.VPS_SSH_KEY }}
+                  script: |
+                    set -e
+
+                    cd /var/www/lingualearn
+
+                    echo "==> Updating source.."
+                    git fetch origin main
+                    git reset --hard origin/main
+
+                    echo "==> Building backend.."
+                    cd /var/www/lingualearn/backend_golang
+
+                    make test
+                    make build
+
+                    echo "==> Building frontend.."
+                    cd /var/www/lingualearn/frontnend_react
+                    npm ci
+                    npm run build
+
+                    echo "==> Restarting backend.."
+                    sudo systemctl restart lingualearn
+
+                    echo "==> Checking backend service.."
+                    sudo systemctl is-activate --quite lingualearn
+
+                    echo "==> Running health check"
+                    curl --fail --silent --show-error http://127.0.0.1/api/v1/health
+
+                    echo "==> Deployment successfull.."

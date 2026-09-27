@@ -16,7 +16,7 @@ func TestNewMongoDB(t *testing.T) {
 		MongoUrl: os.Getenv("MONGO_URL"),
 		MongoUser: os.Getenv("MONGO_USER"),
 		MongoPwd: os.Getenv("MONGO_PASSWORD"),
-		MongoDb: os.Getenv("MONGO_NAME"),
+		MongoName: os.Getenv("MONGO_NAME"),
 	}
 
 	client, err := NewMongoDb(cfg)

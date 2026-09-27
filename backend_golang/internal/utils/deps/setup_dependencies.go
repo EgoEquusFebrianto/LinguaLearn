@@ -84,7 +84,7 @@ func SetupDependencies(
 
 	bankWordRepository := repository.NewBankWordRepository(
 		mongoClient,
-		cfg.MongoDb.MongoDb,
+		cfg.MongoDb.MongoName,
 	)
 
 	// SECURITY

@@ -5,3 +5,5 @@ LinguaLearn adalah aplikasi web pembelajaran bahasa Inggris yang dikembangkan se
 Aplikasi dibangun dengan **React.js** sebagai front-end dan **Golang** sebagai back-end yang terhubung dengan **MySQL** sebagai basis data, serta **Redis** sebagai penyimpanan in-memory. Seluruh aplikasi kemudian dikemas menggunakan **Docker** untuk menyediakan lingkungan deployment yang konsisten antara proses pengembangan dan produksi.
 
 Proyek ini dikembangkan dengan pendekatan pemisahan antara sisi client dan server, sehingga antarmuka pengguna, logika bisnis, akses data, autentikasi, serta penyimpanan file dapat dikelola secara terstruktur dan independen.
+
+### ADD TEST PIPELINE
