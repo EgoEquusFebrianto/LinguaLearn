@@ -18,10 +18,9 @@ jobs:
                   username: ${{ secrets.VPS_USER }}
                   key: ${{ secrets.VPS_SSH_KEY }}
                   script: |
-                    set -e
-
-                    export PATH="/usr/local/go/bin:$PATH"
-
+            
+                    export PATH="/usr/local/go/bin:$PATH
+              
                     echo "==> Environment"
                     whoami
                     go version
