@@ -60,12 +60,18 @@ jobs:
 
             echo "==> Restarting backend.."
             sudo systemctl restart lingualearn
+            echo "==> [SUCCESSFUL] Restarting backend.."
 
             echo "==> Checking backend service.."
             sudo systemctl is-active --quiet lingualearn
+            echo "==> [SUCCESSFUL] Checking backend service.."
 
             echo "==> Running health check.."
+
+            sleep 2 # sementara
+
             curl --fail --silent --show-error \
               http://127.0.0.1:8080/api/v1/health
+            echo "==> Running health check.."
 
             echo "==> Deployment successful.."
