@@ -7,3 +7,4 @@ Aplikasi dibangun dengan **React.js** sebagai front-end dan **Golang** sebagai b
 Proyek ini dikembangkan dengan pendekatan pemisahan antara sisi client dan server, sehingga antarmuka pengguna, logika bisnis, akses data, autentikasi, serta penyimpanan file dapat dikelola secara terstruktur dan independen.
 
 ## LETS TESTING AGAIN
+## LETS TESTING FOR BETTER
