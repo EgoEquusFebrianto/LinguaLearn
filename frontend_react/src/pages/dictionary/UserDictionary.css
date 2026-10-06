@@ -1,0 +1,395 @@
+.dictionary-page {
+    min-height: 100%;
+    width: 100%;
+    padding: 2rem;
+    background: #f5f6f8;
+}
+
+.dictionary-header {
+    margin-bottom: 1.5rem;
+}
+
+.dictionary-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1f2937;
+}
+
+.dictionary-tabs {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #d1d5db;
+}
+
+.tab-button {
+    position: relative;
+    padding: 12px 0;
+    border: none;
+    background: transparent;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    color: #6b7280;
+    cursor: pointer;
+}
+
+.tab-button::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #2563eb;
+    left: 0;
+    bottom: -1px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .2s ease;
+}
+
+.tab-button:hover {
+    color: #1f2937;
+}
+
+.tab-button.active {
+    color: #2563eb;
+}
+
+.tab-button.active::after { 
+    transform: scaleX(1);
+}
+
+.dictionary-controls {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
+}
+
+.sort-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 16px;
+    border: 1px solid #d1d5db;
+    background-color: #ffffff;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    cursor: pointer;
+    transition: 
+        background-color .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.sort-button:hover {
+    background-color: #f9fafb;
+    border-color: #9ca3af;
+}
+
+.sort-button:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+.sort-options {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    z-index: 10;
+    width: 220px;
+    padding: 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 
+        0 10px 25px rgba(0, 0, 0, .08),
+        0 4px 10px rgba(0, 0, 0, .04);
+
+    transform: translateY(-6px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 
+        opacity .2s ease,
+        visibility .2s ease,
+        transform .2s ease;
+}
+
+.sort-options.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.sort-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 0;
+    font-size: 14px;
+    color: #4b5563;
+    cursor: pointer;
+}
+
+.sort-options input[type="radio"] {
+    margin: 0;
+    cursor: pointer;
+}
+
+.dictionary-catalog {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    align-items: start;
+}
+
+.dictionary-card {
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background-color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .04);
+}
+
+.dictionary-card-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border: none;
+    background-color: #ffffff;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+
+.dictionary-card-header:hover {
+    background-color: #f9fafb;
+}
+
+.dictionary-card-header:focus-visible {
+    outline: 2px solid #256e3b;
+    outline-offset: -2px;
+}
+
+.dictionary-word {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.dictionary-type {
+    flex-shrink: 0;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #eff6ff;
+    font-size: 11px;
+    font-weight: 600;
+    color: #2453eb;
+    text-transform: uppercase;
+}
+
+
+/* 
+    Kita menggunakan CSS Grid untuk membuat efek expand / collapse. 
+
+    collapsed: 0fr 
+    expanded: 1fr 
+    
+    Wrapper .dictionary-card-content-inner diperlukan agar isi tidak keluar ketika grid row masih 0. 
+*/
+
+.dictionary-card-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .3s ease;
+}
+
+/* 
+    State expanded. 
+    
+    Nanti React akan memberikan class: 
+        .dictionary-card.expanded 
+*/
+.dictionary-card.expanded .dictionary-card-content {
+    grid-template-rows: 1fr;
+}
+
+.dictionary-card-content-inner {
+    padding: 0 20px;
+    min-height: 0;
+    overflow: hidden;
+
+    transition: 
+        padding-top .3s ease,
+        padding-bottom .3s ease;
+}
+
+.dictionary-card.expanded .dictionary-card-content-inner {
+    padding-top: 16px;
+    padding-bottom: 20px;
+}
+
+.dictionary-detail {
+    margin-bottom: 16px;
+}
+
+.dictionary-detail:last-of-type {
+    margin-bottom: 20px;
+}
+
+.dictionary-detail h2 {
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.dictionary-detail p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #374151;
+}
+
+.dictionary-detail-description {
+    white-space: pre-line;
+}
+
+/* .dictionary-detail ul { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 0.4rem; 
+    margin: 0; 
+    padding: 0; 
+    list-style: none; 
+} 
+
+.dictionary-detail li { 
+    padding: 0.3rem 0.6rem; 
+    border-radius: 0.4rem; 
+    background-color: #f3f4f6; 
+    font-size: 0.8rem; 
+    color: #4b5563;
+} */
+
+.dictionary-card-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: #f3f4f6;
+    font: inherit;
+    font-size: 14px;
+    color: #4b5563;
+    cursor: pointer;
+    transition: 
+        background-color .2s ease,
+        border-color .2s ease,
+        color .2s ease;
+}
+
+.dictionary-card-close:hover {
+    background: #d1d5db;
+    border-color: #9ca3af;
+    color: #1f2937;
+}
+
+.dictionary-card-close:focus-visible { 
+    outline: 2px solid #2563eb; 
+    outline-offset: 2px; 
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .dictionary-page {
+        padding: 20px;
+    }
+
+    .dictionary-catalog {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .dictionary-page {
+        padding: 16px;
+    }
+
+    .dictionary-tabs {
+        gap: 20px;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .dictionary-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tab-button {
+        flex-shrink: 0;
+        font-size: 14px;
+    }
+
+    .dictionary-controls {
+        justify-content: flex-start;
+    }
+
+    .sort-options {
+        left: 0;
+        right: auto;
+    }
+
+    .dictionary-card-header {
+        padding: 14px 16px;
+    }
+
+    .dictionary-word {
+        font-size: 15px;
+    }
+
+    .dictionary-type {
+        font-size: 10px;
+    }
+
+    .dictionary-card-content-inner {
+        padding: 0 16px 0;
+    }
+
+    .dictionary-card.expanded .dictionary-card-content-inner {
+        padding: 14px 0 16px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 600px) {
+    .dictionary-page {
+        padding: 12px;
+    }
+
+    .dictionary-tabs {
+        gap: 16px;
+    }
+
+    .dictionary-card-header {
+        padding: 13px;
+    }
+
+    .dictionary-card-content-inner {
+        padding: 0 13px 0;
+    }
+}
