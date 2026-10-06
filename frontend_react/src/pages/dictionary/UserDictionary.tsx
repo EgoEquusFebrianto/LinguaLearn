@@ -34,7 +34,7 @@ export const UserDictionary = () => {
     const [expandedCard, setExpandedCard] = useState<string | null>(null);
 
     const normalize = () => {
-        const res: DictionaryItem[] = payload.flatMap(
+        const res: DictionaryItem[] = (payload as DictionaryEntry[]).flatMap(
             ({id, word, senses}) => senses.map(
                 (sense, idx) => ({
                     senseId: `${id}-${idx}`,
