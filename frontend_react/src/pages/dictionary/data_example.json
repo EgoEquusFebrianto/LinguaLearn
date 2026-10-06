@@ -1,0 +1,389 @@
+[
+    {
+        "id": "6a8e00209d27574438342615",
+        "word_uuid": "3960b611-efef-554b-b655-f2871175d6c0",
+        "word": "At the very least",
+        "senses": [
+            {
+                "translations": [
+                    "setidaknya"
+                ],
+                "synonyms": [
+                    "at least"
+                ],
+                "type": "Adjective Phrase",
+                "description": "1. At least\nFrasa ini digunakan untuk menyatakan batas minimum atau jumlah minimum dari sesuatu. Itu menunjukkan\nbahwa hal yang disebutkan adalah batas terendah atau paling sedikit yang diharapkan atau diperlukan.\n\nContoh\nYou should at least finish your homework before going out.\n(Setidaknya kamu harus menyelesaikan pekerjaan rumah sebelum keluar.)\n\nI need at least $100 to cover my expenses.\n(Saya membutuhkan setidaknya $100 untuk menutupi pengeluaran saya.)\n\nDalam kalimat ini, 'at least' menunjukkan sesuatu yang dianggap cukup atau minimal untuk situasi tertentu.\n\n2. At the very least\nFrasa ini memberikan penekanan lebih kuat pada batas minimum, sering kali menunjukkan bahwa situasi\nini adalah yang paling kecil atau paling rendah yang bisa diterima atau diharapkan. Ini menekankan\nbahwa meskipun tidak ideal, hal ini adalah standar minimal yang mutlak diperlukan.\n\nContoh:\nYou should at the very least apologize for your mistake.\n(Kamu paling tidak harus meminta maaf atas kesalahanmu.)\n\nAt the very least, we should have a backup plan in case things go wrong.\n(Paling tidak, kita harus memiliki rencana cadangan jika sesuatu berjalan tidak sesuai rencana.)\n\nDalam kalimat ini, 'at the very least' menekankan bahwa tidak ada pilihan lain yang lebih rendah atau lebih\nsedikit dari itu yang bisa diterima.\n\nPerbedaan Intinya:\n\nAt least, menyatakan batas minimum secara umum.\nAt the very least, menambahkan penekanan lebih kuat, menyiratkan bahwa ini adalah batas minimum yang\nbenar-benar diperlukan, dan apa pun di bawah itu tidak dapat diterima."
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426bb",
+        "word_uuid": "6cc8ced2-c48f-55bf-bc30-439b082f739d",
+        "word": "accident",
+        "senses": [
+            {
+                "translations": [
+                    "kecelakaan"
+                ],
+                "synonyms": [
+                    "wreck",
+                    "mishap"
+                ],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834263d",
+        "word_uuid": "010049b9-b710-502b-b030-4a71f424cbf4",
+        "word": "accommodate",
+        "senses": [
+            {
+                "translations": [
+                    "menampung"
+                ],
+                "synonyms": [
+                    "contain",
+                    "collect",
+                    "resettle",
+                    "relocate"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426b8",
+        "word_uuid": "7af17fc8-565d-5fbb-b2a3-68e1189f004b",
+        "word": "accompany",
+        "senses": [
+            {
+                "translations": [
+                    "menemani",
+                    "mengantar"
+                ],
+                "synonyms": [
+                    "escort",
+                    "attend",
+                    "squire"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426ba",
+        "word_uuid": "032ed438-ad0c-53b9-a6a9-34649eed1a6f",
+        "word": "accomplishment",
+        "senses": [
+            {
+                "translations": [
+                    "prestasi"
+                ],
+                "synonyms": [
+                    "feat",
+                    "achievement"
+                ],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834269d",
+        "word_uuid": "d2d9e7ae-846e-5c48-9622-d7f64eb667cc",
+        "word": "achieve",
+        "senses": [
+            {
+                "translations": [
+                    "meraih",
+                    "mencapai",
+                    "memperoleh"
+                ],
+                "synonyms": [
+                    "reach",
+                    "attain",
+                    "obtain",
+                    "acquire",
+                    "gain"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342681",
+        "word_uuid": "5db0f3e5-3a44-5773-bcfd-1dc58a33d20e",
+        "word": "achievement",
+        "senses": [
+            {
+                "translations": [
+                    "pencapaian"
+                ],
+                "synonyms": [
+                    "attainment",
+                    "accession"
+                ],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834262d",
+        "word_uuid": "4459dc21-54bc-5a29-aa1c-7ca60c47e43d",
+        "word": "across",
+        "senses": [
+            {
+                "translations": [
+                    "melintasi"
+                ],
+                "synonyms": [],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342687",
+        "word_uuid": "cc50ea5f-b871-5b25-bd7a-d36e899ab7fe",
+        "word": "act",
+        "senses": [
+            {
+                "translations": [
+                    "memainkan peran"
+                ],
+                "synonyms": [
+                    "represent"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834264d",
+        "word_uuid": "cab7eed1-f5b0-5489-97b4-332c78df8a9f",
+        "word": "almost",
+        "senses": [
+            {
+                "translations": [
+                    "hampir"
+                ],
+                "synonyms": [
+                    "nearly",
+                    "close",
+                    "nigh",
+                    "practically"
+                ],
+                "type": "Adverb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426ab",
+        "word_uuid": "aaed0e49-9852-55b8-a5a7-3b59be2708b3",
+        "word": "annually",
+        "senses": [
+            {
+                "translations": [
+                    "setiap tahun"
+                ],
+                "synonyms": [],
+                "type": "Adverb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342619",
+        "word_uuid": "d4a57e92-4b3c-50ea-8311-1a88673c2e79",
+        "word": "apply",
+        "senses": [
+            {
+                "translations": [
+                    "menerapkan"
+                ],
+                "synonyms": [
+                    "adjust"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834263e",
+        "word_uuid": "d87abaed-188d-54cf-b6c0-e23e3541a1c0",
+        "word": "appreciate",
+        "senses": [
+            {
+                "translations": [
+                    "menghargai"
+                ],
+                "synonyms": [
+                    "respect",
+                    "value",
+                    "cherish"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342643",
+        "word_uuid": "bff2fbbb-1295-5182-bb39-5f4b5938c201",
+        "word": "approach",
+        "senses": [
+            {
+                "translations": [
+                    "mendekati"
+                ],
+                "synonyms": [
+                    "nearcome",
+                    "near",
+                    "tocome",
+                    "upget",
+                    "gear",
+                    "toverge"
+                ],
+                "type": "Verb",
+                "description": ""
+            },
+            {
+                "translations": [
+                    "pendekatan"
+                ],
+                "synonyms": [
+                    "oncoming"
+                ],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426b3",
+        "word_uuid": "a9362c63-707e-5052-a7c6-de08da2066db",
+        "word": "appropriate",
+        "senses": [
+            {
+                "translations": [
+                    "sesuai",
+                    "tepat"
+                ],
+                "synonyms": [
+                    "suitable",
+                    "corresponding",
+                    "fit",
+                    "convenient",
+                    "consistent"
+                ],
+                "type": "Adjective",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342655",
+        "word_uuid": "0b39aaa3-e92d-50b4-b568-6b2980f2e56e",
+        "word": "approximate",
+        "senses": [
+            {
+                "translations": [
+                    "perkiraan",
+                    "kurang lebih",
+                    "kira-kira"
+                ],
+                "synonyms": [],
+                "type": "Adjective",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834262c",
+        "word_uuid": "1ad0afd4-1ff3-5a0e-baab-1ce884cb847a",
+        "word": "arrange",
+        "senses": [
+            {
+                "translations": [
+                    "mengatur"
+                ],
+                "synonyms": [
+                    "set",
+                    "organize",
+                    "manage",
+                    "regulate",
+                    "adjust"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342614",
+        "word_uuid": "bf242bab-8da3-58e0-9be3-65e74b52d6ad",
+        "word": "as a result",
+        "senses": [
+            {
+                "translations": [
+                    "sebagai akibat",
+                    "sebagai hasil"
+                ],
+                "synonyms": [
+                    "consequently",
+                    "therefore",
+                    "thus"
+                ],
+                "type": "Adjective Phrase",
+                "description": "Ini digunakan untuk menunjukkan hasil atau konsekuensi dari suatu tindakan atau peristiwa yang telah dijelaskan sebelumnya.\n\nContoh kalimat:\n\n1. Explanation of a consequence (menjelaskan akibat):\n\nThe team didn't prepare well for the presentation, and as a result, they lost the project bid.\n(Tim tidak mempersiapkan presentasi dengan baik, dan sebagai akibatnya, mereka kalah dalam penawaran proyek.)\n\n2. Cause and effect (sebab dan akibat):\n\nIt rained heavily last night. As a result, the streets were flooded this morning.\n(Hujan deras turun semalam. Sebagai akibatnya, jalanan banjir pagi ini.)"
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426a2",
+        "word_uuid": "e6373b0a-e767-5791-90b3-1eaf6d497602",
+        "word": "assume",
+        "senses": [
+            {
+                "translations": [
+                    "menganggap"
+                ],
+                "synonyms": [
+                    "think",
+                    "regard",
+                    "presume",
+                    "believe",
+                    "take"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834267e",
+        "word_uuid": "e7b1e5ce-c3d1-5597-ae83-c3727494398a",
+        "word": "attend",
+        "senses": [
+            {
+                "translations": [
+                    "menghadiri"
+                ],
+                "synonyms": [
+                    "present"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    }
+]

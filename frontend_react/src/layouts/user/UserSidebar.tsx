@@ -44,7 +44,7 @@ export const UserSidebar = ({
                 </div>
 
                 <nav className='sidebar-navigation'>
-                    <NavLink to={"/home"}>
+                    <NavLink to={"/"}>
                         <FaHome />
                         {!isCollapsed && (<span>Beranda</span>)}
                     </NavLink>

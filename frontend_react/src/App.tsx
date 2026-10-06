@@ -7,6 +7,7 @@ import { HomeUser } from "./pages/home_authorized_user/HomeUser";
 import { useAuth } from "./features/authentication/hooks/useAuth";
 import { Toaster } from "react-hot-toast";
 import { UserLayout } from './layouts/user/UserLayout';
+import { UserDictionary } from './pages/dictionary/UserDictionary';
 import "./App.css";
 
 type ProtectedRouteProps = {
@@ -26,7 +27,7 @@ const ProtectedRoute = ({isAuthenticated}: ProtectedRouteProps) => {
 };
 
 function AppContent() {
-  const { isAuthenticated, login, register} = useAuth();
+  const { login, register} = useAuth();
 
   return(
     <div className='app'>
@@ -34,14 +35,16 @@ function AppContent() {
         <Routes>
           <Route 
             index 
-            element={<ProtectedRoute isAuthenticated={isAuthenticated}/>}
-            // element={<ProtectedRoute isAuthenticated={true}/>}
+            // element={<ProtectedRoute isAuthenticated={isAuthenticated}/>}
+            element={<ProtectedRoute isAuthenticated={true}/>}
           />
 
           <Route element={<AuthenticationPage />}>
             <Route path='login' element={<LoginPage login={login} />} />
             <Route path='register' element={<RegisterPage register={register} />} />
           </Route>
+
+          <Route path='dictionary' element={<UserDictionary />}/>
         </Routes>
       </div>
     </div>
