@@ -27,7 +27,7 @@ const ProtectedRoute = ({isAuthenticated}: ProtectedRouteProps) => {
 };
 
 function AppContent() {
-  const { login, register} = useAuth();
+  const { isAuthenticated, login, register} = useAuth();
 
   return(
     <div className='app'>
@@ -35,8 +35,8 @@ function AppContent() {
         <Routes>
           <Route 
             index 
-            // element={<ProtectedRoute isAuthenticated={isAuthenticated}/>}
-            element={<ProtectedRoute isAuthenticated={true}/>}
+            element={<ProtectedRoute isAuthenticated={isAuthenticated}/>}
+            // element={<ProtectedRoute isAuthenticated={true}/>}
           />
 
           <Route element={<AuthenticationPage />}>
