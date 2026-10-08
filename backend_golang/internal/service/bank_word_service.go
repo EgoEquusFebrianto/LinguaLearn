@@ -2,6 +2,7 @@ package service
 
 import (
 	"context"
+	"errors"
 	"strings"
 
 	"github.com/EgoEquusFebrianto/LinguaLearn/internal/delivery/http/response"
@@ -27,7 +28,7 @@ func (s *BankWordService) Search(
 	limit int,
 ) (*response.BankWordSearchResponse, error) {
 	if page < 1 {
-		page = 1
+		return nil, errors.New("Page must be positif number")
 	}
 
 	if limit < 1 {

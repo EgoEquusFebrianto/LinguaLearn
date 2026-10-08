@@ -1,25 +1,26 @@
-import { createContext, useCallback, useEffect, useMemo, useState } from 'react'
+import { createContext, useCallback, useMemo, useState } from 'react'
 import type { 
-    BankWord,
     BankWordContextValue, 
-    FunctionProps
+    FunctionProps,
+    DictionaryContentQueryParams,
+    DictionaryItem
 } from '../bank.word.feature.type'
 import { BankWordService } from '../services/BankWordService';
 
 export const BankWordContext = createContext<BankWordContextValue | null>(null)
 
 export const BankWordContextProvider = ({children}: FunctionProps) => {
-    const [bankWords, setBankWords] = useState<BankWord[]>([]);
+    const [dictionaryContent, setDictionaryContent] = useState<DictionaryItem[]>([]);
     const [loading, setLoading] = useState(false);
 
-    const fetchBankWordList = useCallback(
-        async () => {
+    const fetchDictionaryContent = useCallback(
+        async (query: DictionaryContentQueryParams) => {
             setLoading(true);
 
             try {
-                const response = await BankWordService.getAllWords();
+                const response = await BankWordService.getDictionaryContent(query);
 
-                setBankWords(response.Data);
+                setDictionaryContent(prev => [...prev, ...response.data]);
             } catch (error) {
                 console.error(error);
 
@@ -32,19 +33,12 @@ export const BankWordContextProvider = ({children}: FunctionProps) => {
 
     const value = useMemo<BankWordContextValue>(
         () => ({
-            bankWords,
+            dictionaryContent,
             loading,
-        }), [bankWords, loading]
+            fetchDictionaryContent,
+        }), [dictionaryContent, loading, fetchDictionaryContent]
     );
 
-    useEffect(() => {
-        const callFetchBankWord = async () => {
-            await fetchBankWordList();
-        }
-
-        callFetchBankWord()
-    }, [fetchBankWordList]);
-    
     return (
         <BankWordContext.Provider value={value}>
             {children}
