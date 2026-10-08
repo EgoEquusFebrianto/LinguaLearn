@@ -8,15 +8,10 @@ export const HomeUser = () => {
     return (
         <div className="home-user">
             <section className="home-welcome">
-                <h1>
-                    Selamat datang kembali! 👋
-                </h1>
+                <h1>Selamat datang kembali! 👋</h1>
 
-                <p>
-                    Mari lanjutkan perjalanan belajar bahasa Inggris Anda.
-                </p>
+                <p>Mari lanjutkan perjalanan belajar bahasa Inggris Anda.</p>
             </section>
-
 
             <section className="home-quick-actions">
                 <Link
@@ -27,12 +22,9 @@ export const HomeUser = () => {
 
                     <div>
                         <h2>Kamus</h2>
-                        <p>
-                            Cari arti dan informasi kata bahasa Inggris.
-                        </p>
+                        <p>Cari arti dan informasi kata bahasa Inggris.</p>
                     </div>
                 </Link>
-
 
                 <Link
                     to="/games"
@@ -42,21 +34,15 @@ export const HomeUser = () => {
 
                     <div>
                         <h2>Challenge</h2>
-                        <p>
-                            Uji kemampuan bahasa Inggris Anda melalui game.
-                        </p>
+                        <p>Uji kemampuan bahasa Inggris Anda melalui game.</p>
                     </div>
                 </Link>
             </section>
 
-
             <section className="learning-section">
-                <div className="section-header">
-                    <h2>Progress Belajar</h2>
-                </div>
+                <div className="section-header"><h2>Progress Belajar</h2></div>
 
                 <div className="progress-grid">
-
                     <div className="progress-card">
                         <span>Games Dimainkan</span>
                         <strong>12</strong>
@@ -74,7 +60,6 @@ export const HomeUser = () => {
 
                 </div>
             </section>
-
 
             <section className="learning-section">
                 <div className="section-header">
@@ -97,7 +82,6 @@ export const HomeUser = () => {
                         <span>Sentence Ordering</span>
                         <strong>90%</strong>
                     </div>
-
                 </div>
             </section>
         </div>
