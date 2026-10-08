@@ -30,15 +30,13 @@ export const PreferencesContextProvider = (
     });
 
     useEffect(() => {
-        localStorage.setItem(DARK_MODE_STORAGE_KEY, String(isDarkMode));
-    }, [isDarkMode]);
-
-    useEffect(() => {
         localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
     }, [language]);
 
     useEffect(() => {
         document.documentElement.classList.toggle("dark", isDarkMode);
+
+        localStorage.setItem(DARK_MODE_STORAGE_KEY, String(isDarkMode));
     }, [isDarkMode]);
 
     const toggleDarkMode = () => {

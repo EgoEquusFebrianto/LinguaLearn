@@ -1,8 +1,13 @@
+/* =========================
+   DICTIONARY PAGE
+========================= */
+
 .dictionary-page {
     min-height: 100%;
     width: 100%;
     padding: 2rem;
-    background: #f5f6f8;
+    background: transparent;
+    color: var(--user-text-color);
 }
 
 .dictionary-header {
@@ -14,15 +19,19 @@
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.2;
-    color: #1f2937;
+    color: var(--user-text-color);
 }
+
+/* =========================
+   DICTIONARY TABS
+========================= */
 
 .dictionary-tabs {
     display: flex;
     align-items: center;
     gap: 2rem;
     margin-bottom: 1.5rem;
-    border-bottom: 1px solid #d1d5db;
+    border-bottom: 1px solid var(--user-border-color);
 }
 
 .tab-button {
@@ -33,8 +42,9 @@
     font: inherit;
     font-size: 15px;
     font-weight: 500;
-    color: #6b7280;
+    color: var(--user-text-muted);
     cursor: pointer;
+    transition: color 0.2s ease;
 }
 
 .tab-button::after {
@@ -42,25 +52,34 @@
     position: absolute;
     width: 100%;
     height: 2px;
-    background: #2563eb;
+    background: var(--user-text-active);
     left: 0;
     bottom: -1px;
     transform: scaleX(0);
     transform-origin: center;
-    transition: transform .2s ease;
+    transition: transform 0.2s ease;
 }
 
 .tab-button:hover {
-    color: #1f2937;
+    color: var(--user-text-color);
 }
 
 .tab-button.active {
-    color: #2563eb;
+    color: var(--user-text-active);
 }
 
-.tab-button.active::after { 
+.tab-button.active::after {
     transform: scaleX(1);
 }
+
+.tab-button:focus-visible {
+    outline: 2px solid var(--user-text-active);
+    outline-offset: 4px;
+}
+
+/* =========================
+   DICTIONARY CONTROLS
+========================= */
 
 .dictionary-controls {
     position: relative;
@@ -73,28 +92,34 @@
     display: inline-flex;
     align-items: center;
     padding: 10px 16px;
-    border: 1px solid #d1d5db;
-    background-color: #ffffff;
+    border: 1px solid var(--user-border-color);
+    border-radius: 8px;
+    background-color: var(--user-surface-background);
     font: inherit;
     font-size: 14px;
     font-weight: 500;
-    color: #374151;
+    color: var(--user-text-secondary);
     cursor: pointer;
-    transition: 
-        background-color .2s ease,
-        border-color .2s ease,
-        box-shadow .2s ease;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        color 0.2s ease;
 }
 
 .sort-button:hover {
-    background-color: #f9fafb;
-    border-color: #9ca3af;
+    background-color: var(--user-hover-background);
+    border-color: var(--user-text-muted);
 }
 
 .sort-button:focus-visible {
-    outline: 2px solid #2563eb;
+    outline: 2px solid var(--user-text-active);
     outline-offset: 2px;
 }
+
+/* =========================
+   SORT OPTIONS
+========================= */
 
 .sort-options {
     position: absolute;
@@ -103,21 +128,22 @@
     z-index: 10;
     width: 220px;
     padding: 16px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--user-border-color);
     border-radius: 14px;
-    background: #ffffff;
-    box-shadow: 
-        0 10px 25px rgba(0, 0, 0, .08),
-        0 4px 10px rgba(0, 0, 0, .04);
+    background: var(--user-surface-background);
+    color: var(--user-text-color);
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12),
+        0 4px 10px rgba(0, 0, 0, 0.06);
 
     transform: translateY(-6px);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: 
-        opacity .2s ease,
-        visibility .2s ease,
-        transform .2s ease;
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease,
+        transform 0.2s ease;
 }
 
 .sort-options.open {
@@ -133,14 +159,23 @@
     gap: 8px;
     padding: 7px 0;
     font-size: 14px;
-    color: #4b5563;
+    color: var(--user-text-secondary);
     cursor: pointer;
+}
+
+.sort-options label:hover {
+    color: var(--user-text-color);
 }
 
 .sort-options input[type="radio"] {
     margin: 0;
+    accent-color: var(--user-text-active);
     cursor: pointer;
 }
+
+/* =========================
+   DICTIONARY CATALOG
+========================= */
 
 .dictionary-catalog {
     display: grid;
@@ -149,13 +184,22 @@
     align-items: start;
 }
 
+/* =========================
+   DICTIONARY CARD
+========================= */
+
 .dictionary-card {
     width: 100%;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--user-border-color);
     border-radius: 12px;
-    background-color: #ffffff;
+    background-color: var(--user-surface-background);
+    color: var(--user-text-color);
     overflow: hidden;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, .04);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .dictionary-card-header {
@@ -163,63 +207,66 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
     padding: 16px 20px;
     border: none;
-    background-color: #ffffff;
+    background-color: var(--user-surface-background);
+    color: var(--user-text-color);
     font: inherit;
     text-align: left;
     cursor: pointer;
-    transition: background-color .2s ease;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
 
 .dictionary-card-header:hover {
-    background-color: #f9fafb;
+    background-color: var(--user-hover-background);
 }
 
 .dictionary-card-header:focus-visible {
-    outline: 2px solid #256e3b;
+    outline: 2px solid var(--user-text-active);
     outline-offset: -2px;
 }
 
 .dictionary-word {
     font-size: 1rem;
     font-weight: 600;
-    color: #1f2937;
+    color: var(--user-text-color);
+    overflow-wrap: anywhere;
 }
 
 .dictionary-type {
     flex-shrink: 0;
     padding: 4px 10px;
     border-radius: 999px;
-    background: #eff6ff;
+    background: var(--user-active-background);
     font-size: 11px;
     font-weight: 600;
-    color: #2453eb;
+    color: var(--user-text-active);
     text-transform: uppercase;
 }
 
+/* =========================
+   CARD EXPAND / COLLAPSE
+========================= */
 
-/* 
-    Kita menggunakan CSS Grid untuk membuat efek expand / collapse. 
+/*
+    Collapsed: 0fr
+    Expanded: 1fr
 
-    collapsed: 0fr 
-    expanded: 1fr 
-    
-    Wrapper .dictionary-card-content-inner diperlukan agar isi tidak keluar ketika grid row masih 0. 
+    Wrapper inner diperlukan supaya isi tidak
+    keluar ketika grid row masih 0.
 */
 
 .dictionary-card-content {
     display: grid;
     grid-template-rows: 0fr;
-    transition: grid-template-rows .3s ease;
+    transition: grid-template-rows 0.3s ease;
 }
 
-/* 
-    State expanded. 
-    
-    Nanti React akan memberikan class: 
-        .dictionary-card.expanded 
-*/
+/* Expanded state */
+
 .dictionary-card.expanded .dictionary-card-content {
     grid-template-rows: 1fr;
 }
@@ -228,16 +275,19 @@
     padding: 0 20px;
     min-height: 0;
     overflow: hidden;
-
-    transition: 
-        padding-top .3s ease,
-        padding-bottom .3s ease;
+    transition:
+        padding-top 0.3s ease,
+        padding-bottom 0.3s ease;
 }
 
 .dictionary-card.expanded .dictionary-card-content-inner {
     padding-top: 16px;
     padding-bottom: 20px;
 }
+
+/* =========================
+   DICTIONARY DETAILS
+========================= */
 
 .dictionary-detail {
     margin-bottom: 16px;
@@ -251,7 +301,7 @@
     margin-bottom: 5px;
     font-size: 13px;
     font-weight: 600;
-    color: #6b7280;
+    color: var(--user-text-muted);
     text-transform: uppercase;
     letter-spacing: 0.04em;
 }
@@ -260,58 +310,69 @@
     margin: 0;
     font-size: 15px;
     line-height: 1.6;
-    color: #374151;
+    color: var(--user-text-secondary);
 }
 
 .dictionary-detail-description {
     white-space: pre-line;
+    overflow-wrap: anywhere;
 }
 
-/* .dictionary-detail ul { 
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 0.4rem; 
-    margin: 0; 
-    padding: 0; 
-    list-style: none; 
-} 
+/*
+.dictionary-detail ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
-.dictionary-detail li { 
-    padding: 0.3rem 0.6rem; 
-    border-radius: 0.4rem; 
-    background-color: #f3f4f6; 
-    font-size: 0.8rem; 
-    color: #4b5563;
-} */
+.dictionary-detail li {
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.4rem;
+    background-color: var(--user-hover-background);
+    font-size: 0.8rem;
+    color: var(--user-text-secondary);
+}
+*/
+
+/* =========================
+   CLOSE BUTTON
+========================= */
 
 .dictionary-card-close {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 9px 15px;
-    border: 1px solid #d1d5db;
+    border: 1px solid var(--user-border-color);
     border-radius: 8px;
-    background-color: #f3f4f6;
+    background-color: var(--user-hover-background);
     font: inherit;
     font-size: 14px;
-    color: #4b5563;
+    color: var(--user-text-secondary);
     cursor: pointer;
-    transition: 
-        background-color .2s ease,
-        border-color .2s ease,
-        color .2s ease;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
 }
 
 .dictionary-card-close:hover {
-    background: #d1d5db;
-    border-color: #9ca3af;
-    color: #1f2937;
+    background: var(--user-active-background);
+    border-color: var(--user-text-active);
+    color: var(--user-text-color);
 }
 
-.dictionary-card-close:focus-visible { 
-    outline: 2px solid #2563eb; 
-    outline-offset: 2px; 
+.dictionary-card-close:focus-visible {
+    outline: 2px solid var(--user-text-active);
+    outline-offset: 2px;
 }
+
+/* =========================
+   LOADING / EMPTY / SENTINEL
+========================= */
 
 .dictionary-sentinel {
     width: 100%;
@@ -322,10 +383,13 @@
 .dictionary-empty {
     padding: 16px;
     text-align: center;
-    color: #6b7280;
+    color: var(--user-text-muted);
 }
 
-/* Tablet */
+/* =========================
+   TABLET
+========================= */
+
 @media (max-width: 900px) {
     .dictionary-page {
         padding: 20px;
@@ -336,7 +400,10 @@
     }
 }
 
-/* Mobile */
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 600px) {
     .dictionary-page {
         padding: 16px;
@@ -383,11 +450,14 @@
     }
 
     .dictionary-card.expanded .dictionary-card-content-inner {
-        padding: 14px 0 16px;
+        padding: 14px 16px 16px;
     }
 }
 
-/* Tablet */
+/* =========================
+   SMALL MOBILE
+========================= */
+
 @media (max-width: 600px) {
     .dictionary-page {
         padding: 12px;
@@ -403,5 +473,27 @@
 
     .dictionary-card-content-inner {
         padding: 0 13px 0;
+    }
+
+    .dictionary-card.expanded .dictionary-card-content-inner {
+        padding: 14px 13px 16px;
+    }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .tab-button,
+    .tab-button::after,
+    .sort-button,
+    .sort-options,
+    .dictionary-card,
+    .dictionary-card-header,
+    .dictionary-card-content,
+    .dictionary-card-content-inner,
+    .dictionary-card-close {
+        transition: none;
     }
 }
