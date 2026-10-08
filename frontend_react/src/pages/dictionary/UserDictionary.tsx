@@ -1,63 +1,23 @@
-import { useEffect, useState } from 'react';
-import payload from './data_example.json';
-import "./UserDictionary.css";
+import { useEffect, useRef, useState } from 'react';
 import { UserLayout } from '../../layouts/user/UserLayout';
-
-type Sense = {
-    translations: string[];
-    synonyms: string[];
-    type: string;
-    description: string;
-}
-
-type DictionaryEntry = {
-    id: string;
-    word_uuid: string;
-    word: string;
-    senses: Sense[];
-}
-
-type DictionaryItem = {
-    id: string;
-    senseId: string;
-    word: string;
-    type: string;
-    translations: string[];
-    synonyms: string[];
-    description: string;
-}
+import { useInfiniteDictionary } from '../../features/bank_word/hooks/useInfiniteDictionary';
+import "./UserDictionary.css";
 
 export const UserDictionary = () => {
-    const [datas, setData] = useState<DictionaryItem[]>([]);
     const [activeTab, setActiveTab] = useState("all");
     const [isSortOpen, setIsSortOpen] = useState(false);
     const [expandedCard, setExpandedCard] = useState<string | null>(null);
 
-    const normalize = () => {
-        const res: DictionaryItem[] = (payload as DictionaryEntry[]).flatMap(
-            ({id, word, senses}) => senses.map(
-                (sense, idx) => ({
-                    senseId: `${id}-${idx}`,
-                    id,
-                    word,
-                    type: sense.type,
-                    translations: sense.translations ?? [],
-                    synonyms: sense.synonyms ?? [],
-                    description: sense.description ?? "",
-                })
-            )
-        )
+    const observerTarget = useRef<HTMLDivElement | null>(null);
 
-        setData(res);
-    };
+    const {
+        dictionaryContent,
+        isLoading,
+        isFetchingNextPage,
+        hasNextPage,
+        fetchNextPage,
+    } = useInfiniteDictionary(); 
 
-    useEffect(() => {
-        const fetchData = async () => {
-            await normalize();
-        }
-
-        fetchData();
-    }, [])
 
     const handleCardToggle = (senseId: string) => {
         setExpandedCard((current) => current === senseId ? null : senseId);
@@ -75,7 +35,36 @@ export const UserDictionary = () => {
         setActiveTab(tab);
     };
 
-    console.log("Active tabs=", activeTab)
+    useEffect(() => {
+        const target = observerTarget.current;
+
+        if (!target) return;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                const entry = entries[0]
+
+                if (
+                    entry.isIntersecting &&
+                    hasNextPage &&
+                    !isFetchingNextPage
+                ) {
+                    fetchNextPage();
+                }
+            },
+            {
+                root: null,
+                rootMargin: "200px",
+                threshold: 0,
+            }
+        );
+
+        observer.observe(target);
+
+        return () => {
+            observer.disconnect();
+        };
+    }, [hasNextPage, isFetchingNextPage, fetchNextPage]);
 
     return (
         <UserLayout>
@@ -86,7 +75,10 @@ export const UserDictionary = () => {
                 </header>
 
                 {/* Dictionary Tabs */}
-                <nav className="dictionary-tabs" aria-label="Dictionary filters">
+                <nav 
+                    className="dictionary-tabs"
+                    aria-label="Dictionary filters"
+                >
                     <button 
                         type="button" 
                         className={`tab-button ${activeTab === "all" ? "active" : ""}`}
@@ -125,7 +117,7 @@ export const UserDictionary = () => {
                     </button>
 
                     <div 
-                        id="sort-options" 
+                        id="sort-options"
                         className={`sort-options ${isSortOpen ? "open" : ""}`}
                     >
                         <p>Sort by</p>
@@ -157,8 +149,10 @@ export const UserDictionary = () => {
                     className="dictionary-catalog"
                     aria-label="Dictionary entries"
                 >
-                    {datas.map((data) =>
-                        {
+                    {isLoading ? (
+                        <p>Loading Dictionary...</p>
+                    ) : (
+                        dictionaryContent.map((data) => {
                             const isExpanded = expandedCard === data.senseId;
 
                             return(
@@ -189,17 +183,16 @@ export const UserDictionary = () => {
                                             </section>
 
                                             <section className="dictionary-detail">
-                                                <h2>Synonyms</h2>
                                                 <p>{data.synonyms.join(", ")}</p>
+                                                <h2>Synonyms</h2>
                                             </section>
-
 
                                             <section className="dictionary-detail">
                                                 <h2>Description</h2>
 
                                                 <p className='dictionary-detail-description'>{data.description || "-"}</p>
                                             </section>
-
+                                
                                             <button
                                                 type="button"
                                                 className="dictionary-card-close"
@@ -210,10 +203,30 @@ export const UserDictionary = () => {
                                         </div>
                                     </div>
                                 </article>
-                            )
-                        }
+                            );
+                        })
                     )}
                 </section>
+                
+                {/* Infinite Scroll Sentinel */}
+                <div 
+                    ref={observerTarget}
+                    className='dictionary-sentinel'
+                    aria-hidden="true"
+                />
+
+                {isFetchingNextPage && (
+                    <p className='dictionary-loading'>
+                        Loading more words...
+                    </p>
+                )}
+
+                {!isLoading &&
+                    dictionaryContent.length === 0 && (
+                        <p className='dictionary-empty'>
+                            No dictionary entries found.
+                        </p>
+                )}
             </main>
         </UserLayout>
     );
