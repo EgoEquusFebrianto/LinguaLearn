@@ -9,6 +9,7 @@ import { Toaster } from "react-hot-toast";
 import { UserLayout } from './layouts/user/UserLayout';
 import { UserDictionary } from './pages/dictionary/UserDictionary';
 import "./App.css";
+import { MatchingWordsPage } from './pages/matching_words/MatchingWordsPage';
 
 type ProtectedRouteProps = {
   isAuthenticated: boolean;
@@ -35,8 +36,8 @@ function AppContent() {
         <Routes>
           <Route 
             index 
-            element={<ProtectedRoute isAuthenticated={isAuthenticated}/>}
-            // element={<ProtectedRoute isAuthenticated={true}/>}
+            // element={<ProtectedRoute isAuthenticated={isAuthenticated}/>}
+            element={<ProtectedRoute isAuthenticated={true}/>}
           />
 
           <Route element={<AuthenticationPage />}>
@@ -45,6 +46,7 @@ function AppContent() {
           </Route>
 
           <Route path='dictionary' element={<UserDictionary />}/>
+          <Route path='games' element={<MatchingWordsPage />}/>
         </Routes>
       </div>
     </div>

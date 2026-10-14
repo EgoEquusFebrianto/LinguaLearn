@@ -93,3 +93,40 @@ func (h *BankWordHandler) FindByWord(
 		result,
 	)
 }
+
+func (h *BankWordHandler) Random(
+	w http.ResponseWriter,
+	r *http.Request,
+) {
+	result, err := h.service.Random(r.Context())
+	if err != nil {
+		utils.Error(
+			w,
+			http.StatusInternalServerError,
+			"Failed to get random words.",
+		)
+		return
+	}
+
+	utils.JSON(
+		w,
+		http.StatusOK,
+		result,
+	)
+
+    // limit := 10
+
+    // if rawLimit := r.URL.Query().Get("limit"); rawLimit != "" {
+    //     parsedLimit, err := strconv.Atoi(rawLimit)
+    //     if err != nil || parsedLimit < 1 {
+    //         utils.Error(
+    //             w,
+    //             http.StatusBadRequest,
+    //             "limit must be a positive integer",
+    //         )
+    //         return
+    //     }
+
+    //     limit = parsedLimit
+    // }
+}

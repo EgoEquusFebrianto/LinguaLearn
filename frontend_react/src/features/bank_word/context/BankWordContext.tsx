@@ -1,5 +1,5 @@
 import { createContext, useCallback, useMemo, useState } from 'react'
-import type { 
+import type {
     BankWordContextValue, 
     FunctionProps,
     DictionaryContentQueryParams,
@@ -11,6 +11,7 @@ export const BankWordContext = createContext<BankWordContextValue | null>(null)
 
 export const BankWordContextProvider = ({children}: FunctionProps) => {
     const [dictionaryContent, setDictionaryContent] = useState<DictionaryItem[]>([]);
+    
     const [loading, setLoading] = useState(false);
 
     const fetchDictionaryContent = useCallback(
@@ -36,7 +37,11 @@ export const BankWordContextProvider = ({children}: FunctionProps) => {
             dictionaryContent,
             loading,
             fetchDictionaryContent,
-        }), [dictionaryContent, loading, fetchDictionaryContent]
+        }), [
+            dictionaryContent, 
+            loading, 
+            fetchDictionaryContent, 
+        ]
     );
 
     return (

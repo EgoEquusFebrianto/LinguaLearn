@@ -73,3 +73,9 @@ func (s *BankWordService) FindByWord(
 		word,
 	)
 }
+
+func (s *BankWordService) Random(
+	ctx context.Context,
+) ([]domain.BankWord, error) {
+	return s.repository.Random(ctx)
+}

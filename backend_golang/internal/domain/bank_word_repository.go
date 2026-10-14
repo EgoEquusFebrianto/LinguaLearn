@@ -24,4 +24,8 @@ type BankWordRepository interface {
 		ctx context.Context,
 		query string,
 	) (int64, error)
+
+	Random(
+		ctx context.Context,
+	) ([]BankWord, error)
 }

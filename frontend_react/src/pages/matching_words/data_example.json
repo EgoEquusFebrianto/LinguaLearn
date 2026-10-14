@@ -1,0 +1,1835 @@
+[
+    {
+        "id": "6a8e00209d275744383426af",
+        "word_uuid": "3cfff9b9-c536-54ef-a8f1-e41849f6575c",
+        "word": "uptown",
+        "senses": [
+            {
+                "translations": [
+                    "pinggiran kota",
+                    "daerah permukiman"
+                ],
+                "synonyms": [],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342635",
+        "word_uuid": "d7c865f9-939f-58bc-908f-dbd452ced318",
+        "word": "collect",
+        "senses": [
+            {
+                "translations": [
+                    "mengumpulkan"
+                ],
+                "synonyms": [
+                    "gather",
+                    "put together",
+                    "garner",
+                    "accumulate",
+                    "raise"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342642",
+        "word_uuid": "6c045be9-df6f-580d-ac04-2791de1eaaf8",
+        "word": "precise form",
+        "senses": [
+            {
+                "translations": [
+                    "bentuk yang tepat"
+                ],
+                "synonyms": [],
+                "type": "",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834262c",
+        "word_uuid": "1ad0afd4-1ff3-5a0e-baab-1ce884cb847a",
+        "word": "arrange",
+        "senses": [
+            {
+                "translations": [
+                    "mengatur"
+                ],
+                "synonyms": [
+                    "set",
+                    "organize",
+                    "manage",
+                    "regulate",
+                    "adjust"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426ca",
+        "word_uuid": "c070b3ff-c37a-5a03-aa73-95c159f5b41e",
+        "word": "retrieve",
+        "senses": [
+            {
+                "translations": [
+                    "mengambil",
+                    "mendapatkan"
+                ],
+                "synonyms": [],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342698",
+        "word_uuid": "2f82891e-f0e0-5109-bef2-5b62107d19db",
+        "word": "confuse",
+        "senses": [
+            {
+                "translations": [
+                    "bingung"
+                ],
+                "synonyms": [],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342672",
+        "word_uuid": "8745c040-f157-5f54-b006-edc823e0a107",
+        "word": "trustworthiness",
+        "senses": [
+            {
+                "translations": [
+                    "dapat dipercaya",
+                    "keandalan"
+                ],
+                "synonyms": [
+                    "reliability",
+                    "dependability",
+                    "honesty",
+                    "integrity"
+                ],
+                "type": "Noun",
+                "description": "Trustworthiness adalah kata benda (noun) yang menggambarkan sifat atau kualitas."
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342611",
+        "word_uuid": "d184e177-ff15-5372-a780-935675339546",
+        "word": "throught",
+        "senses": [
+            {
+                "translations": [
+                    "pemikiran",
+                    "ide",
+                    "opini"
+                ],
+                "synonyms": [],
+                "type": "Noun",
+                "description": ""
+            },
+            {
+                "translations": [
+                    "memikirkan"
+                ],
+                "synonyms": [],
+                "type": "Verb",
+                "description": "Explanation:\n'Throught' is the past tense (Verb 2) of 'think,'\nwhich means to think about something or to have an opinion."
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342632",
+        "word_uuid": "e92255ce-4f45-5f31-b1cb-fb9c19ee1963",
+        "word": "deflect",
+        "senses": [
+            {
+                "translations": [
+                    "membelokkan",
+                    "mengelak"
+                ],
+                "synonyms": [
+                    "divert",
+                    "turn",
+                    "swerve"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834266f",
+        "word_uuid": "48662589-15b8-5111-bfa4-503410c92c27",
+        "word": "conclude",
+        "senses": [
+            {
+                "translations": [
+                    "menyimpulkan"
+                ],
+                "synonyms": [
+                    "deduce",
+                    "sum up",
+                    "stuck up"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834268d",
+        "word_uuid": "d8956f96-2aaa-5b84-b24c-93c4c0c1aae0",
+        "word": "thin",
+        "senses": [
+            {
+                "translations": [
+                    "tipis"
+                ],
+                "synonyms": [],
+                "type": "Adjective",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342630",
+        "word_uuid": "3815b872-a40b-5350-820b-9473989c8814",
+        "word": "derived",
+        "senses": [
+            {
+                "translations": [
+                    "berasal dari"
+                ],
+                "synonyms": [],
+                "type": "Verb",
+                "description": "\nKata 'derived' adalah bentuk past tense dan past participle dari kata kerja 'derive',\nyang berarti berasal dari atau diperoleh dari sesuatu. Ini digunakan untuk menunjukkan\nbahwa sesuatu diperoleh atau diambil dari sumber lain."
+            },
+            {
+                "translations": [
+                    "yang berasal"
+                ],
+                "synonyms": [],
+                "type": "Adjective",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426a4",
+        "word_uuid": "8ec3f202-9c84-5f0a-aab5-4977bbbfe1c4",
+        "word": "definite",
+        "senses": [
+            {
+                "translations": [
+                    "pasti",
+                    "jelas"
+                ],
+                "synonyms": [
+                    "sure",
+                    "certain"
+                ],
+                "type": "Adjective",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342622",
+        "word_uuid": "28218efb-19e8-5011-808c-e37da57c3faa",
+        "word": "especially",
+        "senses": [
+            {
+                "translations": [
+                    "khususnya"
+                ],
+                "synonyms": [
+                    "particularly",
+                    "specifically",
+                    "in particular"
+                ],
+                "type": "Adverb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834265e",
+        "word_uuid": "475122be-1c3a-5985-aa5f-d0dafd44cdd5",
+        "word": "overcome",
+        "senses": [
+            {
+                "translations": [
+                    "mengatasi"
+                ],
+                "synonyms": [
+                    "surmount",
+                    "get over",
+                    "outgrow"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834262e",
+        "word_uuid": "a42e40d9-ceb8-536f-a079-e7722fc395ce",
+        "word": "trail",
+        "senses": [
+            {
+                "translations": [
+                    "jejak"
+                ],
+                "synonyms": [],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834262b",
+        "word_uuid": "916b395e-1e0e-5927-84cc-2674b21a7cc8",
+        "word": "divide",
+        "senses": [
+            {
+                "translations": [
+                    "membagi"
+                ],
+                "synonyms": [
+                    "split",
+                    "share",
+                    "distribute",
+                    "cut",
+                    "partition"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426b8",
+        "word_uuid": "7af17fc8-565d-5fbb-b2a3-68e1189f004b",
+        "word": "accompany",
+        "senses": [
+            {
+                "translations": [
+                    "menemani",
+                    "mengantar"
+                ],
+                "synonyms": [
+                    "escort",
+                    "attend",
+                    "squire"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342634",
+        "word_uuid": "78abc2f3-ff71-5091-a984-4f750722a767",
+        "word": "perform",
+        "senses": [
+            {
+                "translations": [
+                    "melakukan"
+                ],
+                "synonyms": [
+                    "do",
+                    "undertake",
+                    "carry out"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834266b",
+        "word_uuid": "81812251-da15-560d-b927-9712c067d27b",
+        "word": "prone",
+        "senses": [
+            {
+                "translations": [
+                    "rentan"
+                ],
+                "synonyms": [],
+                "type": "Adjective",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342652",
+        "word_uuid": "7b3ac3d1-c34a-5e0f-b795-43c2cb434b2d",
+        "word": "find",
+        "senses": [
+            {
+                "translations": [
+                    "menemukan"
+                ],
+                "synonyms": [
+                    "come across",
+                    "discover",
+                    "uncover",
+                    "locate"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426a2",
+        "word_uuid": "e6373b0a-e767-5791-90b3-1eaf6d497602",
+        "word": "assume",
+        "senses": [
+            {
+                "translations": [
+                    "menganggap"
+                ],
+                "synonyms": [
+                    "think",
+                    "regard",
+                    "presume",
+                    "believe",
+                    "take"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834264f",
+        "word_uuid": "517e2822-4518-5bd7-9148-9693b7ab6b83",
+        "word": "expertise",
+        "senses": [
+            {
+                "translations": [
+                    "keahlian"
+                ],
+                "synonyms": [
+                    "craftsmanship",
+                    "proficiency"
+                ],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834261f",
+        "word_uuid": "d7063d48-3866-5d6d-8c4c-4e0ff9178886",
+        "word": "initiative",
+        "senses": [
+            {
+                "translations": [
+                    "inisiatif"
+                ],
+                "synonyms": [],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342675",
+        "word_uuid": "bbbaa3c6-fbec-59ff-b878-593f1d1e7c68",
+        "word": "understand",
+        "senses": [
+            {
+                "translations": [
+                    "memahami"
+                ],
+                "synonyms": [
+                    "fathom",
+                    "comprehend",
+                    "conceive"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834267d",
+        "word_uuid": "a263fcbc-9f52-510b-ac0c-af93502dfab7",
+        "word": "relate",
+        "senses": [
+            {
+                "translations": [
+                    "berhubungan"
+                ],
+                "synonyms": [
+                    "correspond",
+                    "appertain",
+                    "bear"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342637",
+        "word_uuid": "06b09eef-e0bd-5385-b6d4-4aac462f3d2b",
+        "word": "things",
+        "senses": [
+            {
+                "translations": [
+                    "hal-hal",
+                    "suatu"
+                ],
+                "synonyms": [],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342636",
+        "word_uuid": "93504e32-2578-5293-ad8e-727eb14d129e",
+        "word": "evidence",
+        "senses": [
+            {
+                "translations": [
+                    "bukti",
+                    "keterangan"
+                ],
+                "synonyms": [
+                    "proof"
+                ],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342618",
+        "word_uuid": "f8bbf23d-820b-5f08-b291-313cd88d2ffc",
+        "word": "lead",
+        "senses": [
+            {
+                "translations": [
+                    "memimpin"
+                ],
+                "synonyms": [
+                    "guide",
+                    "preside",
+                    "conduct",
+                    "run"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342679",
+        "word_uuid": "90882f74-2d05-51a8-afcb-fbc1a16565bb",
+        "word": "underneath",
+        "senses": [
+            {
+                "translations": [
+                    "di bawah"
+                ],
+                "synonyms": [
+                    "below",
+                    "beneath",
+                    "under",
+                    "within"
+                ],
+                "type": "Preposition",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834266e",
+        "word_uuid": "ff201ab2-94f9-54ce-8009-4c666564cfcd",
+        "word": "escape",
+        "senses": [
+            {
+                "translations": [
+                    "melarikan diri"
+                ],
+                "synonyms": [
+                    "flee",
+                    "run away",
+                    "get away",
+                    "run off",
+                    "take off"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342693",
+        "word_uuid": "a6afa152-ebda-52b7-9dae-fd31068199a8",
+        "word": "relocate",
+        "senses": [
+            {
+                "translations": [
+                    "pindah"
+                ],
+                "synonyms": [],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834262a",
+        "word_uuid": "1cf6ef6c-32a1-5030-978b-fc897a23114c",
+        "word": "consider",
+        "senses": [
+            {
+                "translations": [
+                    "mempertimbangkan"
+                ],
+                "synonyms": [],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426a5",
+        "word_uuid": "dd770e9e-32dc-526c-b0a2-d36d0eabd6b2",
+        "word": "significant",
+        "senses": [
+            {
+                "translations": [
+                    "penting"
+                ],
+                "synonyms": [
+                    "important",
+                    "necessary",
+                    "notable",
+                    "prominent"
+                ],
+                "type": "Adjective",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834264e",
+        "word_uuid": "c1814578-a43d-5e4e-bf14-a9925834367b",
+        "word": "demand",
+        "senses": [
+            {
+                "translations": [
+                    "tuntutan"
+                ],
+                "synonyms": [
+                    "claim",
+                    "charge",
+                    "indictment",
+                    "assertion",
+                    "requirement"
+                ],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834267b",
+        "word_uuid": "53ea541c-c941-57b9-a070-af4f20301c0f",
+        "word": "prefer",
+        "senses": [
+            {
+                "translations": [
+                    "lebih menyukai",
+                    "lebih suka",
+                    "memilih"
+                ],
+                "synonyms": [],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426c4",
+        "word_uuid": "201e55cb-2c77-5057-85fc-1de41be485f0",
+        "word": "attract",
+        "senses": [
+            {
+                "translations": [
+                    "menarik"
+                ],
+                "synonyms": [
+                    "appeal",
+                    "tow",
+                    "pull"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426a6",
+        "word_uuid": "143f175e-27c8-524d-a27a-5b445d7f580b",
+        "word": "entrust",
+        "senses": [
+            {
+                "translations": [
+                    "mempercayakan"
+                ],
+                "synonyms": [
+                    "intrust"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834265c",
+        "word_uuid": "3c98d2f8-af79-5271-b9e3-51708893bf94",
+        "word": "trousers",
+        "senses": [
+            {
+                "translations": [
+                    "celana panjang"
+                ],
+                "synonyms": [],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834261c",
+        "word_uuid": "2dc594ba-cc7a-5db1-b665-2bf6d60199a2",
+        "word": "expansion",
+        "senses": [
+            {
+                "translations": [
+                    "ekspansi",
+                    "perluasan",
+                    "perkembangan"
+                ],
+                "synonyms": [],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342656",
+        "word_uuid": "7a32692d-d9aa-5ca6-9985-43d95477a7d1",
+        "word": "overwhelming",
+        "senses": [
+            {
+                "translations": [
+                    "sangat banyak",
+                    "berlimpah-limpah",
+                    "begitu banyak"
+                ],
+                "synonyms": [],
+                "type": "Adjective",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834265f",
+        "word_uuid": "1670f1af-3fba-5088-b896-7a089f01df1e",
+        "word": "reassemble",
+        "senses": [
+            {
+                "translations": [
+                    "mengumpulkan kembali",
+                    "menyusun kembali"
+                ],
+                "synonyms": [],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834266c",
+        "word_uuid": "885ac4e3-a508-5699-9fc6-b957f0ea4ac0",
+        "word": "handy",
+        "senses": [
+            {
+                "translations": [
+                    "berguna"
+                ],
+                "synonyms": [
+                    "useful",
+                    "helpful"
+                ],
+                "type": "Adjective",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342685",
+        "word_uuid": "23fa92d8-37b0-5e66-b47d-5dfd7e426922",
+        "word": "weather",
+        "senses": [
+            {
+                "translations": [
+                    "cuaca"
+                ],
+                "synonyms": [],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426c0",
+        "word_uuid": "43396bb5-11fd-5cec-91c1-e5ff1db2e94b",
+        "word": "consequently",
+        "senses": [
+            {
+                "translations": [
+                    "akibatnya"
+                ],
+                "synonyms": [
+                    "therefore",
+                    "hence",
+                    "in consequence",
+                    "thereupon"
+                ],
+                "type": "Adverb",
+                "description": "fungsinya hampir sama dengan 'thus', tetapi lebih menekankan pada akibat atau hasil yang muncul dari suatu kejadian.\n\nContoh kalimat:\n\n1. Explanation of a result (menjelaskan akibat):\n\nHe didn't submit his project on time, consequently, he failed the course.\n(Dia tidak menyerahkan proyeknya tepat waktu, akibatnya, dia gagal dalam mata kuliah tersebut.)\n\n2. Cause and effect (sebab dan akibat):\n\nThe factory faced a major power outage, and consequently, production was delayed for several hours.\n(Pabrik mengalami pemadaman listrik besar, dan akibatnya, produksi tertunda selama beberapa jam.)\n\nJadi, 'consequently' digunakan untuk menekankan hubungan sebab-akibat dalam suatu pernyataan."
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426c8",
+        "word_uuid": "bc23451d-0303-520a-b0ba-06db80c50d6a",
+        "word": "threaten",
+        "senses": [
+            {
+                "translations": [
+                    "mengancam"
+                ],
+                "synonyms": [],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426ad",
+        "word_uuid": "66f98822-a970-53e8-90e7-adffa8d108fc",
+        "word": "smooth",
+        "senses": [
+            {
+                "translations": [
+                    "halus"
+                ],
+                "synonyms": [
+                    "delicate"
+                ],
+                "type": "Adjective",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342682",
+        "word_uuid": "f039e103-baee-5689-b717-901b2421c5fd",
+        "word": "indictment",
+        "senses": [
+            {
+                "translations": [
+                    "dakwaan",
+                    "tuduhan",
+                    "tuntutan"
+                ],
+                "synonyms": [
+                    "arraignment",
+                    "charge",
+                    "accusation",
+                    "inculpation",
+                    "crimination"
+                ],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834261e",
+        "word_uuid": "895d7e60-9de6-5e61-ad64-23600ba01f66",
+        "word": "wrap",
+        "senses": [
+            {
+                "translations": [
+                    "membungkus"
+                ],
+                "synonyms": [
+                    "incase",
+                    "encase",
+                    "envelop"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342623",
+        "word_uuid": "a6973f0e-d4c6-55f8-8602-9da1e66525cb",
+        "word": "yarn",
+        "senses": [
+            {
+                "translations": [
+                    "benang"
+                ],
+                "synonyms": [],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342674",
+        "word_uuid": "63f9f984-fab2-5222-a1db-0332da7268ec",
+        "word": "performance",
+        "senses": [
+            {
+                "translations": [
+                    "pertunjukkan"
+                ],
+                "synonyms": [
+                    "show",
+                    "display",
+                    "entertainment",
+                    "exhibition"
+                ],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342667",
+        "word_uuid": "8c7369fa-0270-5adb-8537-ba2e98433464",
+        "word": "display",
+        "senses": [
+            {
+                "translations": [
+                    "menampilkan"
+                ],
+                "synonyms": [],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834261a",
+        "word_uuid": "b6a4476f-d904-5dd1-a80a-5a378d4bfcb8",
+        "word": "simultaneous",
+        "senses": [
+            {
+                "translations": [
+                    "serentak",
+                    "serempak",
+                    "bersama"
+                ],
+                "synonyms": [],
+                "type": "Adjective",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834268c",
+        "word_uuid": "5ebf24c5-d319-5bf7-8a65-c7bb8aa77e47",
+        "word": "due to the",
+        "senses": [
+            {
+                "translations": [
+                    "karena"
+                ],
+                "synonyms": [],
+                "type": "Adjective Phrase",
+                "description": "Frasa 'due to the' digunakan untuk menunjukkan penyebab atau alasan suatu keadaan, peristiwa, \natau situasi. Ini mengindikasikan bahwa sesuatu terjadi sebagai hasil dari sesuatu yang lain. \n\nContoh kalimat: \n\n1.Menggambarkan penyebab: \nThe event was canceled due to the bad weather. \n(Acara dibatalkan karena cuaca buruk.) \n\n2.Menjelaskan alasan: \nThe flight was delayed due to the technical issues. \n(Penerbangan tertunda karena masalah teknis.) \n\n3. Dalam konteks formal: \nThe project was postponed due to the lack of funding. \n(Proyek ditunda karena kurangnya dana.)"
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834264c",
+        "word_uuid": "699d5fcb-089d-506e-8865-fc07a6d3bc5a",
+        "word": "branch",
+        "senses": [
+            {
+                "translations": [
+                    "cabang",
+                    "ranting"
+                ],
+                "synonyms": [],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834263f",
+        "word_uuid": "1bd868e8-a917-5a1f-9ae2-93d642374213",
+        "word": "various",
+        "senses": [
+            {
+                "translations": [
+                    "bermacam macam"
+                ],
+                "synonyms": [],
+                "type": "Adjective",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342661",
+        "word_uuid": "3f987694-93c8-53c0-9d11-77916c3867a4",
+        "word": "interplanetary",
+        "senses": [
+            {
+                "translations": [
+                    "antar planet"
+                ],
+                "synonyms": [],
+                "type": "Adjective",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834268a",
+        "word_uuid": "cfc9784e-765b-518b-9c3b-6f9c4514a758",
+        "word": "wince",
+        "senses": [
+            {
+                "translations": [
+                    "memasamkan wajah"
+                ],
+                "synonyms": [],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426b0",
+        "word_uuid": "f911fb27-949d-5f7b-8d9e-ae2bb621a82f",
+        "word": "scale",
+        "senses": [
+            {
+                "translations": [
+                    "skala"
+                ],
+                "synonyms": [],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342663",
+        "word_uuid": "1c2b9adc-6130-51e9-ad64-cb3b752d4f55",
+        "word": "weather forecast",
+        "senses": [
+            {
+                "translations": [
+                    "prakiraan cuaca"
+                ],
+                "synonyms": [],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834268f",
+        "word_uuid": "7b0ebc11-6ebc-531a-823e-be767e739e8c",
+        "word": "penetrate",
+        "senses": [
+            {
+                "translations": [
+                    "menembus"
+                ],
+                "synonyms": [
+                    "pierce",
+                    "permeate",
+                    "cut through",
+                    "go through",
+                    "come through"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426c3",
+        "word_uuid": "3e229eff-6874-5660-b371-12cf8220a80e",
+        "word": "well",
+        "senses": [
+            {
+                "translations": [
+                    "baik"
+                ],
+                "synonyms": [],
+                "type": "Adjective",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342677",
+        "word_uuid": "11c94f04-4114-51e6-b04e-31e3b0e71167",
+        "word": "soft",
+        "senses": [
+            {
+                "translations": [
+                    "lembut",
+                    "empuk",
+                    "lunak"
+                ],
+                "synonyms": [
+                    "tender",
+                    "delicate"
+                ],
+                "type": "Adjective",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426ab",
+        "word_uuid": "aaed0e49-9852-55b8-a5a7-3b59be2708b3",
+        "word": "annually",
+        "senses": [
+            {
+                "translations": [
+                    "setiap tahun"
+                ],
+                "synonyms": [],
+                "type": "Adverb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426bf",
+        "word_uuid": "bfa08fd3-71d3-5ed2-833f-e6c358373a5e",
+        "word": "write the ticket",
+        "senses": [
+            {
+                "translations": [
+                    "menulis denda"
+                ],
+                "synonyms": [],
+                "type": "",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834266d",
+        "word_uuid": "0e39cbd2-e28d-5751-b44d-a494d175bc2b",
+        "word": "major",
+        "senses": [
+            {
+                "translations": [
+                    "besar",
+                    "utama"
+                ],
+                "synonyms": [
+                    "great",
+                    "large",
+                    "big",
+                    "substantial",
+                    "high"
+                ],
+                "type": "Adjective",
+                "description": ""
+            },
+            {
+                "translations": [
+                    "mata pelajaran pokok",
+                    "mata kuliah pokok"
+                ],
+                "synonyms": [],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342616",
+        "word_uuid": "f0d2e954-4586-5126-a85e-fa5f9cc07344",
+        "word": "earner",
+        "senses": [
+            {
+                "translations": [
+                    "pencari nafkah"
+                ],
+                "synonyms": [
+                    "breadwinner"
+                ],
+                "type": "Noun",
+                "description": "example sentence:\nWe define an employee's total earnings to be their monthly  worked, and the\nmaximum total earnings to be the maximum total earnings for any employee \nin the Employee table.\nKami mendefinisikan total penghasilan seorang karyawan sebagai jumlah \nyang mereka peroleh setiap bulan, dan total penghasilan maksimum sebagai \ntotal penghasilan maksimum untuk setiap karyawan dalam tabel Karyawan.Kami mendefinisikan total pendapatan karyawan sebagai hasil kerja bulanan mereka, dan total pendapatan maksimum sebagai total pendapatan maksimum untuk setiap karyawan dalam tabel Karyawan."
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426ae",
+        "word_uuid": "13c91f8b-2fd1-58cb-b7b0-b562033b08c8",
+        "word": "crush",
+        "senses": [
+            {
+                "translations": [
+                    "menghancurkan"
+                ],
+                "synonyms": [
+                    "destroy",
+                    "smash",
+                    "ruin",
+                    "demolish",
+                    "shatter"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426a8",
+        "word_uuid": "892dddc0-62f6-5937-908b-d7385fc18988",
+        "word": "wreck",
+        "senses": [
+            {
+                "translations": [
+                    "merusak"
+                ],
+                "synonyms": [
+                    "ruin",
+                    "harm",
+                    "undermine",
+                    "impair"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342666",
+        "word_uuid": "3c03eff3-86f4-5ca9-928e-50a397a30b6b",
+        "word": "mastery",
+        "senses": [
+            {
+                "translations": [
+                    "penguasaan"
+                ],
+                "synonyms": [
+                    "mastership",
+                    "control"
+                ],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342664",
+        "word_uuid": "99ab9238-9a0e-5c92-9493-09396bee653c",
+        "word": "variety",
+        "senses": [
+            {
+                "translations": [
+                    "variasi"
+                ],
+                "synonyms": [
+                    "variation",
+                    "variant"
+                ],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426b2",
+        "word_uuid": "7d436b53-a17a-5bb1-b3f7-04478c302db5",
+        "word": "broad",
+        "senses": [
+            {
+                "translations": [
+                    "luas",
+                    "lebar"
+                ],
+                "synonyms": [
+                    "comprehensive",
+                    "spacious",
+                    "vast",
+                    "wide",
+                    "extensive"
+                ],
+                "type": "Adjective",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426b6",
+        "word_uuid": "af8b0872-2673-5a08-aa11-a8bef1a1def3",
+        "word": "large",
+        "senses": [
+            {
+                "translations": [
+                    "besar"
+                ],
+                "synonyms": [
+                    "great",
+                    "big",
+                    "major",
+                    "substantial",
+                    "broad"
+                ],
+                "type": "Adjective",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342654",
+        "word_uuid": "1c9a9839-3d85-5e70-8a9b-778fab9ea81b",
+        "word": "straightforward",
+        "senses": [
+            {
+                "translations": [
+                    "mudah",
+                    "terus terang",
+                    "polos"
+                ],
+                "synonyms": [
+                    "easy",
+                    "convenient",
+                    "simple",
+                    "prone",
+                    "handy"
+                ],
+                "type": "Adjective",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834269b",
+        "word_uuid": "3d6d46e0-365c-5aea-b38e-fea2d6aeb922",
+        "word": "track",
+        "senses": [
+            {
+                "translations": [
+                    "melacak"
+                ],
+                "synonyms": [],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426c1",
+        "word_uuid": "82892727-5b64-51e9-924e-2cae75487945",
+        "word": "employ",
+        "senses": [
+            {
+                "translations": [
+                    "mempekerjakan"
+                ],
+                "synonyms": [
+                    "engage"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426b9",
+        "word_uuid": "e5a9a221-8375-5ef6-8dca-24ac11ef1e62",
+        "word": "journey",
+        "senses": [
+            {
+                "translations": [
+                    "perjalanan"
+                ],
+                "synonyms": [
+                    "travel",
+                    "trip",
+                    "traveling"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342625",
+        "word_uuid": "828e2ac5-0e0b-51d8-bf1c-8fe5cf704b09",
+        "word": "facilitate",
+        "senses": [
+            {
+                "translations": [
+                    "memudahkan",
+                    "membantu"
+                ],
+                "synonyms": [
+                    "ease",
+                    "simplify"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342686",
+        "word_uuid": "59968db5-0fda-5f77-a760-82407d4ce27b",
+        "word": "turnstile",
+        "senses": [
+            {
+                "translations": [
+                    "pintu putar"
+                ],
+                "synonyms": [],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834267f",
+        "word_uuid": "50da8403-a945-54dd-b31c-f91409482ad6",
+        "word": "through",
+        "senses": [
+            {
+                "translations": [
+                    "melalui"
+                ],
+                "synonyms": [
+                    "via",
+                    "thru",
+                    "by means of",
+                    "by way of"
+                ],
+                "type": "Preposition",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426bc",
+        "word_uuid": "53f33f31-fe57-542b-82c0-6d79173bb312",
+        "word": "evergreen",
+        "senses": [
+            {
+                "translations": [
+                    "selalu hijau"
+                ],
+                "synonyms": [],
+                "type": "",
+                "description": "\nDalam konteks kalimat 'Data processing is an evergreen field for software engineers',\nkata 'evergreen' memiliki makna selalu relevan, tidak pernah ketinggalan zaman, atau\nterus-menerus bermanfaat dalam jangka waktu panjang.\n\nSecara umum, istilah 'evergreen' digunakan untuk menggambarkan sesuatu yang selalu hijau\n(seperti pohon yang daunnya tidak gugur), dan secara figuratif mengacu pada hal-hal yang\nselalu relevan, berguna, atau diminati, tanpa peduli dengan perubahan waktu atau tren.\n\nJadi, dalam kalimat tersebut, 'evergreen field' berarti bahwa pemrosesan data adalah\nbidang yang akan selalu dibutuhkan dan relevan bagi para insinyur perangkat lunak,\nterlepas dari perubahan teknologi atau tren industri. Bidang ini dianggap tidak pernah\nusang dan terus memiliki nilai penting.\n"
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342645",
+        "word_uuid": "637f587d-f7bb-5196-89a8-2cdd7256b317",
+        "word": "yet",
+        "senses": [
+            {
+                "translations": [
+                    "masih"
+                ],
+                "synonyms": [],
+                "type": "Adverb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426a3",
+        "word_uuid": "9f9d1fe6-3980-5fdb-a9b4-c70bfd028493",
+        "word": "wary",
+        "senses": [
+            {
+                "translations": [
+                    "waspada"
+                ],
+                "synonyms": [
+                    "vigilant",
+                    "watchful",
+                    "cautious",
+                    "alert"
+                ],
+                "type": "Adjective",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342628",
+        "word_uuid": "6cef0b24-5702-5629-b284-0b2c509b1be4",
+        "word": "evolve",
+        "senses": [
+            {
+                "translations": [
+                    "berkembang"
+                ],
+                "synonyms": [
+                    "thrive",
+                    "flourish",
+                    "unfold"
+                ],
+                "type": "Verb",
+                "description": "'thrive' digunakan untuk menunjukkan suatu yang berkembang dengan pesat"
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834261d",
+        "word_uuid": "8e9b457d-ae83-568a-991d-4cb22682c579",
+        "word": "initiate",
+        "senses": [
+            {
+                "translations": [
+                    "memulai",
+                    "menginisiasikan"
+                ],
+                "synonyms": [
+                    "start",
+                    "begin",
+                    "embark",
+                    "commence"
+                ],
+                "type": "Verb",
+                "description": "Sinonim kata 'initiate', berlaku untuk arti memulai"
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342665",
+        "word_uuid": "b526b13b-c82b-5be6-8507-be68facac29f",
+        "word": "in contrast",
+        "senses": [
+            {
+                "translations": [
+                    "sebalinya"
+                ],
+                "synonyms": [],
+                "type": "Adjective Phrase",
+                "description": "Frasa 'in contrast' digunakan untuk menunjukkan perbedaan atau perbandingan antara dua hal, ide, atau \nsituasi yang berbeda. Frasa ini membantu menekankan bagaimana satu hal berbeda dari yang lain. yang \nmana dalam arti lain, untuk menunjukkan perbandingan atau perbedaan. \n\nContoh kalimat: \n1. Menunjukkan perbedaan: \nIn contrast to her brother, she is very outgoing. \n(Berbeda dengan saudaranya, dia sangat terbuka.) \n\n2. Menggambarkan dua situasi yang berbeda: \nThe climate in the north is cold; in contrast, the south enjoys a warm climate. \n(Iklim di utara dingin; sebaliknya, selatan menikmati iklim hangat.) \n\n3. Menekankan perbandingan: \nIn contrast to last year's results, this year's performance has improved significantly. \n(Berbeda dengan hasil tahun lalu, kinerja tahun ini telah meningkat secara signifikan.)"
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342691",
+        "word_uuid": "e0ff2be9-634a-5fec-a11b-8bbc902c320e",
+        "word": "verse",
+        "senses": [
+            {
+                "translations": [
+                    "kuplet",
+                    "syair"
+                ],
+                "synonyms": [],
+                "type": "Noun",
+                "description": "kuplet merupakan satuan syair yang terdiri dari 2 baris.\n"
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834264a",
+        "word_uuid": "e5e793b2-a650-52c5-b709-76a6aed83ae6",
+        "word": "squire",
+        "senses": [
+            {
+                "translations": [
+                    "mengantar",
+                    "mengantarkan"
+                ],
+                "synonyms": [
+                    "deliver",
+                    "usher",
+                    "accompany",
+                    "escort"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342669",
+        "word_uuid": "a855f354-8f84-54dd-96ce-1695947984bf",
+        "word": "baggage",
+        "senses": [
+            {
+                "translations": [
+                    "bagasi",
+                    "bagasi mobil"
+                ],
+                "synonyms": [],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342640",
+        "word_uuid": "96a427a2-e116-5635-a5dc-6c255bd220a2",
+        "word": "treat",
+        "senses": [
+            {
+                "translations": [
+                    "merawat",
+                    "menyuguhi"
+                ],
+                "synonyms": [],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342668",
+        "word_uuid": "15271c2c-8e73-5097-9ae9-d0f65523c637",
+        "word": "measure",
+        "senses": [
+            {
+                "translations": [
+                    "ukuran"
+                ],
+                "synonyms": [
+                    "size",
+                    "dimensions",
+                    "gauge"
+                ],
+                "type": "Noun",
+                "description": ""
+            },
+            {
+                "translations": [
+                    "mengukur"
+                ],
+                "synonyms": [
+                    "gauge",
+                    "quantify",
+                    "gage"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426ba",
+        "word_uuid": "032ed438-ad0c-53b9-a6a9-34649eed1a6f",
+        "word": "accomplishment",
+        "senses": [
+            {
+                "translations": [
+                    "prestasi"
+                ],
+                "synonyms": [
+                    "feat",
+                    "achievement"
+                ],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342694",
+        "word_uuid": "01d40b1e-3db2-5ab4-a18a-e3e3557a3a0d",
+        "word": "concise",
+        "senses": [
+            {
+                "translations": [
+                    "ringkas"
+                ],
+                "synonyms": [
+                    "succinct"
+                ],
+                "type": "Adjective",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342657",
+        "word_uuid": "06bdbf1d-3d42-5e08-932e-adbd125c3d6f",
+        "word": "enormous",
+        "senses": [
+            {
+                "translations": [
+                    "sangat besar"
+                ],
+                "synonyms": [
+                    "huge"
+                ],
+                "type": "Adjective",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834267e",
+        "word_uuid": "e7b1e5ce-c3d1-5597-ae83-c3727494398a",
+        "word": "attend",
+        "senses": [
+            {
+                "translations": [
+                    "menghadiri"
+                ],
+                "synonyms": [
+                    "present"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342683",
+        "word_uuid": "2015f593-19bc-5366-8d51-ea8c66d7dfa4",
+        "word": "comprehend",
+        "senses": [
+            {
+                "translations": [
+                    "memahami",
+                    "mengerti"
+                ],
+                "synonyms": [
+                    "understand",
+                    "grasp",
+                    "perceive",
+                    "fathom"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d2757443834260f",
+        "word_uuid": "d108259c-4d33-5434-b195-9f92e6c7a316",
+        "word": "patch",
+        "senses": [
+            {
+                "translations": [
+                    "tambalan",
+                    "petakan",
+                    "plester",
+                    "pembaruan perangkat lunak"
+                ],
+                "synonyms": [],
+                "type": "Noun",
+                "description": ""
+            },
+            {
+                "translations": [
+                    "menambal",
+                    "memperbaharui perangkat lunak"
+                ],
+                "synonyms": [],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426bb",
+        "word_uuid": "6cc8ced2-c48f-55bf-bc30-439b082f739d",
+        "word": "accident",
+        "senses": [
+            {
+                "translations": [
+                    "kecelakaan"
+                ],
+                "synonyms": [
+                    "wreck",
+                    "mishap"
+                ],
+                "type": "Noun",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d275744383426c7",
+        "word_uuid": "30d7e658-020a-5e0a-ad70-47c9b6286034",
+        "word": "venture",
+        "senses": [
+            {
+                "translations": [
+                    "upaya yang berbahaya"
+                ],
+                "synonyms": [],
+                "type": "Noun",
+                "description": ""
+            },
+            {
+                "translations": [
+                    "mengambil risiko"
+                ],
+                "synonyms": [],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "6a8e00209d27574438342660",
+        "word_uuid": "945e5799-7cf0-5f99-919e-233669ea59f0",
+        "word": "represent",
+        "senses": [
+            {
+                "translations": [
+                    "mewakili"
+                ],
+                "synonyms": [
+                    "reflect",
+                    "depute"
+                ],
+                "type": "Verb",
+                "description": ""
+            }
+        ]
+    }
+]
