@@ -1,5 +1,7 @@
 import API from "../../api/api";
 import type {
+  BankWords,
+  MatchingWords,
   BankWordSearchResponse, 
   DictionaryContentQueryParams, 
   DictionaryItem,
@@ -7,11 +9,11 @@ import type {
 } from "../bank.word.feature.type";
 
 export const BankWordService = {
-  async getAllWords(): Promise<BankWordSearchResponse> {
-    const response = await API.get("/dictionary");
+  // async getAllWords(): Promise<BankWordSearchResponse> {
+  //   const response = await API.get("/dictionary");
 
-    return response.data;
-  },
+  //   return response.data;
+  // },
 
   async getDictionaryContent(
     query: DictionaryContentQueryParams
@@ -46,5 +48,25 @@ export const BankWordService = {
     const {data, ...paginationInfo} = payload;
 
     return {...paginationInfo, data: res};
+  },
+
+  /**
+   * Mengubah data RESPONSE API menjadi pasangan kata permainan.
+   * Satu sense menghasilkan satu pasangan.
+   */
+  async getMatchingWordsContent(): Promise<MatchingWords[]> {
+    const response = await API.get("dictionary/random");
+    const payload: BankWords[] = response.data;
+
+    return payload.flatMap(
+      ({id, word_uuid, word, senses}) => senses.map(
+        (sense, idx) => ({
+          word_id: `${id}-${idx}`,
+          word_uuid,
+          word,
+          translations: sense.translations ?? [],
+        }
+      )
+    ));
   },
 }

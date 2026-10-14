@@ -38,6 +38,7 @@ func NewRouter(deps *deps.Dependencies) *chi.Mux {
 
 		r.Get("/dictionary", deps.BankWordHandler.Search)
 		r.Get("/dictionary/word", deps.BankWordHandler.FindByWord)
+		r.Get("/dictionary/random", deps.BankWordHandler.Random)
 	})
 
 	return r

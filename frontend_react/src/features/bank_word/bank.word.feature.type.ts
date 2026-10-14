@@ -5,15 +5,22 @@ export type Sense = {
     description: string;
 };
 
-export type BankWord = {
+export type BankWords = {
     id: string;
     word_uuid: string;
     word: string;
     senses: Sense[];
 };
 
+export type MatchingWords = {
+    word_id: string;
+    word_uuid: string;
+    word: string;
+    translations: string[];
+};
+
 export type BankWordSearchResponse = {
-    data: BankWord[];
+    data: BankWords[];
     page: number;
     limit: number;
     total: number;
@@ -48,6 +55,6 @@ export type DictionaryContentResponse = {
 
 export type BankWordContextValue = {
     dictionaryContent: DictionaryItem[];
-    loading: boolean;
+    loading: boolean; 
     fetchDictionaryContent: (query: DictionaryContentQueryParams) => Promise<void>;
 };

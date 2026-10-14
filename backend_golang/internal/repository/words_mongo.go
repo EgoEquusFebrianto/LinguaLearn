@@ -137,3 +137,38 @@ func (r *bankWordRepository) Count(
 		filter,
 	)
 }
+
+func (r *bankWordRepository) Random(
+	ctx context.Context,
+) ([]domain.BankWord, error) {
+	limit := 100
+
+	pipeline := mongo.Pipeline{
+		bson.D{
+			{
+				Key: "$sample",
+				Value: bson.D{
+					{
+						Key: "size",
+						Value: limit,
+					},
+				},
+			},
+		},
+	}
+
+	cursor, err := r.collection.Aggregate(ctx, pipeline)
+	if err != nil {
+		return nil, err
+	}
+
+	defer cursor.Close(ctx)
+
+	result := make([]domain.BankWord, 0)	
+
+	if err := cursor.All(ctx, &result); err != nil {
+		return nil, err
+	}
+
+	return result, nil
+}
